@@ -56,12 +56,24 @@
     <card-t rank=1 suit=0 suitcolor="#FFF," cardcolor="red" class="newrow"></card-t>
     <card-t rank=1 suit=1 suitcolor=",yellow," cardcolor="green"></card-t>
     <card-t rank=1 suit=2 suitcolor=",,black," cardcolor="dodgerblue"></card-t>
-    <card-t rank=1 suit=3 suitcolor=",,,red" cardcolor="yellow"></card-t>
+    <card-t rank=1 suit=3 suitcolor=",,,red" cardcolor="yellow" norank=1></card-t>
     <div></div>
-    <card-t rank=1 suit=0></card-t>
+    <style>
+        [opacity] {
+            /* opacity: .5; */
+        }
+    </style>
+    <card-t rank=1 suit=0 opacity=1></card-t>
     <card-t rank=1 suit=1 opacity=.75></card-t>
     <card-t rank=1 suit=2 opacity=.5></card-t>
-    <card-t rank=1 suit=3 opacity=.1></card-t>
+    <card-t foundation=Spades></card-t>
+    <card-t foundation=Hearts></card-t>
+    <card-t foundation=2></card-t>
+    <card-t foundation=C></card-t>
+    <div></div>
+    <card-t rank=0 backcolor="red"></card-t>
+    <card-t rank=0 backcolor="green"></card-t>
+    <card-t rank=0 backcolor="#44F" backtext="COPYRIGHT" backtextcolor=black></card-t>
     <card-t suit=Hearts rank=Jack courtcolors=gold,red,blue,black,black,4 class="newrow"></card-t>
     <card-t suit=Spades rank=Queen courtcolors=#DB3,lightcoral,lightblue,slategray,#000,1></card-t>
     <card-t suit=Diamonds rank=King courtcolors=gold,red,green,orange,#000,4></card-t>
@@ -74,7 +86,6 @@
     <card-t suit=H rank=Queen suits=2222></card-t>
     <card-t suit=D rank=Queen suits=2222></card-t>
     <card-t suit=C rank=Queen suits=2222></card-t>
-
 
     <script defer>
         let shuffle = x => x.sort(() => Math.random() - 0.5);// Yes, Fisher-Yates is better
