@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CARD-TS examples</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type=module src='playingcardts.element.full.js'></script>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(13, 1fr);
+            grid-template-rows: 4fr;
+            grid-gap: 1em;
+            margin: 1em;
+        }
+
+        .greencloth {
+            background-image: url('data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoeAB4APikSh0KhoQoCAAwBQllYz41AABFV/n8AItOaJepDavAA/vkKUe5BGtPR5aeKP/4hd7G2///gzv/f1X/gzv/BmUX9cJtST/Z9T/XsQq/MQV+1v8m2uukhu3nFYS/A5iTPpyXsMLAwk6xasWWFDPdx7OkWouLHKfqaoozRIW3R5D5MAA==');
+            background-size: cover;
+        }
+
+        card-t img {
+            border: 3px solid var(--cardborder, transparent);
+            border-radius: 8px;
+            /* filter: grayscale(); */
+        }
+
+        [rank="q"] img {
+            border: 3px solid greenyellow;
+            transform: rotate(15deg);
+        }
+
+        [four]+[three]+[two] {
+            --cardborder: pink;
+        }
+
+        .newrow {
+            grid-column-start: 1;
+        }
+    </style>
+</head>
+
+<body class="greencloth">
+    <card-t suit=Hearts rank=Jack courts=201></card-t>
+    <card-t suit=Spades rank=Queen courts=201></card-t>
+    <card-t suit=Diamonds rank=King courts=201></card-t>
+    <div></div>
+    <card-t suit=0 rank=1 letters="CCCC"></card-t>
+    <card-t suit=1 rank=11 letters="AAAA"></card-t>
+    <card-t suit=3 rank=13 letters="RRRR"></card-t>
+    <card-t suit=2 rank=12 letters="DDDD"></card-t>
+    <card-t suit=0 rank=0 letters="TTTT"></card-t>
+    <card-t suit=0 rank=13 letters="TTTT"></card-t>
+    <div></div>
+    <card-t rank=1 suit=0 suitcolor="#FFF," cardcolor="red" class="newrow"></card-t>
+    <card-t rank=1 suit=1 suitcolor=",yellow," cardcolor="green"></card-t>
+    <card-t rank=1 suit=2 suitcolor=",,black," cardcolor="dodgerblue"></card-t>
+    <card-t rank=1 suit=3 suitcolor=",,,red" cardcolor="yellow"></card-t>
+    <div></div>
+    <card-t rank=1 suit=0></card-t>
+    <card-t rank=1 suit=1 opacity=.75></card-t>
+    <card-t rank=1 suit=2 opacity=.5></card-t>
+    <card-t rank=1 suit=3 opacity=.1></card-t>
+    <card-t suit=Hearts rank=Jack courtcolors=gold,red,blue,black,black,4 class="newrow"></card-t>
+    <card-t suit=Spades rank=Queen courtcolors=#DB3,lightcoral,lightblue,slategray,#000,1></card-t>
+    <card-t suit=Diamonds rank=King courtcolors=gold,red,green,orange,#000,4></card-t>
+    <div></div>
+    <card-t rank=1 suit=0 bordercolor=red borderradius=12 borderline=12></card-t>
+    <card-t rank=4 suit=0 bordercolor=hotpink borderradius=100% borderline=20></card-t>
+    <card-t rank=13 suit=H bordercolor=gold borderradius=12 borderline=38></card-t>
+    <div></div>
+    <card-t suit=S rank=Queen suits=2222></card-t>
+    <card-t suit=H rank=Queen suits=2222></card-t>
+    <card-t suit=D rank=Queen suits=2222></card-t>
+    <card-t suit=C rank=Queen suits=2222></card-t>
+
+
+    <script defer>
+        let shuffle = x => x.sort(() => Math.random() - 0.5);// Yes, Fisher-Yates is better
+        let cardt = (suitname, rankname) => {
+            let card = document.createElement(`card-t`);
+            let setAttr = (x, v = '') => card.setAttribute(x, v);
+            setAttr('suit', suitname.toLowerCase());
+            setAttr('rank', rankname);
+            setAttr('draggable', 'true');
+            //setAttr('cardcolor', 'transparent');
+            //setAttr('suits', '1111');
+            setAttr(rankname);
+            if (suitname != '0') setAttr(suitname);
+            setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');
+
+            return card;
+        }
+        let cards = ['0', 'Hearts', 'Diamonds', 'Clubs']
+            .map(suitname => 'ace,two,three,four,five,six,seven,eight,nine,ten,jack,queen,king'.split`,`
+                .map(rankname => cardt(suitname, rankname)))
+            .flat();
+        //cards = shuffle(cards);
+        //document.body.append(...cards);
+    </script>
+</body>
+
+</html>

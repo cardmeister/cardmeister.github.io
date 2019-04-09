@@ -11,8 +11,8 @@ let createCustomElement = cardts => {
                 }, {
                         //overwrite default AND!! attribute values
                         //cardcolor: 'whitesmoke',    // default is #FFF
-                        suitcolor: 'red,green,hotpink,blue',
-                        opacity: 1,                // default is 0.8
+                        //suitcolor: 'red,green,hotpink,blue',
+                        //opacity: 1,                // default is 0.8
                     })
         )
 
