@@ -408,6 +408,16 @@ The SVG creation code took some blood, sweat and tears and is closed source for 
 
 **You do NOT need the ``SVGcardt()`` _Source Code_ to use ``<card-t>`` in applications**
 
+### 🃏 Are cardts really created in the browser/not downloaded?
+
+See F12 Network tab, ``data:imag/svg`` cardts take **0 milliseconds** download time 
+
+![](https://i.imgur.com/ieN7gvc.jpg)
+
+### 🃏 Where is the Joker?
+
+Probably causing havoc in Gotham City
+
 <hr>
 
 [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 👁️[attribute examples](https://card-ts.github.io/playingcardts/attribute_examples.html) 📄 [source](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
