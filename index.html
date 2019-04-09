@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>CARD-TS</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script type=module src='playingcardts.element.js'></script>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(13, 1fr);
+            grid-template-rows: 4fr;
+            grid-gap: 1em;
+            margin: 1em;
+        }
+
+        .greencloth {
+            background-image: url('data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoeAB4APikSh0KhoQoCAAwBQllYz41AABFV/n8AItOaJepDavAA/vkKUe5BGtPR5aeKP/4hd7G2///gzv/f1X/gzv/BmUX9cJtST/Z9T/XsQq/MQV+1v8m2uukhu3nFYS/A5iTPpyXsMLAwk6xasWWFDPdx7OkWouLHKfqaoozRIW3R5D5MAA==');
+            background-size: cover;
+        }
+
+        card-t {
+            border: 3px solid var(--cardborder, transparent);
+            border-radius: 8px;
+            /* filter: grayscale(); */
+        }
+
+        [queen] {
+            transform: rotate(5deg);
+        }
+
+        [ace]+[two],
+        [two]+[three],
+        [three]+[four],
+        [four]+[five],
+        [five]+[six],
+        [six]+[seven],
+        [seven]+[eight],
+        [eight]+[nine],
+        [nine]+[ten],
+        [ten]+[jack],
+        [jack]+[queen],
+        [queen]+[king],
+        [king]+[ace] {
+            --cardborder: green;
+            filter: unset;
+        }
+
+        [three]+[two],
+        [four]+[three],
+        [five]+[four],
+        [six]+[five],
+        [seven]+[six],
+        [eight]+[seven],
+        [nine]+[eight],
+        [ten]+[nine],
+        [jack]+[ten],
+        [queen]+[jack],
+        [king]+[queen],
+        [ace]+[king] {
+            --cardborder: red;
+        }
+
+        [four]+[three]+[two] {
+            --cardborder: pink;
+        }
+    </style>
+</head>
+
+<body class="greencloth">
+    <script>
+        let shuffle = x => x.sort(() => Math.random() - 0.5);// Yes, Fisher-Yates is better
+        let cardt = (suitname, rankname) => {
+            let card = document.createElement(`card-t`);
+            let setAttr = (x, v = '') => card.setAttribute(x, v);
+            setAttr('suit', suitname.toLowerCase());
+            setAttr('rank', rankname);
+            setAttr('draggable');
+            try {
+                setAttr(rankname);
+                setAttr(suitname);
+            } catch (e) {
+                //disregard invalid attribute names
+            }
+            setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');
+
+            return card;
+        }
+        let cards = ['0', 'Hearts', 'Diamonds', 'Clubs']
+            .map(suitname => 'ace,two,three,four,five,six,seven,eight,nine,ten,jack,queen,king'.split`,`
+                .map(rankname => cardt(suitname, rankname)))
+            .flat();
+        cards = shuffle(cards);
+        document.body.append(...cards);
+    </script>
+</body>
+
+</html>
