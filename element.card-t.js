@@ -2,30 +2,30 @@
 (function(exports) {
     let createElementCardT = CARDTS => {
         // called after SVGpaths below are loaded, CARDTS holds card ranks and suit and SVGcardt() creator function
-        let drawCard = cardt => {
+        let ranks_and_suits = [ ...CARDTS.ranknames, ...CARDTS.suitnames ];
+ // ace,two,three...,king   spades,hearts,diamonds,clubs
+                let drawCard = cardt => {
             let documentation = "ATTRIBUTES:\n";
-            let ranks_and_suits = [ ...CARDTS.ranknames, ...CARDTS.suitnames ];
-            let newcard = CARDTS.SVGcardt(cardt.constructor.observedAttributes.reduce((attrSettings, attr) => {
+ // atributes show on click in https://card-ts.github.io/playingcardts/index.html
+            // create one {} Object parameter from all (String) attributes
+                        let cardtAttributes = cardt.constructor.observedAttributes.reduce((attrSettings, attr) => {
                 if (cardt.hasAttribute(attr)) {
                     let value = cardt.getAttribute(attr);
                     Object.assign(attrSettings, {
                         [attr]: value || attr
-                    });
-                    if (ranks_and_suits.includes(attr)) documentation += attr + "  "; else documentation += "\n" + `${attr} : ${value}`;
+ /* alllow attributes names without values (set attr as value) */                    });
+                    if (ranks_and_suits.includes(attr)) documentation += attr + "  "; // attribute definition for easier CSS Selectors
+                     else documentation += "\n" + `${attr} : ${value}`;
                 }
                 return attrSettings;
             }, {
-                //default attrSettings:
-                /** overwrite default AND!! attribute values
-                        cardcolor: 'whitesmoke',
-                        suitcolor: 'red,green,hotpink,dodgerblue',
-                        norank: true
-                        */
-                opacity: 1
-            }));
- // <<< SVGcardt
-                        cardt.setAttribute("documentation", documentation);
-            if (cardt.cardIMG) {
+                /* default attrSettings overwrite default AND!! attribute values */
+                cardcolor: "whitesmoke"
+            });
+            let newcard = CARDTS.SVGcardt(cardtAttributes);
+            cardt.setAttribute("documentation", documentation);
+ // atributes show on click in https://card-ts.github.io/playingcardts/index.html
+                        if (cardt.cardIMG) {
                 // if image was already created
                 cardt.cardIMG.src = newcard.src;
  // only replace the image src
@@ -36,7 +36,7 @@
         //*=========================================================================================== Custom Element
                 customElements.define("card-t", class extends HTMLElement {
             static get observedAttributes() {
-                return [ ...CARDTS.suitnames, ...CARDTS.ranknames, ...CARDTS.attributes ];
+                return [ ...ranks_and_suits, ...CARDTS.attributes ];
             }
             constructor() {
                 super();
@@ -45,7 +45,8 @@
                         }
             attributeChangedCallback(name, oldValue, newValue) {
                 if (oldValue) drawCard(this);
-            }
+ // redraw IMG.src for every attribute change
+                        }
             connectedCallback() {
                 drawCard(this);
             }
