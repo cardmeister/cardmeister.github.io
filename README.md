@@ -44,6 +44,8 @@ Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 
 Feel free to PEEK around, and if you want to POKE submit an [issue](https://github.com/card-ts/playingcardts/issues/new).
 
+A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful answers on [StackOverflow](https://stackoverflow.com/questions/tagged/web-component+or+custom-element)!
+
 -- Danny Engelman  
 -- Amsterdam 🌷🌷🌷 the Netherlands  
 -- Summer 2019  👴🏽  _25 years after my first HTML page_
@@ -184,13 +186,11 @@ Rename Ace, Jack, Queen, King letters AJQK to Dutch locale 'Aas Boer Vrouw Heer'
 
 ![](https://i.imgur.com/y83wjG8.jpg)
 
-notes: 
+💡 a 4 letter string is used so it can be a global setting for all created cards
 
-  * a 4 letter string is used so it can be a global setting for all created cards
+💡 Custom ``letters`` draw **all** ranks (A,2,3,4 etc.) in Arial font
 
-  * Custom ``letters`` draw **all** ranks (A,2,3, etc.) in Arial font
-
-  * ``letters`` can not be Emoji (Unicode strings)
+💡 ``letters`` can **not** be Emoji (Unicode strings)
 
 # 🔧 ``courts`` - mix court images
 
@@ -338,6 +338,8 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 All good open-source SVG playingcards available are high-precision ready for print. 
 
+In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**
+
 * I started with the 550 KB for 52 CC-0 licensed cards from the [card generator by Adrian Kennard](https://www.me.uk/cards/)
 * reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)
 * manually reduced details in the cards you don't see on a computer screen
@@ -414,7 +416,7 @@ See F12 Network tab, ``data:image/svg`` cardts take **0 milliseconds** download 
 
 ### 🃏 Where is the Joker?
 
-🤣 Probably causing havoc in Gotham City?
+😉 Causing havoc in Gotham City?!
 
 I haven't found a good Joker Card design yet, if you have one let me know
 
@@ -491,7 +493,9 @@ https://www.webcomponents.org/element/vpusher/game-card
 https://donpark.github.io/scalable-css-playing-cards/
 * HTML5 deck of cards (all 52 cards are separate SVG files) (last commit: 2017)  
 https://github.com/pakastin/deck-of-cards  
-https://deck-of-cards.js.org/
+https://deck-of-cards.js.org/  
+**King of Hearts alone is 69 KB** : https://deck-of-cards.js.org/faces/1_13.svg
+
 * CSS only (no Court images) (last commit: 2012)  
 https://github.com/zachwaugh/Helveticards
 * PNG card background image = https://bfa.github.io/solitaire-js/img/card_back_bg.png
