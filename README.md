@@ -1,24 +1,22 @@
 
 # ``<CARD-T>`` - 52 playingcardts in **one** Custom Element ♥️
 
-This project is about exploring modern browser technologies (and stuffing all assets in one file)  
-If you came here with IE or Edge you are out of luck. Use the latest Chrome or Firefox
+**This project uses modern browser technologies, use the latest Chrome or Firefox**
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 👁️[attribute examples](https://card-ts.github.io/playingcardts/attribute_examples.html) 📄 [source](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
-## The **single file** [playingcardts.element.js](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) in this project contains:
+## The **single file** [element.card-t.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) is:
 
 * W3C Custom Element: ``<card-t> </card-t>``
 
 * SVG data for 52 playing cards - **500 KB** painstakingly slimmed to **148 KB**
 
-* Total file size: **160 KB / 63 KB GZip**
+* Total **gzip** file size: **63 KB creating 52 playingcardts:**
 
-## 63 KB creates 52 SVG playingcardts
 
 ![](https://i.imgur.com/sVahVJO.jpg)
 
@@ -26,20 +24,19 @@ If you came here with IE or Edge you are out of luck. Use the latest Chrome or F
 
 # Why another SVG playing card
 
-I created a 'Hello World!' App with Framework X and the bundle was  **95 KiloBytes** ... to display 12 characters.
+A 'Hello World!' App with Framework **X** used  **95 KiloBytes** ... to display 12 characters.
 
-Where have the good times gone?
-When we played adventure games on a [TRS-80](https://en.wikipedia.org/wiki/TRS-80) with only **16** KiloBytes of memory
+Something did not feel right!
 
-I learned to [PEEK and POKE](https://en.wikipedia.org/wiki/PEEK_and_POKE) at the age of 10, and learned HTML (yes, a bit late) at **25**  
-I liked WWW simplicity and the ability to 'peek at' and learn from someone else's effort.  
-25 years later 'Web Development' has become *For-Rocket-Scientists-Only*  
+I learned to [PEEK and POKE](https://en.wikipedia.org/wiki/PEEK_and_POKE) at the age of 10 on a [TRS-80](https://en.wikipedia.org/wiki/TRS-80) and learned HTML (a bit late) at **25**  
+The ability to 'peek at' and learn from someone else's effort was fantastic.  
+In the past years 'Web Development' has become *For-Rocket-Scientists-Only*  
 
 **What happened to the days when all you needed were some HTML tags and a text-editor?**
 
-[W3C standard Custom Elements](https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework)¹ make writing semantic HTML as cool as it was in 1994 .. **without any Framework !!!**  
+[W3C standard Custom Elements](https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework)¹ make writing semantic HTML as cool as it was in the early days .. **without any Framework !!!**  
 
-playingcard(t)s are the perfect example to demonstrate the power of a Custom Element
+Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 
 * one single file creates a ``<card-t>`` element
 * **no** external SVG images
@@ -48,16 +45,16 @@ Feel free to PEEK around, and if you want to POKE submit an [issue](https://gith
 
 -- Danny Engelman  
 -- Amsterdam 🌷🌷🌷 the Netherlands  
--- Summer 2019 (_25 years after my first HTML page_)
+-- Summer 2019  👴🏽  _25 years after my first HTML page_
 
 ````
 ¹ - Everyone uses the terms Custom Elements & Web Components interchangeably.  
-    Strictly speaking Web Components are Custom Elements **with** shadow DOM
+    Strictly speaking Web Components are Custom Elements WITH shadow DOM
 ````
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 👁️[attribute examples](https://card-ts.github.io/playingcardts/attribute_examples.html) 📄 [source](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -65,16 +62,16 @@ Feel free to PEEK around, and if you want to POKE submit an [issue](https://gith
 
 For an introduction to W3C standard Custom Elements/WebComponents [read the excellent Blog by Danny Moerkerke](https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework)
 
-Like the HTML5 ``<video>`` tag, the Custom Element ``<card-t>`` abstracts complex functionality into one HTML tag (customizable with attributes)
+Like the HTML5 ``<video>`` tag, the Custom Element ``<card-t>`` abstracts complex functionality into one HTML tag
 
-📑 Custom Elements must be declared in a Namespace, so require a - hyphen in the tag name 
+💡 Custom Elements must be declared in a Namespace, so require a - hyphen in the tag name 
 
-## The minimal HTML file to display a Queen of Hearts is:
+## Minimal HTML file to display a Queen of Hearts:
 
 ```html
   <html>
     <head>
-        <script src='playingcardts.element.js'></script>
+        <script src='element.card-t.js'></script>
     </head>
     <body>
         <card-t rank=Queen suit=Hearts></card-t>
@@ -107,15 +104,11 @@ Since ``<card-t>`` only creates a single IMG **no shadow-DOM is used**, thus IMG
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 👁️[attribute examples](https://card-ts.github.io/playingcardts/attribute_examples.html) 📄 [source](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
-# I am working towards a Solitaire game
-
-This Custom Element ``playingcardts.element.js`` takes care of the 52 playingcardts.
-
-My next challenge is to capture Solitaire game logic in Custom Elements:
+# Next challenge a Solitaire game in Custom Elements
 
 ```html
   <cardts-game>
@@ -147,7 +140,7 @@ What if cardts could:
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 👁️[attribute examples](https://card-ts.github.io/playingcardts/attribute_examples.html) 📄 [source](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -231,7 +224,7 @@ Who will notice all cards use the same court image?
 
 ![](https://i.imgur.com/D9qFMP5.jpg)
 
-Note: The Diamond court image is not suitable to be used for Spades, Hearts and Clubs because the top-half of cards are rotated 180 degrees to create the bottom-half, and only the Diamond makes a valid image (see card center) when rotated 180 degrees
+Note: The Diamond court image (suits=2222) is not suitable for Spades, Hearts and Clubs cards because the top-half of cards are rotated 180 degrees to create the bottom-half, and only the Diamond makes a valid image (see card center) when rotated 180 degrees
 
 ![](https://i.imgur.com/t3jR5bz.jpg)
 
@@ -286,7 +279,7 @@ default: 0.8
 💡 0.8 makes the cards look not too sharp, and you can highlight card-ts by setting opacity to 1
 
 ````html
-    <card-t rank=1 suit=0            ></card-t>
+    <card-t rank=1 suit=0 opacity=1  ></card-t>
     <card-t rank=1 suit=1 opacity=.75></card-t>
     <card-t rank=1 suit=2 opacity=.5 ></card-t>
     <card-t rank=1 suit=3 opacity=.1 ></card-t>
@@ -332,7 +325,7 @@ Note: suit decorations are set by the ``suitcolor`` attribute
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 👁️[attribute examples](https://card-ts.github.io/playingcardts/attribute_examples.html) 📄 [source](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -359,7 +352,7 @@ And the Browser needs to decompress the data which takes a hefty 200ms
 
 Version 1 did de-compression and lazy loaded all 12 court images.
 
-Since GZip is a similar compression (over the whole file)  
+Since gzip is a similar compression (over the whole file)  
 there is only a gain on really slow 3G connections (download takes 5 instead of 6 seconds)
 
 <hr>
@@ -396,12 +389,12 @@ This project was about stuffing everything into **one** file.
 
 ### 🃏 Where is the NPM installer?  
 
-If you need an installer to copy **one** file: [playingcardts.element.js](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js)  
+If you need an installer to copy **one** file: [element.card-t.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js)  
 You might find a better career flipping burgers at McDonalds.
 
 ### 🃏 Where is the ``SVGcardt()`` source?
 
-The ``<card-t>`` Custom Element declaration in [playingcardts.element.js](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) is Open Source.  
+The ``<card-t>`` Custom Element declaration in [element.card-t.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) is Open Source.  
 You can rename ``<card-t>`` to anything you want and customize the Custom Element to your liking.
 
 The SVG creation code took some blood, sweat and tears and is closed source for now. 
@@ -410,7 +403,7 @@ The SVG creation code took some blood, sweat and tears and is closed source for 
 
 ### 🃏 Are cardts really created in the browser/not downloaded?
 
-See F12 Network tab, ``data:imag/svg`` cardts take **0 milliseconds** download time 
+See F12 Network tab, ``data:image/svg`` cardts take **0 milliseconds** download time 
 
 ![](https://i.imgur.com/ieN7gvc.jpg)
 
@@ -420,7 +413,7 @@ Probably causing havoc in Gotham City
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 👁️[attribute examples](https://card-ts.github.io/playingcardts/attribute_examples.html) 📄 [source](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -466,7 +459,7 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 👁️[attribute examples](https://card-ts.github.io/playingcardts/attribute_examples.html) 📄 [source](https://github.com/card-ts/playingcardts/blob/master/playingcardts.element.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
