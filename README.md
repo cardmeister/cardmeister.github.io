@@ -1,5 +1,5 @@
 
-# ``<CARD-T>`` - 52 playingcardts in **one** Custom Element ♥️
+# ``<CARD-T>`` - 52 playingcardts in **one** 63 KB Custom Element
 
 **This project uses modern browser technologies, use the latest Chrome or Firefox**
 
@@ -112,7 +112,7 @@ Since ``<card-t>`` only creates a single IMG **no shadow-DOM is used**, thus IMG
 
 <hr>
 
-# My next challenge a Solitaire game in Custom Elements
+# My next challenge: a Solitaire game in Custom Elements
 
 ```html
   <cardts-game>
@@ -161,7 +161,7 @@ What if cardts could:
 **``<card-t>`` takes a sh*tload of attributes you can play with:**
 
 * ``letters`` - Custom localized court letters 
-* ``courts`` - mix court images
+* ``courts`` - mix rank/courts images
 * ``suits`` - Mix suit/court images
 * ``suitcolor`` - Change SHDC suit color
 * ``cardcolor`` - card color
@@ -192,9 +192,11 @@ Rename Ace, Jack, Queen, King letters AJQK to Dutch locale 'Aas Boer Vrouw Heer'
 
 💡 ``letters`` can **not** be Emoji (Unicode strings)
 
-# 🔧 ``courts`` - mix court images
+# 🔧 ``courts`` - mix rank/courts images
 
 default: 012
+
+Before anyone complains the Queen is always #2
 
 Rearrange SHDC court images to KJQ:
 
@@ -258,7 +260,7 @@ default: #FFF
     <card-t rank=1 suit=3 suitcolor="#FFF,#FFF,#FFF,red"   cardcolor="yellow"    ></card-t>
 ````
 
-💡 You need to specify all 4 colors even when only applying one suit
+💡 You need to specify all 4 colors even when only applying one suit (allows for a global setting)
 
 Since the string is converted to an array the above can be written as:
 
@@ -269,7 +271,7 @@ Since the string is converted to an array the above can be written as:
     <card-t rank=1 suit=3 suitcolor=",,,red"   cardcolor="yellow"    ></card-t>
 ````
 
-💡 non-color values will break the SVG suit display... So.. if you want a card without suits.. force an error :-)
+💡 non-color values will break the SVG suit display
 
 💡 add attribute ``norank=true`` and only the big center suit remains
 
@@ -288,13 +290,13 @@ default: 0.8
     <card-t rank=1 suit=3 opacity=.1 ></card-t>
 ````
 
-💡 CSS opacity makes the whole IMG transparent, ``<card-t opacity=.5>`` leaves the card **backcolor** at 100%
+💡 CSS opacity makes the whole IMG transparent!  ``<card-t opacity=n>`` leaves the ``<card-t>`` **backcolor** at 100%
 
 ![](https://i.imgur.com/eZhAuob.jpg)
 
 # 🔧 ``bordercolor`` - set card border color
 
-default: black
+default: #444 (darkgray)
 
 # 🔧 ``borderradius`` - set card border radius
 
@@ -302,7 +304,7 @@ default: 12
 
 # 🔧 ``borderline`` - set card border line thickness
 
-default: 1.5
+default: 1
 
 ````html
     <card-t rank=1  suit=0 bordercolor=red     borderradius=12   borderline=12></card-t>
@@ -314,7 +316,7 @@ default: 1.5
 
 # ☠️ ``courtcolors`` - Change court image colors
 
-**this setting will most likely be gone in 'less SVG' version 2**
+<b style=color:lightcoral>this setting will most likely be gone in 'less SVG' version 2</b>
 
 default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethickness)
 
@@ -338,10 +340,11 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 All good open-source SVG playingcards available are high-precision ready for print. 
 
-In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**
+In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**!!  ``<card-t>`` creates 52 cards in **63 KB**!
 
 * I started with the 550 KB for 52 CC-0 licensed cards from the [card generator by Adrian Kennard](https://www.me.uk/cards/)
-* reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)
+* reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)  
+(this causes some alignment 'errors' you only see viewing a court card full screen)
 * manually reduced details in the cards you don't see on a computer screen
 * cut everything up in separate SVG paths
 * made redundant paths into single JS functions
@@ -355,12 +358,12 @@ In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts]
 
 Using a [LZMA compressor](http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html) that **148** KB can be reduced to **55 KB**  
 You then need to transport it over HTTP as Base64 making it 67 KB  
-And the Browser needs to decompress the data which takes a hefty 200ms
+And the Browser needs to decompress the data which takes a hefty 200ms (and a 6.9KB decoder)
 
-Version 1 did de-compression and lazy loaded all 12 court images.
+Version 0 did LZMA de-compression and lazy loaded all 12 court images.
 
 Since gzip is a similar compression (over the whole file)  
-there is only a gain on really-really slow 3G connections (download takes 5 instead of 6 seconds)
+there is only a gain on slow 3G connections (download takes 3.1 seconds instead of 3.3 seconds)
 
 <hr>
 
@@ -455,13 +458,13 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
   <cardts-game>
 ```
 
-## Here is some help to create the foundation for the foundation piles:
+## Here is some help to create the foundation for the SHDC foundation piles:
 
 ````html
-    <card-t foundation=Spades></card-t>
-    <card-t foundation=Hearts></card-t>
-    <card-t foundation=2></card-t>
-    <card-t foundation=C></card-t>
+    <card-t foundation=0 ></card-t>
+    <card-t foundation=H ></card-t>
+    <card-t foundation=2 ></card-t>
+    <card-t foundation=C ></card-t>
 ````
 
 ![](https://i.imgur.com/F5v8Ud7.jpg)
