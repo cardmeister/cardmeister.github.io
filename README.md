@@ -39,6 +39,7 @@ In the past years 'Web Development' has become *For-Rocket-Scientists-Only*
 Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 
 * one single file creates a ``<card-t>`` element
+* attributes for configuration
 * **no** external SVG images
 
 Feel free to PEEK around, and if you want to POKE submit an [issue](https://github.com/card-ts/playingcardts/issues/new).
@@ -516,6 +517,3 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-
- <a href='https://www.stat-counter.org/'>statcounter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=2d45ab32a0d69a175586f1217ceaaadefdf9c7ae'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/515154/t/0"></script>
