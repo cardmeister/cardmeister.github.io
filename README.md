@@ -34,7 +34,7 @@ In the past years 'Web Development' has become *For-Rocket-Scientists-Only*
 
 **What happened to the days when all you needed were some HTML tags and a text-editor?**
 
-[W3C standard Custom Elements](https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework)¹ make writing semantic HTML as cool as it was in the early days .. **without any Framework !!!**  
+[W3C standard Custom Elements](https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework)¹ make writing semantic HTML as cool as it was in my early days .. **without any Framework!**  
 
 Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 
@@ -64,7 +64,7 @@ For an introduction to W3C standard Custom Elements/WebComponents [read the exce
 
 Like the HTML5 ``<video>`` tag, the Custom Element ``<card-t>`` abstracts complex functionality into one HTML tag
 
-💡 Custom Elements must be declared in a Namespace, so require a - hyphen in the tag name 
+💡 Custom Elements must be declared in a [Namespace](https://www.webcomponents.org/community/articles/how-should-i-name-my-element), so require a - hyphen in the tag name 
 
 ## Minimal HTML file to display a Queen of Hearts:
 
@@ -83,7 +83,8 @@ Like the HTML5 ``<video>`` tag, the Custom Element ``<card-t>`` abstracts comple
 
 **Custom Element ``<card-t>`` creates an image with the SVG as ``data:image`` src**
 
-Saves you from headaches with SVG in a document (duplicate symbol ids, bleeding CSS etc.) and makes it easy to add HTML Drag-Drop functionality.
+Saves you from headaches with SVG in a document (duplicate symbol ids, bleeding CSS etc.)  
+and makes it easy to add HTML Drag-Drop functionality.
 
 ### How it looks in F12 Developer Tools:
 
@@ -108,7 +109,7 @@ Since ``<card-t>`` only creates a single IMG **no shadow-DOM is used**, thus IMG
 
 <hr>
 
-# Next challenge a Solitaire game in Custom Elements
+# My next challenge a Solitaire game in Custom Elements
 
 ```html
   <cardts-game>
@@ -152,8 +153,9 @@ What if cardts could:
 
 * 'court' is UK English for 'face' US English. So Jack, Queen and King are **court**-cards (courts)
 * SHDC is short for Spades-Hearts-Diamonds-Clubs 
+* 0123 are Array indexes 
 
-``<card-t>`` takes a sh*tload of attributes you can play with:
+**``<card-t>`` takes a sh*tload of attributes you can play with:**
 
 * ``letters`` - Custom localized suit letters 
 * ``courts`` - mix court images
@@ -218,13 +220,13 @@ Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
 Uses Spades court images for all 4 suits
 
-Yes, that 148 KB of SVG data could be reduced to 25%  (it is not in this element!)
+Yes, that 148 KB of SVG data could be reduced to 25%  (not in this version!)
 
 Who will notice all cards use the same court image?
 
 ![](https://i.imgur.com/D9qFMP5.jpg)
 
-Note: The Diamond court image (suits=2222) is not suitable for Spades, Hearts and Clubs cards because the top-half of cards are rotated 180 degrees to create the bottom-half, and only the Diamond makes a valid image (see card center) when rotated 180 degrees
+💡 The Diamond court image (suits=2222) is not suitable for Spades, Hearts and Clubs cards because the top-half of cards are rotated 180 degrees to create the bottom-half, and only the Diamond makes a valid image (see card center) when rotated 180 degrees
 
 ![](https://i.imgur.com/t3jR5bz.jpg)
 
@@ -255,7 +257,7 @@ default: #FFF
     <card-t rank=1 suit=3 suitcolor="#FFF,#FFF,#FFF,red"   cardcolor="yellow"    ></card-t>
 ````
 
-Note: You need to specify all 4 colors even when only applying one suit
+💡 You need to specify all 4 colors even when only applying one suit
 
 Since the string is converted to an array the above can be written as:
 
@@ -285,7 +287,7 @@ default: 0.8
     <card-t rank=1 suit=3 opacity=.1 ></card-t>
 ````
 
-Note: CSS opacity makes the whole IMG transparent, ``<card-t opacity=.5>`` leaves the card **backcolor** at 100%
+💡 CSS opacity makes the whole IMG transparent, ``<card-t opacity=.5>`` leaves the card **backcolor** at 100%
 
 ![](https://i.imgur.com/eZhAuob.jpg)
 
@@ -311,6 +313,8 @@ default: 1.5
 
 # ☠️ ``courtcolors`` - Change court image colors
 
+**this setting will most likely be gone in 'less SVG' version 2**
+
 default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethickness)
 
 ````html
@@ -319,7 +323,7 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
     <card-t suit=Diamonds rank=King  courtcolors=gold,red,green,orange,#000,4              ></card-t>
 ````
 
-Note: suit decorations are set by the ``suitcolor`` attribute
+💡 suit decorations are set by the ``suitcolor`` attribute
 
 ![](https://i.imgur.com/D2hwgrC.jpg)
 
@@ -353,7 +357,7 @@ And the Browser needs to decompress the data which takes a hefty 200ms
 Version 1 did de-compression and lazy loaded all 12 court images.
 
 Since gzip is a similar compression (over the whole file)  
-there is only a gain on really slow 3G connections (download takes 5 instead of 6 seconds)
+there is only a gain on really-really slow 3G connections (download takes 5 instead of 6 seconds)
 
 <hr>
 
@@ -361,7 +365,7 @@ there is only a gain on really slow 3G connections (download takes 5 instead of 
 
 ### 🃏 Why ``<card-t>``
 
-A Custom Element requires its own namespace, so you are stuck to something with a - hyphen.
+A Custom Element requires its own [Namespace](https://www.webcomponents.org/community/articles/how-should-i-name-my-element), so you are stuck to something with a - hyphen.
 
 You can create 52 Custom Elements (extended from ``<card-t>``):
 
@@ -409,7 +413,9 @@ See F12 Network tab, ``data:image/svg`` cardts take **0 milliseconds** download 
 
 ### 🃏 Where is the Joker?
 
-Probably causing havoc in Gotham City
+🤣 Probably causing havoc in Gotham City?
+
+I haven't found a good Joker Card design yet, if you have one let me know
 
 <hr>
 
