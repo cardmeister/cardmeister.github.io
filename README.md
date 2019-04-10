@@ -513,3 +513,9 @@ https://github.com/zachwaugh/Helveticards
 * https://dafrok.github.io/gzip-size-online/
 * Analyze GZ compression:  
 https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-compression-efficiency
+
+<hr>
+<hr>
+
+ <a href='https://www.stat-counter.org/'>statcounter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=2d45ab32a0d69a175586f1217ceaaadefdf9c7ae'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/515154/t/0"></script>
