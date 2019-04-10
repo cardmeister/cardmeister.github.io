@@ -160,7 +160,7 @@ What if cardts could:
 
 **``<card-t>`` takes a sh*tload of attributes you can play with:**
 
-* ``letters`` - Custom localized suit letters 
+* ``letters`` - Custom localized court letters 
 * ``courts`` - mix court images
 * ``suits`` - Mix suit/court images
 * ``suitcolor`` - Change SHDC suit color
@@ -171,7 +171,7 @@ What if cardts could:
 * ``borderradius`` - set card border radius
 * ``borderline`` - set card border line thickness
 
-# 🔧 ``letters`` - Custom localized suit letters 
+# 🔧 ``letters`` - Custom localized court letters 
 
 default: AJQK 
 
