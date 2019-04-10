@@ -24,13 +24,13 @@
 
 # Why another SVG playing card
 
-A 'Hello World!' App with Framework **X** used  **95 KiloBytes** ... to display 12 characters.
-
-Something did not feel right!
-
 I learned to [PEEK and POKE](https://en.wikipedia.org/wiki/PEEK_and_POKE) at the age of 10 on a [TRS-80](https://en.wikipedia.org/wiki/TRS-80) and learned HTML (a bit late) at **25**  
 The ability to 'peek at' and learn from someone else's effort was fantastic.  
 In the past years 'Web Development' has become *For-Rocket-Scientists-Only*  
+
+A 'Hello World!' with Framework **X** took hours installing tools and used  **95 KiloBytes** ... to display 12 characters.
+
+Something did not feel right!
 
 **What happened to the days when all you needed were some HTML tags and a text-editor?**
 
