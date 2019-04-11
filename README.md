@@ -1,5 +1,5 @@
 
-# ``<CARD-T>`` - 52 playingcardts in **one** 63 KB Custom Element
+# ``<CARD-T>`` - 52 SVG playingcard(t)s in **one** 19 KB² Custom Element
 
 **This project uses modern browser technologies, use the latest Chrome or Firefox**
 
@@ -13,9 +13,9 @@
 
 * W3C Custom Element: ``<card-t> </card-t>``
 
-* SVG data for 52 playing cards - **500 KB** painstakingly slimmed to **148 KB**
+* SVG data for 52 playing cards - **500 KB** painstakingly slimmed
 
-* Total **gzip** file size: **63 KB creating 52 playingcardts:**
+* Total **gzip** file size: **19 KB² creating 52 playingcardts:**
 
 
 ![](https://i.imgur.com/sVahVJO.jpg)
@@ -38,8 +38,9 @@ Something did not feel right!
 
 Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 
-* one single file creates a ``<card-t>`` element
+* one single 19 KB² file creates a ``<card-t>`` element
 * attributes for configuration
+* 52 SVG playingcards
 * **no** external SVG images
 
 Feel free to PEEK around, and if you want to POKE submit an [issue](https://github.com/card-ts/playingcardts/issues/new).
@@ -53,6 +54,9 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 ````
 ¹ - Everyone uses the terms Custom Elements & Web Components interchangeably.  
     Strictly speaking Web Components are Custom Elements WITH shadow DOM
+
+² - 19 KB GZipped
+    And since it is card-game .. I cheated a bit ... but can you spot where?    
 ````
 
 <hr>
@@ -208,30 +212,6 @@ Rearrange SHDC court images to KJQ:
 
 ![](https://i.imgur.com/sw8hWDi.jpg)
 
-# 🔧 ``suits`` - Mix suit/court images
-
-default: 0123
-
-Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
-
-````HTML
-    <card-t suit=S rank=Queen suits=0000></card-t>
-    <card-t suit=H rank=Queen suits=0000></card-t>
-    <card-t suit=D rank=Queen suits=0000></card-t>
-    <card-t suit=C rank=Queen suits=0000></card-t>
-````
-
-Uses Spades court images for all 4 suits
-
-Yes, that 148 KB of SVG data could be reduced to 25%  (not in this version!)
-
-Who will notice all cards use the same court image?
-
-![](https://i.imgur.com/D9qFMP5.jpg)
-
-💡 The Diamond court image (suits=2222) is not suitable for Spades, Hearts and Clubs cards because the top-half of cards are rotated 180 degrees to create the bottom-half, and only the Diamond makes a valid image (see card center) when rotated 180 degrees
-
-![](https://i.imgur.com/t3jR5bz.jpg)
 
 # 🔧 ``backcolor`` - card backside color
 
@@ -336,28 +316,28 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 <hr>
 
-# How I reduced 500 KB SVG to 148 KB
+# How I reduced 500 KB SVG 
 
 All good open-source SVG playingcards available are high-precision ready for print. 
 
-In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**!!  ``<card-t>`` creates 52 cards in **63 KB**!
+In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**!!  ``<card-t>`` creates 52 cards in **19 KB**!
 
 * I started with the 550 KB for 52 CC-0 licensed cards from the [card generator by Adrian Kennard](https://www.me.uk/cards/)
 * reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)  
 (this causes some alignment 'errors' you only see viewing a court card full screen)
-* manually reduced details in the cards you don't see on a computer screen
+* spent some time in [Inkscape](https://inkscape.org/) reducing details you don't see on a computer screen
 * cut everything up in separate SVG paths
 * made redundant paths into single JS functions
-* the SVG data is now 148 KB , this can be made smaller with some more elbow grease using [Inkscape](https://inkscape.org/).
+* cleaned up some courts which (since ages) had the suit on the wrong? side
 * wrote a ``SVGcardt()`` function to create an IMG with SVG data
-* and cleaned up some courts which (since ages) had the suit on the wrong? side
+* and then I cheated...
 
 ![](https://i.imgur.com/9euOd0r.jpg)
 
 ### A note on data compression
 
-Using a [LZMA compressor](http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html) that **148** KB can be reduced to **55 KB**  
-You then need to transport it over HTTP as Base64 making it 67 KB  
+The SVG can be reduced more using a [LZMA compressor](http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html) 
+But HTTP requires Base64 encoding.  
 And the Browser needs to decompress the data which takes a hefty 200ms (and a 6.9KB decoder)
 
 Version 0 did LZMA de-compression and lazy loaded all 12 court images.
@@ -423,11 +403,46 @@ See F12 Network tab, ``data:image/svg`` cardts take **0 milliseconds** download 
 
 I haven't found a good Joker Card design yet, if you have one let me know
 
+# 🃏 Where did you cheat?
+
+Look closely at the court cards.... 
+
+# 🔧 ``suits`` - Mix suit/court images
+
+default: 1111
+
+Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
+
+````HTML
+    <card-t suit=S rank=Queen suits=1111></card-t>
+    <card-t suit=H rank=Queen suits=1111></card-t>
+    <card-t suit=D rank=Queen suits=1111></card-t>
+    <card-t suit=C rank=Queen suits=1111></card-t>
+````
+
+Uses Hearts court images for all 4 suits
+
+**Who noticed me cheating?**
+
+In the 19 KB version all Jacks, Queens and Kings courts use the same (Hearts) court SVG image with slightly different colors.
+
+![](https://i.imgur.com/JI1g5Ec.jpg)
+
 <hr>
 
 [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
+
+# The full version
+
+The Full Version with 12 different court images adds 44 KB of SVG  
+
+Making it 63 KB (GZipped)
+
+is available here: TODO_LINK_TO_BE_DECIDED
+
+
 
 # Challenge - built a game using ``<card-t>``
 
@@ -510,6 +525,8 @@ https://github.com/zachwaugh/Helveticards
     * (2017) No frameworks/library No drag drop, PNG images for courts
     https://bfa.github.io/solitaire-js/  
     https://github.com/bfa/solitaire-js
+
+* Poker API - https://rapidapi.com/danielamitay/api/poker-odds
 
 #### SVG
 * SVGO GUI - https://jakearchibald.github.io/svgomg/
