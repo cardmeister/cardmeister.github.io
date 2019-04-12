@@ -1,15 +1,15 @@
 
-# ``<CARD-T>`` - 52 SVG playingcard(t)s in **one** 19 KB² Custom Element
+# 52 SVG playingcards in **one** 19 KB² Custom Element ``<CARD-T>``
 
 **This project uses modern browser technologies, use the latest Chrome or Firefox**
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
-## The **single file** [element.card-t.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) is:
+## The **single file** [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is:
 
 * W3C Custom Element: ``<card-t> </card-t>``
 
@@ -56,12 +56,12 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
     Strictly speaking Web Components are Custom Elements WITH shadow DOM
 
 ² - 19 KB GZipped
-    And since it is card-game .. I cheated a bit ... but can you spot where?    
+    It is a card-game .. I cheated ... but can you spot where?  (explained in documentation below)
 ````
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -112,7 +112,7 @@ Since ``<card-t>`` only creates a single IMG **no shadow-DOM is used**, thus IMG
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -148,7 +148,7 @@ What if cardts could:
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -312,7 +312,7 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -379,17 +379,19 @@ This project was about stuffing everything into **one** file.
 
 ### 🃏 Where is the NPM installer?  
 
-If you need an installer to copy **one** file: [element.card-t.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js)  
+If you need an installer to copy **one** file: [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js)  
 You might find a better career flipping burgers at McDonalds.
 
 ### 🃏 Where is the ``SVGcardt()`` source?
 
-The ``<card-t>`` Custom Element declaration in [element.card-t.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) is Open Source.  
+**You do NOT need the ``SVGcardt()`` _Source Code_ to use ``<card-t>`` in applications**
+
+The ``<card-t>`` Custom Element declaration in [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is Open Source.  
 You can rename ``<card-t>`` to anything you want and customize the Custom Element to your liking.
 
-The SVG creation code took some blood, sweat and tears and is closed source for now. 
-
-**You do NOT need the ``SVGcardt()`` _Source Code_ to use ``<card-t>`` in applications**
+The SVG creation code took some blood, sweat and tears and is closed source for now.  
+It needs some refactoring and documentation before this is public ready.  
+Watch this GitHub repo and you will know when it becomes available.
 
 ### 🃏 Are cardts really created in the browser/not downloaded?
 
@@ -424,25 +426,24 @@ Uses Hearts court images for all 4 suits
 
 **Who noticed me cheating?**
 
-In the 19 KB version all Jacks, Queens and Kings courts use the same (Hearts) court SVG image with slightly different colors.
+⚡⚡ all Jacks, Queens and Kings courts use the same (JQK Hearts) court image with slightly different colors.
+
+## Cheating Queens:
 
 ![](https://i.imgur.com/JI1g5Ec.jpg)
 
+## The full ``<card-t>`` version with 12 **different** SVG courts:
+
+![](https://i.imgur.com/qjMyXsB.jpg)
+
+The Full Version **element.card-t.full.js** with 12 different court images adds **110 KB** SVG data  
+
+Making it 63 KB GZipped
+
+# See: [index.html?full](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
+
+
 <hr>
-
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
-
-<hr>
-
-# The full version
-
-The Full Version with 12 different court images adds 44 KB of SVG  
-
-Making it 63 KB (GZipped)
-
-is available here: TODO_LINK_TO_BE_DECIDED
-
-
 
 # Challenge - built a game using ``<card-t>``
 
@@ -486,7 +487,7 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/[source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js)) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -519,6 +520,8 @@ https://github.com/zachwaugh/Helveticards
 * PNG card background image = https://bfa.github.io/solitaire-js/img/card_back_bg.png
 * [Google Images playingcards](https://www.google.com/search?q=old+52+cards&tbm=isch&tbs=rimg:CQvmkLdr_14McIjgYvxv84K-eaVXk-0nLcJFF3OanFgQriEXAiZjXEp9zM2hJ2fYh1rUdAmXW8kROLnUlky-kQYhn7SoSCRi_1G_1zgr55pEZomC09EhU8oKhIJVeT7SctwkUURF50UBpuCFl0qEgnc5qcWBCuIRRGBNOuJrmaMECoSCcCJmNcSn3MzESHqEP4mrUbzKhIJaEnZ9iHWtR0R9s1Zi32qMiwqEgkCZdbyRE4udRFP-xbZjpVQIioSCSWTL6RBiGftEX2c9kdcxbzu&tbo=u&sa=X&ved=2ahUKEwjCgrW0x6nhAhXCDOwKHbHpDiIQ9C96BAgBEBs&biw=1920&bih=947&dpr=1#imgrc=GL8b_OCvnml8hM:)
 
+* DeckOfCards API - http://deckofcardsapi.com/
+
 * Solitaire
     * Redux,React, the lot https://codepen.io/HunorMarton/details/rwpGXj
 
@@ -531,6 +534,8 @@ https://github.com/zachwaugh/Helveticards
 #### SVG
 * SVGO GUI - https://jakearchibald.github.io/svgomg/
 * http://www.petercollingridge.appspot.com/svg-editor
+* https://tympanus.net/codrops/2019/01/15/svg-filters-101/
+
 
 #### LZMA compression
 * http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html

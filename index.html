@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     <title>CARD-TS</title>
-    <script async src='element.card-t.js'></script>
+    <!-- <script async src='element.card-t.js'></script> -->
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -121,7 +121,7 @@
     <!-- <div style="width:70vh">
         <card-t rank=Q suit=H></card-t>
     </div> -->
-    <h1>52 SVG playingcardts in one 19 KB Custom Element: &lt;card-t&gt;️</h1>
+    <h1>52 SVG playingcardts in one <span id=ElementGZsize>19</span> KB Custom Element &lt;card-t&gt;️</h1>
 
     <div id=DeckContainer class="grid">
         <div id=Deck class="grid">
@@ -190,45 +190,55 @@
         <card-t suit=S rank=Queen suits=0000></card-t>
         <card-t suit=H rank=Queen suits=0000></card-t>
         <card-t suit=D rank=Queen suits=0000></card-t>
-        <card-t suit=C rank=Queen suits=0000></card-t>
+        <card-t cid=qc suits=0000></card-t>
     </div>
     <div id=shuffled class="grid">
 
     </div>
 
     <script>
-        let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
-
-        let cardt = (suitname, rankname) => {
-            let card = document.createElement(`card-t`);
-            let setAttr = (x, v = '') => card.setAttribute(x, v);
-            setAttr('suit', suitname.toLowerCase());
-            setAttr('rank', rankname);
-            //setAttr('draggable');
-            try {
-                setAttr(rankname);  // set rank and suitnames as attribute for easier CSS selectors
-                setAttr(suitname);
-            } catch (e) {
-                //disregard invalid attribute names
-            }
-            setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');
-
-            return card;
+        const scriptTag = document.createElement('script');
+        scriptTag.type = 'text/javascript';
+        let element_version = 'min';
+        if (document.location.href.includes('full')) {
+            ElementGZsize.innerText = 63;
+            element_version = 'full';
         }
+        scriptTag.src = 'element.card-t.' + element_version + '.js';
+        scriptTag.onload = () => {
+            let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
+            let cardt = (suitname, rankname) => {
+                let card = document.createElement(`card-t`);
+                let setAttr = (x, v = '') => card.setAttribute(x, v);
+                setAttr('suit', suitname.toLowerCase());
+                setAttr('rank', rankname);
+                //setAttr('draggable');
+                try {
+                    setAttr(rankname);  // set rank and suitnames as attribute for easier CSS selectors
+                    setAttr(suitname);
+                } catch (e) {
+                    //disregard invalid attribute names
+                }
+                setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');
 
-        let cards = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
-            .map(suitname => 'ace,two,three,four,five,six,seven,eight,nine,ten,jack,queen,king'.split`,`
-                .map(rankname => cardt(suitname, rankname)))
-            .flat();
-        Deck.append(...cards);
+                return card;
+            }
 
-        document.body.style.display = 'initial';
-        document.body.addEventListener('click', evt => showAttributes.disabled = !showAttributes.disabled);
-        [...document.querySelectorAll('#Deck card-t')].forEach(cardt => {
-            cardt.addEventListener('mouseover', evt => {
-                BigCardt.firstChild.src = cardt.firstChild.src
+            let cards = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
+                .map(suitname => 'ace,two,three,four,five,six,seven,eight,nine,ten,jack,queen,king'.split`,`
+                    .map(rankname => cardt(suitname, rankname)))
+                .flat();
+            Deck.append(...cards);
+
+            document.body.style.display = 'initial';
+            document.body.addEventListener('click', evt => showAttributes.disabled = !showAttributes.disabled);
+            [...document.querySelectorAll('#Deck card-t')].forEach(cardt => {
+                cardt.addEventListener('mouseover', evt => {
+                    BigCardt.firstChild.src = cardt.firstChild.src
+                });
             });
-        });
+        };
+        document.body.appendChild(scriptTag);
     </script>
     <a style="position:fixed;top:0;right:0" href="https://github.com/card-ts/playingcardts"><img width="149"
             height="149"
