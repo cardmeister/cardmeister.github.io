@@ -19,6 +19,10 @@
             margin: 1em;
         }
 
+        #BigQueens {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
         #DeckContainer {
             /* BigCardt on the right */
             grid-template-columns: 10fr 3fr;
@@ -125,10 +129,13 @@
 
         card-t:after {
             position: absolute;
-            top: 0;
-            left: 2px;
+            top: -20;
+            left: 0;
+            box-sizing: border-box;
+            padding: 1px;
+            margin: 0 auto;
             width: 100%;
-            background: pink;
+            background: #ffc107;
             font-size: 13px;
             border: 1px solid green;
             white-space: pre-wrap;
@@ -218,6 +225,12 @@
             <h3>That saves app. 75% of SVG data</h3>
         </div>
         <div id=MinCourts class="grid">
+        </div>
+        <div id=BigQueens class="grid">
+            <card-t cid=Qs suits=1111></card-t>
+            <card-t cid=Qh suits=1111></card-t>
+            <card-t cid=Qd suits=1111></card-t>
+            <card-t cid=Qc suits=1111></card-t>
         </div>
     </div>
 
