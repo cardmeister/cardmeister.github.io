@@ -1,5 +1,5 @@
 
-# 52 SVG playingcards in **one** 19 KB² Custom Element ``<CARD-T>``
+# 52 SVG playingcards in **one** 19KB² Custom Element``<CARD-T>``
 
 **This project uses modern browser technologies, use the latest Chrome or Firefox**
 
