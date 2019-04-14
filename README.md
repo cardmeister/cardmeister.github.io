@@ -1,6 +1,6 @@
 # pre-release!
 
-## 52 SVG playingcards in **one** 19KB² Custom Element: ``<CARD-T>``
+## 52 SVG playingcards in **one** 18KB² Custom Element: ``<CARD-T>``
 
 ### No external SVG files! All SVG is created by the Custom Element
 
@@ -18,7 +18,7 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 * SVG data for 52 playing cards - **500 KB** painstakingly slimmed
 
-* Total **gzip** file size: **19 KB² creating 52 playingcardts:**
+* Total **gzip** file size: **18 KB² creating 52 playingcardts:**
 
 
 ![](https://i.imgur.com/sVahVJO.jpg)
@@ -41,7 +41,7 @@ Something did not feel right!
 
 Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 
-* one single 19 KB² file creates a ``<card-t>`` element
+* one single 18 KB² file creates a ``<card-t>`` element
 * attributes for configuration
 * 52 SVG playingcards
 * **no** external SVG images
@@ -58,7 +58,7 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 ¹ - Everyone uses the terms Custom Elements & Web Components interchangeably.  
     Strictly speaking Web Components are Custom Elements WITH shadow DOM
 
-² - 19 KB GZipped
+² - 18 KB GZipped
     It is a card-game .. I cheated ... but can you spot where?  (explained in documentation below)
 ````
 
@@ -81,7 +81,7 @@ Like the HTML5 ``<video>`` tag, the Custom Element ``<card-t>`` abstracts comple
 ```html
   <html>
     <head>
-        <script src='element.card-t.js'></script>
+        <script src='element.card-t.full.js'></script>
     </head>
     <body>
         <card-t rank=Queen suit=Hearts></card-t>
@@ -99,8 +99,6 @@ and makes it easy to add HTML Drag-Drop functionality.
 ### How it looks in F12 Developer Tools:
 
 ![](https://i.imgur.com/7csZylT.jpg)
-
-💡 Drag a card image to your desktop to see the created SVG 
 
 Since ``<card-t>`` only creates a single IMG **no shadow-DOM is used**, thus IMG can be styled with **global CSS**.
 
@@ -323,7 +321,7 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 All good open-source SVG playingcards available are high-precision ready for print. 
 
-In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**!!  ``<card-t>`` creates 52 cards in **19 KB**!
+In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**!!  ``<card-t>`` creates 52 cards in **18 KB**!
 
 * I started with the 550 KB for 52 CC-0 licensed cards from the [card generator by Adrian Kennard](https://www.me.uk/cards/)
 * reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)  
@@ -480,10 +478,10 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 ## Here is some help to create the foundation for the SHDC foundation piles:
 
 ````html
-    <card-t foundation=0 ></card-t>
-    <card-t foundation=H ></card-t>
-    <card-t foundation=2 ></card-t>
-    <card-t foundation=C ></card-t>
+    <card-t cid=F0 ></card-t>
+    <card-t cid=FH ></card-t>
+    <card-t cid=F2 ></card-t>
+    <card-t cid=FC ></card-t>
 ````
 
 ![](https://i.imgur.com/F5v8Ud7.jpg)
@@ -538,7 +536,7 @@ https://github.com/zachwaugh/Helveticards
 * SVGO GUI - https://jakearchibald.github.io/svgomg/
 * http://www.petercollingridge.appspot.com/svg-editor
 * https://tympanus.net/codrops/2019/01/15/svg-filters-101/
-
+* SVG minification and GZIP - https://blog.usejournal.com/of-svg-minification-and-gzip-21cd26a5d007
 
 #### LZMA compression
 * http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html
