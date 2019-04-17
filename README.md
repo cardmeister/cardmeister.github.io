@@ -162,6 +162,7 @@ What if cardts could:
 * 'court' is UK English for 'face' US English. So Jack, Queen and King are **court**-cards (courts)
 * SHDC is short for Spades-Hearts-Diamonds-Clubs 
 * 0123 are Array indexes 
+* cid = card id : As = Ace of Spades , Td = Ten of Diamonds
 
 **``<card-t>`` takes a sh*tload of attributes you can play with:**
 
@@ -220,7 +221,7 @@ default: #E55 (red)
 
 ````html
     <card-t rank=0 backcolor="red"  ></card-t>
-    <card-t rank=0 backcolor="green"></card-t>
+    <card-t cid=00                  ></card-t>
     <card-t rank=0 backcolor="#44F" backtext="COPYRIGHT" backtextcolor=black></card-t>
 ````
 
@@ -331,7 +332,7 @@ In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts]
 * made redundant paths into single JS functions
 * cleaned up some courts which (since ages) had the suit on the wrong? side
 * wrote a ``SVGcardt()`` function to create an IMG with SVG data
-* and then I cheated...
+* Re-drawing the Heart pips on the Jack, I saw an opportunity to cheat and save 75% of SVG data (see FAQ)
 
 ![](https://i.imgur.com/9euOd0r.jpg)
 
@@ -400,6 +401,8 @@ See F12 Network tab, ``data:image/svg`` cardts take **0 milliseconds** download 
 
 ![](https://i.imgur.com/ieN7gvc.jpg)
 
+Note: FireFox is noticeably slower in drawing the cards.
+
 ### 🃏 Where is the Joker?
 
 😉 Causing havoc in Gotham City?!
@@ -412,7 +415,7 @@ Look closely at the court cards....
 
 # 🔧 ``suits`` - Mix suit/court images
 
-default: 1111
+default: 0123  (defaults to 1111 in the 18 KB version)
 
 Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
