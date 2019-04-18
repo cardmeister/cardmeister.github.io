@@ -14,7 +14,7 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 ## The **single file** [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is:
 
-* W3C Custom Element: ``<card-t> </card-t>``
+* [W3C Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements): ``<card-t> </card-t>``
 
 * SVG data for 52 playing cards - **500 KB** painstakingly slimmed
 
@@ -166,6 +166,9 @@ What if cardts could:
 
 **``<card-t>`` takes a sh*tload of attributes you can play with:**
 
+See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/)
+
+* ``cid`` - Standard Card ID notation: ``cid=Qh`` = Queen of Hearts
 * ``letters`` - Custom localized court letters 
 * ``courts`` - mix rank/courts images
 * ``suits`` - Mix suit/court images
@@ -176,6 +179,28 @@ What if cardts could:
 * ``bordercolor`` - set card border color
 * ``borderradius`` - set card border radius
 * ``borderline`` - set card border line thickness
+* ``backtext``  - card backside text
+* ``backtextcolor`` - card backside color
+* ``svg`` - (undocumented) add attributes to SVG definition
+* ``pips`` - (undocumented) custom suitsymbols (pips) on number cards
+
+# 🔧 ``cid`` - standard card id notation
+
+````HTML
+    <card-t cid=As></card-t>
+    <card-t cid=5d></card-t>
+    <card-t cid=Tc></card-t>
+    <card-t cid=Jh></card-t>
+    <card-t cid=Qc></card-t>
+````
+
+💡 overrules ``rank=`` and ``suit=`` notation
+
+💡 NOT case sensitive ``qH`` === ``Qh``
+
+💡 ``10H`` is processed as ``TH``
+
+![](https://i.imgur.com/lI8sa0p.jpg)
 
 # 🔧 ``letters`` - Custom localized court letters 
 
@@ -549,4 +574,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-18 16:09 
+Published: 2019-04-18 16:25 
