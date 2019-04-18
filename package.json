@@ -1,0 +1,14 @@
+{
+  "name": "playingcardts",
+  "version": "1.0.0",
+  "description": "52 SVG playingcards in one Custom Element: card-t",
+  "main": "index.html",
+  "keywords":[
+    "javascript",
+    "custom-element",
+    "playingcard"
+  ],
+  "repository": "https://github.com/card-ts/playingcardts.git",
+  "author": "Danny Engelman <Danny@Engelman.nl>",
+  "license": "CC0"
+}
