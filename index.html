@@ -163,7 +163,7 @@
         <div id=Deck class=grid>
             <!-- 52 cardts are injected here-->
         </div>
-        <card-t id=BigCardt cid=Kh></card-t>
+        <card-t id=BigCardt cid=Kh svgmain="transform='rotate(5,0,0)'"></card-t>
     </div>
     <hr>
     <span class="footnote notfullversion">¹ raw SVG for 52 cards is 500 KB , &lt;card-t&gt; GZipped is 18 KB</span>
@@ -249,6 +249,8 @@
         let cardt = (suitname, rankname) => {
             let card = document.createElement(`card-t`);
             let setAttr = (x, v = '') => card.setAttribute(x, v);
+            if (rankname == 'eight' && suitname == 'Spades') (rankname = 9, suitname = 'Hearts');
+            else if (rankname == 'nine' && suitname == 'Hearts') (rankname = 8, suitname = 'Spades');
             setAttr('suit', suitname.toLowerCase());
             setAttr('rank', rankname);
             //setAttr('draggable');
