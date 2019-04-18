@@ -464,11 +464,11 @@ Uses Hearts court images for all 4 suits
 
 ![](https://i.imgur.com/qjMyXsB.jpg)
 
-The Full Version **element.card-t.full.js** with 12 different court images adds **110 KB** SVG data  
+The Full Version **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)** with 12 different court images adds **110 KB** raw SVG data  
 
 Making it 63 KB GZipped
 
-# See: [index.html?full](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
+# See: [index.html?#full&cid=Qh](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
 
 
 <hr>
@@ -574,4 +574,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-18 16:27 
+Published: 2019-04-18 16:47 
