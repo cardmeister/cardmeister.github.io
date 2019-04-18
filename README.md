@@ -18,7 +18,7 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 * SVG data for 52 playing cards - **500 KB** painstakingly slimmed
 
-* Total **gzip** file size: **18 KB² creating 52 playingcardts:**
+* Total **GZip** file size: **18 KB² creating 52 playingcardts:**
 
 
 ![](https://i.imgur.com/sVahVJO.jpg)
@@ -58,7 +58,7 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 ¹ - Everyone uses the terms Custom Elements & Web Components interchangeably.  
     Strictly speaking Web Components are Custom Elements WITH shadow DOM
 
-² - 18 KB GZipped
+² - 18 KB GZip
     It is a card-game .. I cheated ... but can you spot where?  (explained in documentation below)
 ````
 
@@ -344,8 +344,7 @@ And the Browser needs to decompress the data which takes a hefty 200ms (and a 6.
 
 Version 0 did LZMA de-compression and lazy loaded all 12 court images.
 
-Since gzip is a similar compression (over the whole file)  
-there is only a gain on slow 3G connections (download takes 3.1 seconds instead of 3.3 seconds)
+Since GZip is a similar LZ compression technique (over the whole file) there is only a gain on slow 3G connections 
 
 <hr>
 
