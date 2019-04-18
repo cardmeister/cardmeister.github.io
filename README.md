@@ -549,6 +549,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-2019-04-18 15:59 
-2019-04-18 16:00 
-2019-04-18 16:01 
+Published: 2019-04-18 16:09 
