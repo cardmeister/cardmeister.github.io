@@ -126,6 +126,8 @@ Since ``<card-t>`` only creates a single IMG **no shadow-DOM is required/used**,
 
 # My next challenge: a Solitaire game in Custom Elements
 
+I have the selection and drag/drop part nearly done: https://card-ts.github.io/Solitaire/
+
 ```html
   <cardts-game>
     <cardts-deck type="frenchdeck"></cardts-deck>
@@ -598,4 +600,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 13:09 
+Published: 2019-04-19 17:26 
