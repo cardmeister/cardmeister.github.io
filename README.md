@@ -348,15 +348,19 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 <hr>
 
-# How I reduced 500 KB SVG 
+# SVG cards are huge
 
 All good open-source SVG playingcards available are high-precision ready for print. 
 
-In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts 1_13.svg](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**  
+In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the **single** [King of Hearts 1_13.svg](https://deck-of-cards.js.org/faces/1_13.svg) **card is 69 KB**  
 
-!()[https://i.imgur.com/WEgysvp.jpg]
+![](https://i.imgur.com/WEgysvp.jpg)
 
 ### ``<card-t>`` creates all 52 cards in **18 KB**
+
+![](https://i.imgur.com/Uu9E853.jpg)
+
+## How I reduced 500 KB SVG 
 
 * I started with the 550 KB for 52 CC-0 licensed cards from the [card generator by Adrian Kennard](https://www.me.uk/cards/)
 * reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)  
@@ -584,4 +588,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 12:39 
+Published: 2019-04-19 12:43 
