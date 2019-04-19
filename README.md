@@ -10,6 +10,8 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
+Used in: https://card-ts.github.io/Solitaire/
+
 <hr>
 
 ![](https://i.imgur.com/Uu9E853.jpg)
@@ -600,4 +602,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 17:26 
+Published: 2019-04-19 17:38 
