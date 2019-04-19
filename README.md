@@ -12,6 +12,8 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 <hr>
 
+![](https://i.imgur.com/Uu9E853.jpg)
+
 ## The **single file** [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is:
 
 * [W3C Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements): ``<card-t> </card-t>``
@@ -588,4 +590,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 12:43 
+Published: 2019-04-19 12:45 
