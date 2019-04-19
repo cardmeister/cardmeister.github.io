@@ -20,8 +20,7 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 * Total **GZip** file size: **18 KB² creating 52 playingcardts:**
 
-
-![](https://i.imgur.com/sVahVJO.jpg)
+![](https://i.imgur.com/bsYbx1q.jpg)
 
 <hr>
 
@@ -577,4 +576,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 12:24 
+Published: 2019-04-19 12:27 
