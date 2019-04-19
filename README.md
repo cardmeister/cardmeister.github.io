@@ -2,7 +2,7 @@
 
 ## 52 SVG playingcards in **one** 18KB² Custom Element: ``<CARD-T>``
 
-### No external SVG files! All SVG is created by the Custom Element
+#### No Frameworks, No Dependencies, No External SVG files! All SVG is created by the Custom Element
 
 This project uses modern browser technologies, use the latest Chrome or Firefox
 
@@ -100,7 +100,9 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 ![](https://i.imgur.com/7csZylT.jpg)
 
-Since ``<card-t>`` only creates a single IMG **no shadow-DOM is used**, thus IMG can be styled with **global CSS**.
+### Styling ``<card-t>`` with CSS:
+
+Since ``<card-t>`` only creates a single IMG **no shadow-DOM is required/used**, thus IMG can be styled with **global CSS**:
 
 ```css
     [rank="queen"] img {
@@ -164,7 +166,7 @@ What if cardts could:
 * 0123 are Array indexes 
 * cid = card id : As = Ace of Spades , Td = Ten of Diamonds
 
-**``<card-t>`` takes a sh*tload of attributes you can play with:**
+### ``<card-t>`` takes a sh*tload of attributes you can play with:
 
 See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/)
 
@@ -181,8 +183,8 @@ See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playin
 * ``borderline`` - set card border line thickness
 * ``backtext``  - card backside text
 * ``backtextcolor`` - card backside color
-* ``svg`` - (undocumented) add attributes to SVG definition
-* ``pips`` - (undocumented) custom suitsymbols (pips) on number cards
+* ``svg`` - (undocumented/under development) add attributes to main SVG definition (eg: svg="transform='rotate(5,5,5)'")
+* ``pips`` - (undocument/under development) custom suitsymbols (pips) on number cards
 
 # 🔧 ``cid`` - standard card id notation
 
@@ -355,19 +357,19 @@ In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts]
 * spent some time in [Inkscape](https://inkscape.org/) reducing details you don't see on a computer screen
 * cut everything up in separate SVG paths
 * made redundant paths into single JS functions
-* cleaned up some courts which (since ages) had the suit on the wrong? side
+* cleaned up Spades court which (since ages?) had the suit on the wrong? side
 * wrote a ``SVGcardt()`` function to create an IMG with SVG data
-* Re-drawing the Heart pips on the Jack, I saw an opportunity to cheat and save 75% of SVG data (see FAQ)
+* Re-drawing the Heart pips on the Jack, I saw an opportunity to cheat and save 70% of SVG data (see FAQ)
 
 ![](https://i.imgur.com/9euOd0r.jpg)
 
 ### A note on data compression
 
-The SVG can be reduced more using a [LZMA compressor](http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html) 
+The SVG can be reduced more using a [LZMA compressor](http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html)  
 But HTTP requires Base64 encoding.  
 And the Browser needs to decompress the data which takes a hefty 200ms (and a 6.9KB decoder)
 
-Version 0 did LZMA de-compression and lazy loaded all 12 court images.
+The first PoC did LZMA de-compression and lazy loaded all 12 court images.
 
 Since GZip is a similar LZ compression technique (over the whole file) there is only a gain on slow 3G connections 
 
@@ -379,7 +381,7 @@ Since GZip is a similar LZ compression technique (over the whole file) there is 
 
 A Custom Element requires its own [Namespace](https://www.webcomponents.org/community/articles/how-should-i-name-my-element), so you are stuck to something with a - hyphen.
 
-You can create 52 Custom Elements (extended from ``<card-t>``):
+You can create 52 Custom Elements (extend from ``<card-t>``):
 
 ````html
   <queen-of-hearts></queen-of-hearts>
@@ -387,7 +389,8 @@ You can create 52 Custom Elements (extended from ``<card-t>``):
   ...
 ````
 
-But there is little value as you can not use **partial** Selectors for tag names.  
+But there is little value as you can not use **partial** Selectors for tag names.
+
 To select all Spades you still need attributes:
 
 ````html
@@ -466,7 +469,7 @@ Uses Hearts court images for all 4 suits
 
 The Full Version **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)** with 12 different court images adds **110 KB** raw SVG data  
 
-Making it 63 KB GZipped
+Making it 61 KB GZipped
 
 # See: [index.html?#full&cid=Qh](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
 
