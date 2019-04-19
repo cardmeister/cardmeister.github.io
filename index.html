@@ -156,7 +156,8 @@
             padding: 1px;
             margin: 0 auto;
             width: 100%;
-            background: #ffc107;
+            background: orange;
+            color: black;
             font-size: 13px;
             border: 1px solid green;
             white-space: pre-wrap;
@@ -168,7 +169,7 @@
 </head>
 
 <body class="greencloth">
-    <h1>52 SVG playingcardts in one <span id=ElementGZsize>18
+    <h1>52 SVG playingcards in one <span id=ElementGZsize>18
         </span>KB<span class=notfullversion>¹</span> Custom
         Element &lt;card-t&gt;️</h1>
     <h3>No Frameworks, No Dependencies, No external SVG files! All SVG is created by the Custom Element </h3>
@@ -295,15 +296,15 @@
         </div>
     </a>
     <script>
+        //load min or full version dynamically in a script tag
         const scriptTag = document.createElement('script');
+
+        //create a card-t element
         let cardt = (suitname, rankname) => {
             let card = document.createElement(`card-t`);
             let setAttr = (x, v = '') => card.setAttribute(x, v);
-            if (rankname == 'eight' && suitname == 'Spades') (rankname = 9, suitname = 'Hearts');
-            else if (rankname == 'nine' && suitname == 'Hearts') (rankname = 8, suitname = 'Spades');
             setAttr('suit', suitname.toLowerCase());
             setAttr('rank', rankname);
-            //setAttr('draggable');
             try {
                 setAttr(rankname);  // set rank and suitnames as attribute for easier CSS selectors
                 setAttr(suitname);
@@ -313,6 +314,7 @@
             setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');
             return card;
         }
+        //inject cid cards in DOM element
         let injectCardts = (element, settings = {}) => {
             let cids = ['s', 'h', 'd', 'c'].map(suit => ['J', 'Q', 'K'].map(rank => rank + suit)).flat();
             element.append(...cids.map(cid => {
@@ -322,53 +324,61 @@
                 return card;
             }));
         }
+
+        //dynamically load min or full version
         scriptTag.type = 'text/javascript';
         let element_version = 'min';
         if (document.location.href.includes('full')) {
-            ElementGZsize.innerText = 61;
+            ElementGZsize.innerText = 61;//replace 18 KB in span
             element_version = 'full';
         }
         scriptTag.src = 'element.card-t.' + element_version + '.js';
         scriptTag.onload = () => {
             console.log('loaded card-t element', scriptTag.src);
 
-            // let html = HTMLcode.innerHTML.split`--`[1];
-            // HTMLcode.innerHTML = "";
-            // HTMLcode.appendChild(document.createTextNode(html));
-
             let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
 
+            //create 52 cards-t elements
             let cards = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
                 .map(suitname => 'ace,two,three,four,five,six,seven,eight,nine,ten,jack,queen,king'.split`,`
                     .map(rankname => cardt(suitname, rankname)))
-                .flat();
+                .flat();//flatten array
+
+            //add cards to the DOM
             Deck.append(...cards);
+
+            //house keeping for showing full version
             if (element_version == 'full') {
                 fullversion.disabled = false;
                 injectCardts(FullCourts);
                 injectCardts(MinCourts, { suits: '1111' });
             }
-            if (document.location.href.includes('cid')) {
-                BigCardt.setAttribute('cid', document.location.href.split('cid=')[1]);
-            }
 
+            //if cid URL parameter defined show as bigcard
+            if (document.location.href.includes('cid')) BigCardt.setAttribute('cid', document.location.href.split('cid=')[1]);
+
+            // on every click show/hide attributes style
             document.body.addEventListener('click', evt => showAttributes.disabled = !showAttributes.disabled);
+
+            //for every card in the Deck show the card big
             [...document.querySelectorAll('#Deck card-t')].forEach(cardt => {
                 cardt.addEventListener('mouseover', evt => {
                     BigCardt.firstChild.src = cardt.firstChild.src
                 });
             });
+            //show body after all is doen
             document.body.style.visibility = 'initial';
             console.log('index.html loaded');
         };
         document.body.appendChild(scriptTag);
     </script>
-    <a style="position:fixed;top:0;right:0" href="https://github.com/card-ts/playingcardts"><img width="149"
-            height="149"
-            src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149"></a>
+    <!-- Fork me on GitHub label  -->
+    <a style="position:fixed;top:0;right:0" href="https://github.com/card-ts/playingcardts"><img width="160"
+            height="160"
+            src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=160%2C160"></a>
 
 </body>
 
 </html>
 <hr>
-Published: 2019-04-19 12:52 
+Published: 2019-04-19 13:09 
