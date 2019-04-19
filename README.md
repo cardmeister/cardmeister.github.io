@@ -277,10 +277,10 @@ default: #FFF
 Since the string is converted to an array the above can be written as:
 
 ````html
-    <card-t rank=1 suit=0 suitcolor="#FFF,"    cardcolor="red"       ></card-t>
-    <card-t rank=1 suit=1 suitcolor=",yellow," cardcolor="green"     ></card-t>
-    <card-t rank=1 suit=2 suitcolor=",,black," cardcolor="dodgerblue"></card-t>
-    <card-t rank=1 suit=3 suitcolor=",,,red"   cardcolor="yellow"    ></card-t>
+    <card-t rank=1 suit=0 suitcolor="#FFF,"   cardcolor="red"       ></card-t>
+    <card-t rank=1 suit=1 suitcolor=",yellow" cardcolor="green"     ></card-t>
+    <card-t rank=1 suit=2 suitcolor=",,black" cardcolor="dodgerblue"></card-t>
+    <card-t rank=1 suit=3 suitcolor=",,,red"  cardcolor="yellow"    ></card-t>
 ````
 
 💡 non-color values will break the SVG suit display
@@ -352,7 +352,11 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 All good open-source SVG playingcards available are high-precision ready for print. 
 
-In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**!!  ``<card-t>`` creates 52 cards in **18 KB**!
+In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the [King of Hearts 1_13.svg](https://deck-of-cards.js.org/faces/1_13.svg) **alone is 69 KB**  
+
+!()[https://i.imgur.com/WEgysvp.jpg]
+
+### ``<card-t>`` creates all 52 cards in **18 KB**
 
 * I started with the 550 KB for 52 CC-0 licensed cards from the [card generator by Adrian Kennard](https://www.me.uk/cards/)
 * reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)  
@@ -580,4 +584,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 12:31 
+Published: 2019-04-19 12:39 
