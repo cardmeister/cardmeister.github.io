@@ -8,7 +8,7 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -26,7 +26,7 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -69,7 +69,7 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -120,7 +120,7 @@ Since ``<card-t>`` only creates a single IMG **no shadow-DOM is required/used**,
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -156,7 +156,7 @@ What if cardts could:
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -346,7 +346,7 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 <hr>
 
@@ -486,6 +486,14 @@ Making it 61 KB GZipped
 
 # See: [index.html?#full&cid=Qh](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
 
+# Difference between the .min. and the .full. version
+
+**Use the Full version**,  
+the Min version can be used for low-bandwidth applications.
+
+* **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)**
+
+* [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js)
 
 <hr>
 
@@ -590,4 +598,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 12:45 
+Published: 2019-04-19 12:52 
