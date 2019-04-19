@@ -24,6 +24,10 @@ This project uses modern browser technologies, use the latest Chrome or Firefox
 
 <hr>
 
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+
+<hr>
+
 # Why another SVG playing card
 
 I learned to [PEEK and POKE](https://en.wikipedia.org/wiki/PEEK_and_POKE) at the age of 10 on a [TRS-80](https://en.wikipedia.org/wiki/TRS-80) and learned HTML (a bit late) at **25**  
@@ -576,4 +580,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 12:27 
+Published: 2019-04-19 12:31 
