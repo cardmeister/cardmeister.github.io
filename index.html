@@ -12,6 +12,14 @@
             color: whitesmoke;
         }
 
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: blue;
+            /* text-shadow: 1px 1px 1px white; */
+        }
+
         .grid {
             /* 13 ranks 4 suits */
             display: grid;
@@ -276,23 +284,25 @@
         <card-t rank=4 suit=0 bordercolor=hotpink borderradius=100% borderline=20></card-t>
         <card-t rank=13 suit=H bordercolor=gold borderradius=12 borderline=38></card-t>
     </div>
+    <hr>
     <div class=notfullversion>
         <h1>It is a card-trick... Can you spot how I cheated to get the GZip size down to <b>18 KB</b> ?</h1>
-        <h3>The full version is 61 KB GZipped. See the difference: <a href='?#full'>index.html?full</a></h3>
+        <h1>The full version is 61 KB GZipped. See the difference: <a href='?#full'>index.html?full</a></h1>
     </div>
     <a id="full">
-        <div class="fullversion">
-            <h1>61 KB for 12 different court images in the full version:</h1>
-            <div id=FullCourts class="grid">
-            </div>
-            <div>
-                <h1>In <a href=index.html>the 18 KB version</a> all courts use the Hearts suit image:</h1>
-                <h3>Saves app. 70% of SVG data</h3>
-            </div>
-            <div id=MinCourts class="grid">
-            </div>
-            <div id=BigQueens class="grid">
-                <!-- <card-t cid=Js suits=1111></card-t>
+        <!-- anchor for loading index.html#full version--></a>
+    <div class="fullversion">
+        <h1>61 KB for 12 different court images in the full version:</h1>
+        <div id=FullCourts class="grid">
+        </div>
+        <div>
+            <h1>In the <a href="index.html">18 KB version</a> all courts use the Hearts suit image:</h1>
+            <h3>Saves app. 70% of SVG data</h3>
+        </div>
+        <div id=MinCourts class="grid">
+        </div>
+        <div id=BigQueens class="grid">
+            <!-- <card-t cid=Js suits=1111></card-t>
                 <card-t cid=Jh suits=1111></card-t>
                 <card-t cid=Jd suits=1111></card-t>
                 <card-t cid=Jc suits=1111></card-t>
@@ -304,17 +314,15 @@
                 <card-t cid=Kh suits=1111></card-t>
                 <card-t cid=Kd suits=1111></card-t>
                 <card-t cid=Kc suits=1111></card-t> -->
-            </div>
         </div>
-    </a>
+    </div>
     <hr>
     <h1>extending 52 elements from &lt;card-t&gt;</h1>
     <h3>is possible, but only JS code can work with the .nodeName. There are no (CSS) Selectors for a partial nodeName
     </h3>
     <div id=Straight class=grid>
         <div>
-            <pre><code>
-&lt;ten-of-hearts>&lt;/ten-of-hearts>
+            <pre><code>&lt;ten-of-hearts>&lt;/ten-of-hearts>
 &lt;jack-of-hearts>&lt;/jack-of-hearts>
 &lt;queen-of-hearts>&lt;/queen-of-hearts>
 &lt;king-of-hearts>&lt;/king-of-hearts>
@@ -328,7 +336,8 @@
         <ace-of-hearts></ace-of-hearts>
     </div>
     <hr>
-    <h1>&lt;card-it&gt; is used in:</h1>
+    <h1>&lt;card-t&gt; is used in:</h1>
+    <h3><a href='https://card-ts.github.io/Solitaire/'>https://card-ts.github.io/Solitaire/</a></h3>
     <iframe id=Solitaire title="card-t Solitaire" src="https://card-ts.github.io/Solitaire/"></iframe>
     <script>
         //load min or full version dynamically in a script tag
@@ -428,4 +437,4 @@
 
 </html>
 <hr>
-Published: 2019-04-20 16:20 
+Published: 2019-04-20 16:43 
