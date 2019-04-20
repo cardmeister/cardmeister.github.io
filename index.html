@@ -1,10 +1,12 @@
+<!-- 52 SVG playingcards in one Custom Element <card-t> -->
 <html>
 
 <head>
     <meta charset="UTF-8">
 
     <title>CARD-TS</title>
-    <!-- <script async src='element.card-t.js'></script> -->
+    <!-- this.index.html loads .min. or .full. version dynamically  -->
+    <!-- <script src='element.card-t.full.js'></script> -->
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -17,7 +19,6 @@
         a:hover,
         a:active {
             color: blue;
-            /* text-shadow: 1px 1px 1px white; */
         }
 
         .grid {
@@ -59,7 +60,7 @@
         }
 
         #DeckContainer {
-            /* BigCardt on the right */
+            /* BigCardt 3fr on the right */
             grid-template-columns: 10fr 3fr;
             grid-template-rows: 1;
         }
@@ -97,7 +98,8 @@
         } */
 
         card-t img {
-            border: 3px solid var(--cardborder, transparent);
+            /*  can style IMG created by Custom Element */
+            border: 2px solid var(--cardborder, transparent);
             border-radius: 8px;
             /* filter: grayscale(); */
         }
@@ -123,29 +125,12 @@
         [jack]+[queen],
         [queen]+[king],
         [king]+[ace] {
+            /* two follows ace, three follows two etc. */
             /* testing card order and easy CSS selection */
             --cardborder: darkgreen;
             filter: unset;
         }
 
-        [three]+[two],
-        [four]+[three],
-        [five]+[four],
-        [six]+[five],
-        [seven]+[six],
-        [eight]+[seven],
-        [nine]+[eight],
-        [ten]+[nine],
-        [jack]+[ten],
-        [queen]+[jack],
-        [king]+[queen],
-        [ace]+[king] {
-            /* cards in Solitaire order */
-            --cardborder: green;
-        }
-    </style>
-
-    <style>
         .notfullversion {
             margin: 10vh 0;
         }
@@ -164,6 +149,7 @@
         }
     </style>
     <style id=showAttributes onload="this.disabled=true">
+        /* display used card-t attributes over card */
         card-t {
             position: relative;
         }
@@ -189,10 +175,12 @@
 </head>
 
 <body class="greencloth">
+
     <h1>52 SVG playingcards in one <span id=ElementGZsize>18
         </span>KB<span class=notfullversion>¹</span> Custom
         Element &lt;card-t&gt;️</h1>
-    <h3>No Frameworks, No Dependencies, No external SVG files! All SVG is created by the Custom Element </h3>
+    <h3>No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No external SVG files!&nbsp;&nbsp; All SVG is created by
+        the Custom Element </h3>
     <div id=DeckContainer class=grid>
         <div id=Deck class=grid>
             <!-- 52 cardts are injected here-->
@@ -201,6 +189,8 @@
     </div>
     <hr>
     <span class="footnote notfullversion">¹ raw SVG for 52 cards is 500 KB , &lt;card-t&gt; GZipped is 18 KB</span>
+
+    <!-- HR -------------------- -->
     <hr>
     <h1>Using &lt;card-t&gt;:</h1>
     <div id=Usage class="grid">
@@ -231,13 +221,15 @@
         <card-t suit=Clubs rank=Queen></card-t>
     </div>
     <br>
+
+
+    <!-- HR -------------------- -->
     <hr>
     <h1>&lt;card-t attribute&gt; configuration examples</h1>
     <h3>click to see Element Attributes - Details at: <a
             href='https://github.com/card-ts/playingcardts#card-t-attribute-syntax'>GitHub &lt;card-t&gt; attribute
             syntax</a>
     </h3>
-
     <div id=Configuration class="grid">
         <!-- row -->
         <card-t suit=Hearts rank=Jack courts=201></card-t>
@@ -284,6 +276,9 @@
         <card-t rank=4 suit=0 bordercolor=hotpink borderradius=100% borderline=20></card-t>
         <card-t rank=13 suit=H bordercolor=gold borderradius=12 borderline=38></card-t>
     </div>
+
+
+    <!-- HR -------------------- -->
     <hr>
     <div class=notfullversion>
         <h1>It is a card-trick... Can you spot how I cheated to get the GZip size down to <b>18 KB</b> ?</h1>
@@ -316,6 +311,9 @@
                 <card-t cid=Kc suits=1111></card-t> -->
         </div>
     </div>
+
+
+    <!-- HR -------------------- -->
     <hr>
     <h1>extending 52 elements from &lt;card-t&gt;</h1>
     <h3>is possible, but only JS code can work with the .nodeName. There are no (CSS) Selectors for a partial nodeName
@@ -335,19 +333,28 @@
         <king-of-hearts></king-of-hearts>
         <ace-of-hearts></ace-of-hearts>
     </div>
+
+
+    <!-- HR -------------------- -->
     <hr>
     <h1>&lt;card-t&gt; is used in:</h1>
     <h3><a href='https://card-ts.github.io/Solitaire/'>https://card-ts.github.io/Solitaire/</a></h3>
     <iframe id=Solitaire title="card-t Solitaire" src="https://card-ts.github.io/Solitaire/"></iframe>
+
+
+
+
+    <!-- SCRIPT -------------------- -->
+    <!-- executing after HTML/loaded -->
     <script>
         //load min or full version dynamically in a script tag
         const scriptTag = document.createElement('script');
 
-        //create a card-t element
+        //create single card-t element
         let cardt = (suitname, rankname) => {
-            let card = document.createElement(`card-t`);
+            let card = document.createElement(`card-t`);// Custom Element is declare in element.card-t.min/full.js
             let setAttr = (x, v = '') => card.setAttribute(x, v);
-            setAttr('suit', suitname.toLowerCase());
+            setAttr('suit', suitname);
             setAttr('rank', rankname);
             try {
                 setAttr(rankname);  // set rank and suitnames as attribute for easier CSS selectors
@@ -355,25 +362,15 @@
             } catch (e) {
                 //disregard invalid attribute names
             }
-            setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');
+            //setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');// set black/red attributes for easier CSS selection
             return card;
-        }
-        //inject cid cards in DOM element
-        let injectCardts = (element, settings = {}) => {
-            let cids = ['s', 'h', 'd', 'c'].map(suit => ['J', 'Q', 'K'].map(rank => rank + suit)).flat();
-            element.append(...cids.map(cid => {
-                let card = document.createElement(`card-t`);
-                card.setAttribute('cid', cid);
-                Object.keys(settings).map(attr => card.setAttribute(attr, settings[attr]));
-                return card;
-            }));
         }
 
         //dynamically load min or full version
         scriptTag.type = 'text/javascript';
         let element_version = 'min';
         if (document.location.href.includes('full')) {
-            ElementGZsize.innerText = 61;//replace 18 KB in span
+            ElementGZsize.innerText = 61;//replace 18 KB in span text
             element_version = 'full';
         }
         scriptTag.src = 'element.card-t.' + element_version + '.js';
@@ -401,12 +398,22 @@
                 .flat();//flatten array
 
             //add cards to the DOM
-            Deck.append(...cards);
+            Deck.append(...cards);// add 52 cards to DOM element Deck
 
             //house keeping for showing full version
             if (element_version == 'full') {
-                fullversion.disabled = false;
-                injectCardts(FullCourts);
+                fullversion.disabled = false;   // enable fullversion style
+                //inject cid cards in injectCardts array
+                let injectCardts = (element, settings = {}) => {
+                    let cids = ['s', 'h', 'd', 'c'].map(suit => ['J', 'Q', 'K'].map(rank => rank + suit)).flat();
+                    element.append(...cids.map(cid => {
+                        let card = document.createElement(`card-t`);
+                        card.setAttribute('cid', cid);
+                        Object.keys(settings).map(attr => card.setAttribute(attr, settings[attr]));
+                        return card;
+                    }));
+                }
+                injectCardts(FullCourts);                   // inject cardts in DOM element FullCourts
                 injectCardts(MinCourts, { suits: '1111' });
             }
 
@@ -414,7 +421,9 @@
             if (document.location.href.includes('cid')) BigCardt.setAttribute('cid', document.location.href.split('cid=')[1]);
 
             // on every click show/hide attributes style
-            document.body.addEventListener('click', evt => showAttributes.disabled = !showAttributes.disabled);
+            document.body.addEventListener('click', evt => {
+                if (evt.target.parentNode.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled
+            });
 
             //for every card in the Deck show the card big
             [...document.querySelectorAll('#Deck card-t')].forEach(cardt => {
@@ -422,7 +431,7 @@
                     BigCardt.firstChild.src = cardt.firstChild.src
                 });
             });
-            //show body after all is doen
+            //show body after all is done... FireFox does it different
             document.body.style.visibility = 'initial';
             console.log('index.html loaded');
         };
@@ -437,4 +446,4 @@
 
 </html>
 <hr>
-Published: 2019-04-20 16:43 
+Published: 2019-04-20 17:20 
