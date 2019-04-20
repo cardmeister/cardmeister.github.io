@@ -2,7 +2,7 @@
 
 ## 52 SVG playingcards in **one** 18KB² Custom Element: ``<CARD-T>``
 
-#### No Frameworks, No Dependencies, No External SVG files! All SVG is created by the Custom Element
+#### No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No External SVG files!&nbsp;&nbsp; All SVG is created by the Custom Element
 
 This project uses modern browser technologies, use the latest Chrome or Firefox
 
@@ -604,4 +604,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-20 17:20 
+Published: 2019-04-20 17:22 
