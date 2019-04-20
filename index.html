@@ -21,8 +21,20 @@
             margin: 5px;
         }
 
+        iframe {
+            display: block;
+            width: 80vw;
+            height: 80vh;
+            margin: 0 auto;
+        }
+
         #Usage {
             grid-template-columns: 8fr 2fr 2fr 2fr;
+            grid-template-rows: 1;
+        }
+
+        #Straight {
+            grid-template-columns: 8fr 2fr 2fr 2fr 2fr 2fr;
             grid-template-rows: 1;
         }
 
@@ -280,7 +292,7 @@
             <div id=MinCourts class="grid">
             </div>
             <div id=BigQueens class="grid">
-                <card-t cid=Js suits=1111></card-t>
+                <!-- <card-t cid=Js suits=1111></card-t>
                 <card-t cid=Jh suits=1111></card-t>
                 <card-t cid=Jd suits=1111></card-t>
                 <card-t cid=Jc suits=1111></card-t>
@@ -291,10 +303,33 @@
                 <card-t cid=Ks suits=1111></card-t>
                 <card-t cid=Kh suits=1111></card-t>
                 <card-t cid=Kd suits=1111></card-t>
-                <card-t cid=Kc suits=1111></card-t>
+                <card-t cid=Kc suits=1111></card-t> -->
             </div>
         </div>
     </a>
+    <hr>
+    <h1>extending 52 elements from &lt;card-t&gt;</h1>
+    <h3>is possible, but only JS code can work with the .nodeName. There are no (CSS) Selectors for a partial nodeName
+    </h3>
+    <div id=Straight class=grid>
+        <div>
+            <pre><code>
+&lt;ten-of-hearts>&lt;/ten-of-hearts>
+&lt;jack-of-hearts>&lt;/jack-of-hearts>
+&lt;queen-of-hearts>&lt;/queen-of-hearts>
+&lt;king-of-hearts>&lt;/king-of-hearts>
+&lt;ace-of-hearts>&lt;/ace-of-hearts>
+            </code></pre>
+        </div>
+        <ten-of-hearts></ten-of-hearts>
+        <jack-of-hearts></jack-of-hearts>
+        <queen-of-hearts></queen-of-hearts>
+        <king-of-hearts></king-of-hearts>
+        <ace-of-hearts></ace-of-hearts>
+    </div>
+    <hr>
+    <h1>&lt;card-it&gt; is used in:</h1>
+    <iframe id=Solitaire title="card-t Solitaire" src="https://card-ts.github.io/Solitaire/"></iframe>
     <script>
         //load min or full version dynamically in a script tag
         const scriptTag = document.createElement('script');
@@ -340,8 +375,20 @@
 
             //create 52 cards-t elements
             let cards = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
-                .map(suitname => 'ace,two,three,four,five,six,seven,eight,nine,ten,jack,queen,king'.split`,`
-                    .map(rankname => cardt(suitname, rankname)))
+                .map(suitname => 'Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King'.split`,`
+                    .map(rankname => {
+                        //create 52 Custom Elements: 'ace-of-spades','queen-of-hearts'
+                        let elementName = (rankname + '-of-' + suitname).toLowerCase();
+                        customElements.define(elementName, class extends customElements.get('card-t') {
+                            constructor() {
+                                super();
+                                this.setAttribute('suit', suitname);
+                                this.setAttribute('rank', rankname);
+                            }
+                        });
+                        //return single card-t element
+                        return cardt(suitname, rankname);
+                    }))
                 .flat();//flatten array
 
             //add cards to the DOM
@@ -381,4 +428,4 @@
 
 </html>
 <hr>
-Published: 2019-04-19 17:38 
+Published: 2019-04-20 16:20 
