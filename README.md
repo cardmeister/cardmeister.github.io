@@ -488,9 +488,11 @@ The Full Version **[element.card-t.full.js](https://github.com/card-ts/playingca
 
 Making it 61 KB GZipped
 
-# See: [index.html?#full&cid=Qh](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
+# See: [index.html?#full](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
 
 # Difference between the .min. and the .full. version
+
+Apart from the court images none.
 
 **Use the Full version**,  
 the Min version can be used for low-bandwidth applications.
@@ -602,4 +604,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-19 17:38 
+Published: 2019-04-20 16:20 
