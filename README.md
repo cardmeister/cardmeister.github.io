@@ -2,7 +2,7 @@
 
 #### No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No External SVG files!&nbsp;&nbsp; All SVG is created by the Custom Element
 
-This project uses modern browser technologies, use the latest Chrome or Firefox
+This project uses modern browser technologies, use the latest **Chrome or Firefox**
 
 <hr>
 
@@ -291,7 +291,7 @@ Since the string is converted to an array the above can be written as:
 
 💡 add attribute ``norank=true`` and only the big center suit remains
 
-![](https://i.imgur.com/uvGJKQX.jpg)
+![](https://i.imgur.com/kd0dOZ1.jpg)
 
 # 🔧 ``opacity`` - set card content opacity
 
@@ -602,4 +602,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-20 17:27 
+Published: 2019-04-20 20:58 
