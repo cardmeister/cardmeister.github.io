@@ -1,6 +1,4 @@
-# pre-release!
-
-## 52 SVG playingcards in **one** 18KB² Custom Element: ``<CARD-T>``
+## 52 SVG playingcards in **one** 18 KB² Custom Element: ``<CARD-T>``
 
 #### No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No External SVG files!&nbsp;&nbsp; All SVG is created by the Custom Element
 
@@ -28,7 +26,7 @@ Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -71,7 +69,7 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -122,7 +120,7 @@ Since ``<card-t>`` only creates a single IMG **no shadow-DOM is required/used**,
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -160,7 +158,7 @@ What if cardts could:
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -350,7 +348,7 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -545,7 +543,7 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 📄 [source](https://github.com/card-ts/playingcardts/blob/[source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js)) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -604,4 +602,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-20 17:22 
+Published: 2019-04-20 17:27 
