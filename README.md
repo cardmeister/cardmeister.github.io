@@ -117,9 +117,11 @@ and makes it easy to add HTML Drag-Drop functionality.
   <img is=ace-of-hearts>
 ```
 
+💡 declaration **must be** all lowercase!
+
 💡 you can NOT change the ``is=`` declaration after the DOM element is created.
 
-💡 you can use all attributes/properties documented below
+💡 on the (customized IMG) element you can use all attributes/properties documented below
 
 ![](https://i.imgur.com/MNoSbdo.jpg)
 
@@ -129,6 +131,15 @@ Since ``<card-t>`` only creates a single IMG **no shadow-DOM is required/used**,
 
 ```css
     [rank="queen"] img {
+       border: 3px solid greenyellow;
+       transform: rotate(15deg);
+    }
+```
+
+or for the customized IMG element:
+
+```css
+    img[is*="queen"] {
        border: 3px solid greenyellow;
        transform: rotate(15deg);
     }
@@ -418,7 +429,7 @@ Since GZip is a similar LZ compression technique (over the whole file) there is 
 
 A Custom Element requires its own [Namespace](https://www.webcomponents.org/community/articles/how-should-i-name-my-element), so you are stuck to something with a - hyphen.
 
-You can create 52 Custom Elements (extend from ``<card-t>``):
+You can create 52 Autonomous Custom Elements (extend from ``<card-t>``):
 
 ````html
   <queen-of-hearts></queen-of-hearts>
@@ -435,6 +446,27 @@ To select all Spades you still need attributes:
   <ten-of-spades spades></ten-of-spades>
   ...
 ````
+
+Because ``queen-of-hearts`` can  either be a 'Autonomous Custom Element' OR a 'Customized Built-In Element'  
+``<card-t>`` creates 52 Customized IMG elements:
+
+```html
+  <img is=ten-of-hearts>
+  <img is=jack-of-hearts>
+  <img is=queen-of-hearts>
+  <img is=king-of-hearts>
+  <img is=ace-of-hearts>
+```
+
+💡 declaration **must be** all lowercase!
+
+💡 you can NOT change the ``is=`` declaration after the DOM element is created.
+
+💡 on the (customized IMG) element you can use all attributes/properties documented above
+
+![](https://i.imgur.com/MNoSbdo.jpg)
+
+
 
 ### 🃏 How about separating Element and SVG data?
 
@@ -624,4 +656,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-24 17:10 
+Published: 2019-04-24 17:19 
