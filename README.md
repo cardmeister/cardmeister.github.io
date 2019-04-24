@@ -521,16 +521,11 @@ I haven't found a good Joker Card design yet, if you have one let me know
 
 Look closely at the court cards.... 
 
-The 16 KB version uses the same (JQK Hearts) court image with slightly different colors.
-
-## Cheating Queens:
-
-![](https://i.imgur.com/k6cmH4M.jpg)
-
+**The 16 KB version uses the same (JQK Hearts) court image with slightly different colors.**
 
 # 🔧 ``suits`` - Mix suit/court images
 
-default: 0123  (defaults to 1111 in the 16 KB version)
+default: 0123  **defaults to 1111 in the 16 KB version!**
 
 Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
@@ -541,7 +536,9 @@ Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
     <card-t suit=C rank=Queen suits=1111></card-t>
 ````
 
-#### Uses Hearts court images for all 4 suits
+## Cheating Queens:
+
+![](https://i.imgur.com/k6cmH4M.jpg)
 
 ## The full ``<card-t>`` version with 12 **unique** SVG courts:
 
@@ -670,4 +667,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-24 20:56 
+Published: 2019-04-24 20:58 
