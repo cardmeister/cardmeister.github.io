@@ -1,4 +1,4 @@
-## 52 SVG playingcards in **one** 18 KB² Custom Element: ``<CARD-T>``
+## 52 SVG playingcards in **one** 16 KB² Custom Element: ``<CARD-T>``
 
 #### No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No External SVG files!&nbsp;&nbsp; All SVG is created by the Custom Element
 
@@ -20,7 +20,7 @@ Used in: https://card-ts.github.io/Solitaire/
 
 * SVG data for 52 playing cards - **500 KB** painstakingly slimmed
 
-* Total **GZip** file size: **18 KB² creating 52 playingcardts:**
+* Total **GZip** file size: **16 KB² creating 52 playingcardts:**
 
 ![](https://i.imgur.com/bsYbx1q.jpg)
 
@@ -32,13 +32,13 @@ Used in: https://card-ts.github.io/Solitaire/
 
 # Why another SVG playing card
 
+A 'Hello World!' with Framework **X** took hours installing tools and used  **95 KiloBytes** ... to display 12 characters.
+
+**Something did not feel right!**
+
 I learned to [PEEK and POKE](https://en.wikipedia.org/wiki/PEEK_and_POKE) at the age of 10 on a [TRS-80](https://en.wikipedia.org/wiki/TRS-80) and learned HTML (a bit late) at **25**  
 The ability to 'peek at' and learn from someone else's effort was fantastic.  
 In the past years 'Web Development' has become *For-Rocket-Scientists-Only*  
-
-A 'Hello World!' with Framework **X** took hours installing tools and used  **95 KiloBytes** ... to display 12 characters.
-
-Something did not feel right!
 
 **What happened to the days when all you needed were some HTML tags and a text-editor?**
 
@@ -46,10 +46,11 @@ Something did not feel right!
 
 Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 
-* one single 18 KB² file creates a ``<card-t>`` element
-* attributes for configuration
+* one single file creates a ``<card-t>`` Custom Element
+* (loads of) attributes for configuration
 * 52 SVG playingcards
 * **no** external SVG images
+* All in 16 KB² because my first computer had 16 **Kilo**Bytes memory
 
 Feel free to PEEK around, and if you want to POKE submit an [issue](https://github.com/card-ts/playingcardts/issues/new).
 
@@ -63,7 +64,7 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 ¹ - Everyone uses the terms Custom Elements & Web Components interchangeably.  
     Strictly speaking Web Components are Custom Elements WITH shadow DOM
 
-² - 18 KB GZip
+² - 16 KB GZip
     It is a card-game .. I cheated ... but can you spot where?  (explained in documentation below)
 ````
 
@@ -360,7 +361,7 @@ In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the **single** [King
 
 ![](https://i.imgur.com/WEgysvp.jpg)
 
-### ``<card-t>`` creates all 52 cards in **18 KB**
+### ``<card-t>`` creates all 52 cards in **16 KB**
 
 ![](https://i.imgur.com/Uu9E853.jpg)
 
@@ -457,7 +458,7 @@ Look closely at the court cards....
 
 # 🔧 ``suits`` - Mix suit/court images
 
-default: 0123  (defaults to 1111 in the 18 KB version)
+default: 0123  (defaults to 1111 in the 16 KB version)
 
 Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
@@ -484,7 +485,7 @@ Uses Hearts court images for all 4 suits
 
 The Full Version **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)** with 12 different court images adds **110 KB** raw SVG data  
 
-Making it 61 KB GZipped
+Making it 60 KB GZipped
 
 # See: [index.html?#full](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
 
@@ -602,4 +603,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-20 20:58 
+Published: 2019-04-24 16:55 
