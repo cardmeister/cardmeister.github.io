@@ -96,10 +96,12 @@ Like the HTML5 ``<video>`` tag, the Custom Element ``<card-t>`` abstracts comple
 
 ![](https://i.imgur.com/mfhk2pd.jpg)
 
-**Custom Element ``<card-t>`` creates an image with the SVG as ``data:image`` src**
+**(Autonomous) Custom Element ``<card-t>`` creates an image with the SVG as ``data:image`` src**
 
 Saves you from headaches with SVG in a document (duplicate symbol ids, bleeding CSS etc.)  
 and makes it easy to add HTML Drag-Drop functionality.
+
+💡 Autonomous Custom Elements require a closing tag: ``</card-t>``
 
 #### How it looks in F12 Developer Tools:
 
@@ -119,7 +121,9 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 💡 declaration **must be** all lowercase!
 
-💡 you can NOT change the ``is=`` declaration after the DOM element is created.
+💡 the IMG element is self-closing by default, no closing tag required!
+
+💡 the ``is=`` declaration only takes effect when the DOM element is created
 
 💡 on the (customized IMG) element you can use all attributes/properties documented below
 
@@ -202,7 +206,9 @@ What if cardts could:
 * 0123 are Array indexes (SHDC)
 * cid = card id : As = Ace of Spades , Td = Ten of Diamonds
 
-💡 all attributes are also available as property: ``element.cid='Qh'`` === ``element.setAttribute('cid','Qh')``
+💡 attributes can be set as attribute:``element.setAttribute('cid','Qh')``
+
+💡 or as property: ``element.cid='Qh'`` (sets the attribute value)
 
 ### ``<card-t>`` takes a sh*tload of attributes you can play with:
 
@@ -236,11 +242,11 @@ See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playin
 
 💡 overrules ``rank=`` and ``suit=`` notation
 
-💡 **NOT** case sensitive ``qH`` === ``Qh``
+💡 case **in**sensitive: ``qC`` is the same as: ``Qc``
 
-💡 ``10H`` is processed as ``TH``
+💡 ``10C`` is processed as ``TC``
 
-💡 ``Queen-of-Hearts`` is processed as ``QH``
+💡 ``Queen-of-Clubs`` is processed as ``Qc``
 
 ![](https://i.imgur.com/lI8sa0p.jpg)
 
@@ -385,7 +391,7 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 <hr>
 
-# SVG cards are huge
+# SVG cards are huge. How I reduced 500 KB SVG 
 
 All good open-source SVG playingcards available are high-precision ready for print. 
 
@@ -395,9 +401,8 @@ In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the **single** [King
 
 ### ``<card-t>`` creates all 52 cards in **16 KB**
 
-![](https://i.imgur.com/Uu9E853.jpg)
+![](https://i.imgur.com/0K09KNh.jpg)
 
-## How I reduced 500 KB SVG 
 
 * I started with the 550 KB for 52 CC-0 licensed cards from the [card generator by Adrian Kennard](https://www.me.uk/cards/)
 * reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)  
@@ -460,7 +465,9 @@ Because ``queen-of-hearts`` can  either be a 'Autonomous Custom Element' OR a 'C
 
 💡 declaration **must be** all lowercase!
 
-💡 you can NOT change the ``is=`` declaration after the DOM element is created.
+💡 the IMG element is self-closing by default, no closing tag required!
+
+💡 the ``is=`` declaration only takes effect when the DOM element is created
 
 💡 on the (customized IMG) element you can use all attributes/properties documented above
 
@@ -478,6 +485,7 @@ This project was about stuffing everything into **one** file.
 ### 🃏 Where is the NPM installer?  
 
 If you need an installer to copy **one** file: [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js)  
+
 You might find a better career flipping burgers at McDonalds.
 
 ### 🃏 Where is the ``SVGcardt()`` source?
@@ -505,9 +513,18 @@ Note: FireFox is noticeably slower in drawing the cards.
 
 I haven't found a good Joker Card design yet, if you have one let me know
 
+<hr>
+
 # 🃏 Where did you cheat?
 
 Look closely at the court cards.... 
+
+⚡⚡ In the 16 KB version all Jacks, Queens and Kings courts use the same (JQK Hearts) court image with slightly different colors.
+
+## Cheating Queens:
+
+![](https://i.imgur.com/k6cmH4M.jpg)
+
 
 # 🔧 ``suits`` - Mix suit/court images
 
@@ -522,17 +539,9 @@ Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
     <card-t suit=C rank=Queen suits=1111></card-t>
 ````
 
-Uses Hearts court images for all 4 suits
+#### Uses Hearts court images for all 4 suits
 
-**Who noticed me cheating?**
-
-⚡⚡ all Jacks, Queens and Kings courts use the same (JQK Hearts) court image with slightly different colors.
-
-## Cheating Queens:
-
-![](https://i.imgur.com/JI1g5Ec.jpg)
-
-## The full ``<card-t>`` version with 12 **different** SVG courts:
+## The full ``<card-t>`` version with 12 **unique** SVG courts:
 
 ![](https://i.imgur.com/qjMyXsB.jpg)
 
@@ -544,12 +553,15 @@ Making it 60 KB GZipped
 
 # Difference between the .min. and the .full. version
 
-Apart from the court images none.
+Apart from the court images there are no difference. 
 
-**Use the Full version**,  
-the Min version can be used for low-bandwidth applications.
+It was fun (and took some time) breaking that 16 KB barrier, and helped making the full version smaller as well.
+
+**Use the Full version**
 
 * **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)**
+
+The Min version can be used for slow/low-bandwidth applications.
 
 * [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js)
 
@@ -656,4 +668,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-24 17:19 
+Published: 2019-04-24 19:11 
