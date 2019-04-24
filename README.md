@@ -34,13 +34,12 @@ Used in: https://card-ts.github.io/Solitaire/
 
 A 'Hello World!' with Framework **X** took hours installing tools and used  **95 KiloBytes** ... to display 12 characters.
 
-**Something did not feel right!**
+**Something did not feel right!**  
+**What happened to the days when all you needed were some HTML tags and a text-editor?**
 
 I learned to [PEEK and POKE](https://en.wikipedia.org/wiki/PEEK_and_POKE) at the age of 10 on a [TRS-80](https://en.wikipedia.org/wiki/TRS-80) and learned HTML (a bit late) at **25**  
 The ability to 'peek at' and learn from someone else's effort was fantastic.  
 In the past years 'Web Development' has become *For-Rocket-Scientists-Only*  
-
-**What happened to the days when all you needed were some HTML tags and a text-editor?**
 
 [W3C standard Custom Elements](https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework)¹ make writing semantic HTML as cool as it was in my early days .. **without any Framework!**  
 
@@ -102,11 +101,29 @@ Like the HTML5 ``<video>`` tag, the Custom Element ``<card-t>`` abstracts comple
 Saves you from headaches with SVG in a document (duplicate symbol ids, bleeding CSS etc.)  
 and makes it easy to add HTML Drag-Drop functionality.
 
-### How it looks in F12 Developer Tools:
+#### How it looks in F12 Developer Tools:
 
 ![](https://i.imgur.com/7csZylT.jpg)
 
-### Styling ``<card-t>`` with CSS:
+## Customized built-in IMG element
+
+``<card-t>`` also creates 52 Custom Elements customizing the IMG element so you can use:
+
+```html
+  <img is=ten-of-hearts>
+  <img is=jack-of-hearts>
+  <img is=queen-of-hearts>
+  <img is=king-of-hearts>
+  <img is=ace-of-hearts>
+```
+
+💡 you can NOT change the ``is=`` declaration after the DOM element is created.
+
+💡 you can use all attributes/properties documented below
+
+![](https://i.imgur.com/MNoSbdo.jpg)
+
+# Styling ``<card-t>`` with CSS:
 
 Since ``<card-t>`` only creates a single IMG **no shadow-DOM is required/used**, thus IMG can be styled with **global CSS**:
 
@@ -165,14 +182,16 @@ What if cardts could:
 
 ![](https://i.imgur.com/gqOUijq.jpg)
 
-# ``<card-t>`` attribute syntax
+# ``<card-t>`` attribute/properties syntax
 
 **playingcardts Terminology:**
 
 * 'court' is UK English for 'face' US English. So Jack, Queen and King are **court**-cards (courts)
 * SHDC is short for Spades-Hearts-Diamonds-Clubs 
-* 0123 are Array indexes 
+* 0123 are Array indexes (SHDC)
 * cid = card id : As = Ace of Spades , Td = Ten of Diamonds
+
+💡 all attributes are also available as property: ``element.cid='Qh'`` === ``element.setAttribute('cid','Qh')``
 
 ### ``<card-t>`` takes a sh*tload of attributes you can play with:
 
@@ -206,9 +225,11 @@ See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playin
 
 💡 overrules ``rank=`` and ``suit=`` notation
 
-💡 NOT case sensitive ``qH`` === ``Qh``
+💡 **NOT** case sensitive ``qH`` === ``Qh``
 
 💡 ``10H`` is processed as ``TH``
+
+💡 ``Queen-of-Hearts`` is processed as ``QH``
 
 ![](https://i.imgur.com/lI8sa0p.jpg)
 
@@ -603,4 +624,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-24 16:55 
+Published: 2019-04-24 17:10 
