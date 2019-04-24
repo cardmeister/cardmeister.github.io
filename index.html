@@ -224,8 +224,8 @@
     <!-- HR -------------------- -->
     <hr>
     <h1>&lt;card-t attribute&gt; configuration examples</h1>
-    <h3>click to see Element Attributes - Details at: <a
-            href='https://github.com/card-ts/playingcardts#card-t-attribute-syntax'>GitHub &lt;card-t&gt; attribute
+    <h3>click to see Element Attributes - Details at: <a href='https://github.com/card-ts/playingcardt'>GitHub
+            &lt;card-t&gt; attribute/property
             syntax</a>
     </h3>
     <div id=Configuration class="grid">
@@ -313,25 +313,8 @@
 
     <!-- HR -------------------- -->
     <hr>
-    <h1>Extending 52 elements from &lt;card-t&gt; (Autonomous Custom Element)</h1>
-    <h3>is possible, but only JS code can work with the .nodeName. There are no (CSS) Selectors for a partial nodeName
-    </h3>
-    <div id=Straight class=grid>
-        <div>
-            <pre><code>&lt;Ten-of-Hearts>&lt;/Ten-of-Hearts>
-&lt;Jack-of-Hearts>&lt;/Jack-of-Hearts>
-&lt;Queen-of-Hearts>&lt;/Queen-of-Hearts>
-&lt;King-of-Hearts>&lt;/King-of-Hearts>
-&lt;Ace-of-Hearts>&lt;/Ace-of-Hearts></code></pre>
-        </div>
-        <ten-of-hearts></ten-of-hearts>
-        <jack-of-hearts></jack-of-hearts>
-        <queen-of-hearts></queen-of-hearts>
-        <king-of-hearts></king-of-hearts>
-        <ace-of-hearts></ace-of-hearts>
-    </div>
-    <h1>Extending 52 elements from &lt;img> (Customized built-in Element)</h1>
-    <h3>gives more flexibility¹ and creates less DOM nodes (but notation must be the full Element name in lowercase)
+    <h1>Extending 52 elements from &lt;IMG> (Customized built-in Element)</h1>
+    <h3>gives more flexibility and creates less DOM nodes (but notation must be the full Element name in lowercase)
     </h3>
     <div id=Straight class=grid>
         <div>
@@ -341,11 +324,11 @@
 &lt;img is=king-of-hearts>
 &lt;img is=ace-of-hearts></code></pre>
         </div>
-        <img is=ten-of-hearts>
-        <img is=jack-of-hearts>
+        <img is=queen-of-spades suits=1111>
         <img is=queen-of-hearts>
-        <img is=king-of-hearts>
-        <img is=ace-of-hearts>
+        <img is=queen-of-diamonds suits=1111>
+        <img is=queen-of-clubs suits=0000>
+        <img is=queen-of-diamonds>
     </div>
 
 
@@ -449,4 +432,4 @@
 
 </html>
 <hr>
-Published: 2019-04-24 19:11 
+Published: 2019-04-24 20:56 
