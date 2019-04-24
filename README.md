@@ -12,7 +12,7 @@ Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
-![](https://i.imgur.com/Uu9E853.jpg)
+![](https://i.imgur.com/0K09KNh.jpg)
 
 ## The **single file** [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is:
 
@@ -667,4 +667,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-24 21:02 
+Published: 2019-04-24 21:09 
