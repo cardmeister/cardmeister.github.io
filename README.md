@@ -107,9 +107,9 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 ![](https://i.imgur.com/7csZylT.jpg)
 
-## Customized built-in IMG element
+## Customized Built-In IMG element
 
-52 Custom Elements are created customizing the IMG element so you can use:
+52 Custom Elements are **also** created customizing the IMG element so you can use:
 
 ```html
   <img is=ten-of-hearts>
@@ -492,10 +492,12 @@ You might find a better career flipping burgers at McDonalds.
 
 ### 🃏 Where is the ``SVGcardt()`` source?
 
-**You do NOT need the ``SVGcardt()`` _Source Code_ to use ``<card-t>`` in applications**
+**You do NOT need the ``SVGcardt()`` _Source Code_ to use ``<card-t>`` or ``<img is=..>`` in applications**
 
 The ``<card-t>`` Custom Element declaration in [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is Open Source.  
 You can rename ``<card-t>`` to anything you want and customize the Custom Element to your liking.
+
+The ``<img is=..>`` declaration is part of the minified SVGcardt() code.
 
 The SVG creation code took some blood, sweat and tears and is closed source for now.  
 It needs some refactoring and documentation before this is public ready.  
@@ -667,4 +669,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-24 21:09 
+Published: 2019-04-24 21:24 
