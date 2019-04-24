@@ -109,7 +109,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 ## Customized built-in IMG element
 
-``<card-t>`` also creates 52 Custom Elements customizing the IMG element so you can use:
+52 Custom Elements are created customizing the IMG element so you can use:
 
 ```html
   <img is=ten-of-hearts>
@@ -247,6 +247,8 @@ See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playin
 💡 ``10C`` is processed as ``TC``
 
 💡 ``Queen-of-Clubs`` is processed as ``Qc``
+
+💡 ``<img is=queen-of-clubs>`` uses ``cid`` internally (but you always need to use the ``is=`` full Element name!)
 
 ![](https://i.imgur.com/lI8sa0p.jpg)
 
@@ -519,7 +521,7 @@ I haven't found a good Joker Card design yet, if you have one let me know
 
 Look closely at the court cards.... 
 
-⚡⚡ In the 16 KB version all Jacks, Queens and Kings courts use the same (JQK Hearts) court image with slightly different colors.
+The 16 KB version uses the same (JQK Hearts) court image with slightly different colors.
 
 ## Cheating Queens:
 
@@ -543,15 +545,15 @@ Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
 ## The full ``<card-t>`` version with 12 **unique** SVG courts:
 
-![](https://i.imgur.com/qjMyXsB.jpg)
+![](https://i.imgur.com/sVkxGey.jpg)
 
 The Full Version **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)** with 12 different court images adds **110 KB** raw SVG data  
 
 Making it 60 KB GZipped
 
-# See: [index.html?#full](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
+## See: [index.html?#full](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
 
-# Difference between the .min. and the .full. version
+## Difference between the .min. and the .full. version
 
 Apart from the court images there are no difference. 
 
@@ -668,4 +670,4 @@ https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-com
 
 <hr>
 <hr>
-Published: 2019-04-24 19:11 
+Published: 2019-04-24 20:56 
