@@ -618,6 +618,8 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 ## Custom Elements/Web Components
 
+* https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework
+* https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements
 * Custom Elements/Web Components best practices  
 https://developers.google.com/web/fundamentals/web-components/best-practices
 
@@ -659,6 +661,8 @@ https://github.com/zachwaugh/Helveticards
 * http://www.petercollingridge.appspot.com/svg-editor
 * https://tympanus.net/codrops/2019/01/15/svg-filters-101/
 * SVG minification and GZIP - https://blog.usejournal.com/of-svg-minification-and-gzip-21cd26a5d007
+* https://css-tricks.com/gotchas-on-getting-svg-into-production/
+* https://stackoverflow.com/questions/18467982/are-svg-parameters-such-as-xmlns-and-version-needed
 
 #### LZMA compression
 * http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html
@@ -667,6 +671,12 @@ https://github.com/zachwaugh/Helveticards
 * Analyze GZ compression:  
 https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-compression-efficiency
 
+### Code Fragments
+
+Load SVG content in main document:
+```
+  <iframe src="file.svg" onload="this.before(this.contentDocument.children[0]); this.remove();"></iframe>
+```
 <hr>
 <hr>
-Published: 2019-04-24 21:24 
+Published: 2019-04-25 16:41 
