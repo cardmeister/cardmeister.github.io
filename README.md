@@ -4,7 +4,7 @@
 
 This project uses modern browser technologies, use the latest **Chrome or Firefox**
 
-Unlicense: This is free software released into the public domain
+**License:** Unlicense: This is free software released into the public domain - https://choosealicense.com/licenses/unlicense/
 
 <hr>
 
@@ -711,4 +711,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26  9:41 
+Published: 2019-04-26  9:44 
