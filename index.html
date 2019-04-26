@@ -224,7 +224,8 @@
     <!-- HR -------------------- -->
     <hr>
     <h1>&lt;card-t attribute&gt; configuration examples</h1>
-    <h3>click to see Element Attributes - Details at: <a href='https://github.com/card-ts/playingcardt'>GitHub
+    <h3 class="fullversion">click to see Element Attributes - Details at: <a
+            href='https://github.com/card-ts/playingcardt'>GitHub
             &lt;card-t&gt; attribute/property
             syntax</a>
     </h3>
@@ -369,7 +370,7 @@
         }
         scriptTag.src = 'element.card-t.' + element_version + '.js';
         scriptTag.onload = () => {
-            console.log('loaded card-t element', scriptTag.src);
+            //            console.log('loaded card-t element', scriptTag.src);
 
             let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
 
@@ -384,6 +385,11 @@
 
             //house keeping for showing full version
             if (element_version == 'full') {
+                // on every click show/hide attributes style
+                document.body.addEventListener('click', evt => {
+                    if (evt.target.parentNode.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled
+                });
+
                 fullversion.disabled = false;   // enable fullversion style
                 //inject cid cards in injectCardts array
                 let injectCardts = (element, settings = {}) => {
@@ -401,15 +407,11 @@
 
             //if cid URL parameter defined show as bigcard
             if (document.location.href.includes('cid')) BigCardt.cid = document.location.href.split('cid=')[1];
+            //show big testcard 
             if (document.location.href.includes('testcard')) {
                 testcard.setAttribute('cid', document.location.href.split('testcard=')[1]);
                 testcard.style.display = 'block';
             }
-
-            // on every click show/hide attributes style
-            document.body.addEventListener('click', evt => {
-                if (evt.target.parentNode.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled
-            });
 
             //for every card in the Deck show the card big
             [...document.querySelectorAll('#Deck card-t')].forEach(cardt => {
@@ -419,7 +421,6 @@
             });
             //show body after all is done... FireFox does it different
             document.body.style.visibility = 'initial';
-            console.log('index.html loaded');
         };
         document.body.appendChild(scriptTag);
     </script>
@@ -432,4 +433,4 @@
 
 </html>
 <hr>
-Published: 2019-04-26 10:48 
+Published: 2019-04-26 10:59 
