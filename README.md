@@ -630,7 +630,7 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
-# License: Unlicense - https://choosealicense.com/licenses/unlicense/
+# License: Unlicense
 
 My first thought was making it a [Beerware License](https://en.wikipedia.org/wiki/Beerware) 
 
@@ -641,6 +641,8 @@ Which basically says you can do anything you want with what I created. But you c
 If you are flying from the US to Amsterdam, bring me anything from the [Heretic Brewing Company](http://hereticbrewing.com/beers)
 
 Cheers!
+
+https://choosealicense.com/licenses/unlicense/
 
 ````
 This is free and unencumbered software released into the public domain.
@@ -674,6 +676,8 @@ For more information, please refer to <http://unlicense.org>
 # You've got to know when to fold them...
 
 https://www.youtube.com/watch?v=7hx4gdlfamo&t=1s
+
+or the Muppets version: https://www.youtube.com/watch?v=kNnrTNFWcsg
 
 ![](https://i.imgur.com/m3VdphY.jpg)
 
@@ -744,4 +748,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 11:18 
+Published: 2019-04-26 11:23 
