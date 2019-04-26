@@ -262,7 +262,7 @@ See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playin
 
 💡 ``Queen-of-Clubs`` is processed as ``Qc``
 
-💡 ``<img is=queen-of-clubs>`` uses ``cid`` internally (``is=`` requires lowercase full Element name!!)
+💡 ``<img is=queen-of-clubs>`` uses ``cid`` internally - **``is=`` requires lowercase full Element name!!**
 
 ![](https://i.imgur.com/lI8sa0p.jpg)
 
@@ -293,7 +293,7 @@ default: 012
 
 Before anyone complains the Queen is always #2
 
-Rearrange SHDC court images to KJQ:
+Rearrange SHDC court images to KJQ = 201 :
 
 ````html
     <card-t suit=Hearts   rank=Jack  courts=201></card-t>
@@ -726,4 +726,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 10:48 
+Published: 2019-04-26 10:59 
