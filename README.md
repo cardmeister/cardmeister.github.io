@@ -123,6 +123,10 @@ and makes it easy to add HTML Drag-Drop functionality.
   <img is=ace-of-hearts>
 ```
 
+> The *Autonomous* Custom Element ``<card-t>`` and the *Customized Built-In* Element ``<img is=...>``  
+are two different flavours of Custom Elements which (in this case) do the same.  
+You can pick the **one** that suits your application. Or use them both in one page: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/)
+
 💡 declaration **must be** all lowercase!
 
 💡 the IMG element is self-closing by default, no closing tag required!
@@ -717,4 +721,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 10:18 
+Published: 2019-04-26 10:27 
