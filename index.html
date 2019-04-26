@@ -423,9 +423,9 @@
 
             // on every click show/hide attributes style
             document.body.addEventListener('click', evt => {
-                if (element_version == 'full' && evt.target.parentNode.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled;
-                window.nn = evt.target;
-                if (evt.target.parentNode.getAttribute('rank') == 1) {
+                let cardt = evt.target.parentNode;
+                if (element_version == 'full' && cardt.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled;
+                if (cardt.getAttribute('rank') == 1 || cardt.cid == 'As') {
                     if (TheGambler.paused) TheGambler.play();
                     else TheGambler.pause();
                 }
@@ -450,4 +450,4 @@
 
 </html>
 <hr>
-Published: 2019-04-26 14:10 
+Published: 2019-04-26 14:13 
