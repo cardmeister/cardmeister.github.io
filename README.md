@@ -218,9 +218,11 @@ What if cardts could:
 * cid = card id  
 As = Ace of Spades , Td = Ten of Diamonds
 
-💡 attributes can be set as attribute:``element.setAttribute('cid','Qh')``
+💡 attributes can be written as attributes in HTML:``<card-t id=MyCard cid=Qh ></card-t>``
 
-💡 or as property: ``element.cid='Qh'`` (sets the attribute value)
+💡 attributes can be set as attribute:``MyCard.setAttribute('cid','Kh')``
+
+💡 or as property: ``MyCard.cid='Kh'`` (sets the attribute value)
 
 ### ``<card-t>`` takes a sh*tload of attributes you can play with:
 
@@ -724,4 +726,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 10:45 
+Published: 2019-04-26 10:48 
