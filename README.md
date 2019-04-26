@@ -2,7 +2,8 @@
 
 #### No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No External SVG files!&nbsp;&nbsp; All SVG is created by the Custom Element
 
-This project uses modern browser technologies, use the latest **Chrome or Firefox**
+> This project uses modern browser technologies, use the latest **Chrome or Firefox**  
+> If you want to make it work in other browsers see the [WebComponents polyfill](https://www.webcomponents.org/polyfills/)
 
 **License:** Unlicense: This is free software released into the public domain - https://choosealicense.com/licenses/unlicense/
 
@@ -748,4 +749,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 14:22 
+Published: 2019-04-26 16:24 
