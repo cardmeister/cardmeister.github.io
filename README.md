@@ -208,7 +208,8 @@ What if cardts could:
 * 'court' is UK English for 'face' US English. So Jack, Queen and King are **court**-cards (courts)
 * SHDC is short for Spades-Hearts-Diamonds-Clubs 
 * 0123 are Array indexes (SHDC)
-* cid = card id : As = Ace of Spades , Td = Ten of Diamonds
+* cid = card id  
+As = Ace of Spades , Td = Ten of Diamonds
 
 💡 attributes can be set as attribute:``element.setAttribute('cid','Qh')``
 
@@ -231,8 +232,8 @@ See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playin
 * ``borderline`` - set card border line thickness
 * ``backtext``  - card backside text
 * ``backtextcolor`` - card backside color
-* ``svg`` - (undocumented/under development) add attributes to main SVG definition (eg: svg="transform='rotate(5,5,5)'")
-* ``pips`` - (undocument/under development) custom suitsymbols (pips) on number cards
+* ``svg`` - (undocumented) add attributes to main SVG definition (eg: svg="transform='rotate(5,5,5)'")
+* ``pips`` - (undocumented) custom suitsymbols (pips) on number cards
 
 # 🔧 ``cid`` - standard card id notation
 
@@ -252,7 +253,7 @@ See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playin
 
 💡 ``Queen-of-Clubs`` is processed as ``Qc``
 
-💡 ``<img is=queen-of-clubs>`` uses ``cid`` internally (but you always need to use the ``is=`` full Element name!)
+💡 ``<img is=queen-of-clubs>`` uses ``cid`` internally (``is=`` requires lowercase full Element name!!)
 
 ![](https://i.imgur.com/lI8sa0p.jpg)
 
@@ -415,8 +416,8 @@ In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the **single** [King
 (this causes some alignment 'errors' you only see viewing a court card full screen)
 * spent some time in [Inkscape](https://inkscape.org/) reducing details you don't see on a computer screen
 * cut everything up in separate SVG paths
-* made redundant paths into single JS functions
-* cleaned up Spades court which (since ages?) had the suit on the wrong? side
+* made redundant paths into single JS functions/variables
+* (see below) cleaned up the Jack of Spades court which (since ages?) had the suit on the wrong? side
 * wrote a ``SVGcardt()`` function to create an IMG with SVG data
 * Re-drawing the Heart pips on the Jack, I saw an opportunity to cheat and save 70% of SVG data (see FAQ)
 
@@ -498,7 +499,7 @@ You might find a better career flipping burgers at McDonalds.
 
 **You do NOT need the ``SVGcardt()`` _Source Code_ to use ``<card-t>`` or ``<img is=..>`` in applications**
 
-The ``<card-t>`` Custom Element declaration in [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is Open Source.  
+The ``<card-t>`` Custom Element declaration in [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is unlicensed.  
 You can rename ``<card-t>`` to anything you want and customize the Custom Element to your liking.
 
 The ``<img is=..>`` declaration is part of the minified SVGcardt() code.
@@ -515,7 +516,9 @@ See F12 Network tab, ``data:image/svg`` cardts take **0 milliseconds** download 
 
 Note: FireFox is noticeably slower in drawing the cards.
 
-### 🃏 Where is the Joker?
+Creating the card does take CPU time. Maybe a WebWorker can improve performance (but I can't stick JScode and a WebWorker in **one** single file)
+
+## 🃏 Where is the Joker?
 
 😉 Causing havoc in Gotham City?!
 
@@ -527,11 +530,11 @@ I haven't found a good Joker Card design yet, if you have one let me know
 
 Look closely at the court cards.... 
 
-**The 16 KB version uses the same (JQK Hearts) court image with slightly different colors.**
+**The 16 KB version uses the same (JQK Hearts) court image with slightly different colors to distract your eye.**
 
 # 🔧 ``suits`` - Mix suit/court images
 
-default: 0123  **defaults to 1111 in the 16 KB version!**
+default: 0123  &nbsp;  (**defaults to 1111 in the 16 KB version!**)
 
 Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
@@ -552,17 +555,17 @@ Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
 The Full Version **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)** with 12 different court images adds **110 KB** raw SVG data  
 
-Making it 60 KB GZipped
+**Making the single file 60 KB GZipped!**
 
 ## See: [index.html?#full](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
 
 ## Difference between the .min. and the .full. version
 
-Apart from the court images there are no difference. 
+Apart from the court images there are no differences. 
 
 It was fun (and took some time) breaking that 16 KB barrier, and helped making the full version smaller as well.
 
-**Use the Full version**
+**Use the Full version** !
 
 * **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)**
 
@@ -618,9 +621,10 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
-# UNlicense
+# License: Unlicense - https://choosealicense.com/licenses/unlicense/
 
-````This is free and unencumbered software released into the public domain.
+````
+This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
 distribute this software, either in source code form or as a compiled
@@ -713,4 +717,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26  9:52 
+Published: 2019-04-26 10:17 
