@@ -24,7 +24,7 @@ This project uses modern browser technologies, use the latest **Chrome or Firefo
 
 * 52 customized Built-In IMG elements : ``<img is=queen-of-hearts>``
 
-* Total **GZip** file size: **16 KB² creating 52 playingcardts:**
+* Total **GZip** file size: (under) **16 KB² creating 52 playingcardts:**
 
 ![](https://i.imgur.com/bsYbx1q.jpg)
 
@@ -43,7 +43,8 @@ A 'Hello World!' with Framework **X** took hours installing tools and used  **95
 
 I learned to [PEEK and POKE](https://en.wikipedia.org/wiki/PEEK_and_POKE) at the age of 10 on a [TRS-80](https://en.wikipedia.org/wiki/TRS-80) and learned HTML (a bit late) at **25**  
 The ability to 'peek at' and learn from someone else's effort was fantastic.  
-In the past years 'Web Development' has become *For-Rocket-Scientists-Only*  
+
+Alas in the past years 'Web Development' has become something *For-Rocket-Scientists* only
 
 [W3C standard Custom Elements](https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework)¹ make writing semantic HTML as cool as it was in my early days .. **without any Framework!**  
 
@@ -721,4 +722,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 10:36 
+Published: 2019-04-26 10:38 
