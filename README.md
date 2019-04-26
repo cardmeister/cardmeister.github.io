@@ -331,9 +331,7 @@ default: #FFF
     <card-t rank=1 suit=3 suitcolor="#FFF,#FFF,#FFF,red"   cardcolor="yellow"    ></card-t>
 ````
 
-💡 You need to specify all 4 colors even when only applying one suit (allows for a global setting)
-
-Since the string is converted to an array the above can be written as:
+The string (all 4 settings in one string for global declaration!) is converted to an array so can be written as:
 
 ````html
     <card-t rank=1 suit=0 suitcolor="#FFF,"   cardcolor="red"       ></card-t>
@@ -341,6 +339,8 @@ Since the string is converted to an array the above can be written as:
     <card-t rank=1 suit=2 suitcolor=",,black" cardcolor="dodgerblue"></card-t>
     <card-t rank=1 suit=3 suitcolor=",,,red"  cardcolor="yellow"    ></card-t>
 ````
+
+💡 You can change one card with: ``element.suitcolor='blue';``
 
 💡 non-color values will break the SVG suit display
 
@@ -748,4 +748,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 13:48 
+Published: 2019-04-26 14:08 
