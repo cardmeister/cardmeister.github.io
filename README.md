@@ -4,6 +4,8 @@
 
 This project uses modern browser technologies, use the latest **Chrome or Firefox**
 
+Unlicense: This is free software released into the public domain
+
 <hr>
 
 [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
@@ -614,6 +616,36 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
+# UNlicense
+
+````This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+````
+
+For more information, please refer to <http://unlicense.org>
+
+<hr>
+
 # (some) Used Resources
 
 ## Custom Elements/Web Components
@@ -679,4 +711,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-25 16:41 
+Published: 2019-04-26  9:41 
