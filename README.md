@@ -136,6 +136,8 @@ You can pick the **one** that suits your application. Or use them both in one pa
 
 💡 on the (customized IMG) element you can use all attributes/properties documented below
 
+👨‍💻 tech: Autonomous Elements *can* have [ShadowDom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM), Customized Elements can **not** have [ShadowDom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+
 ![](https://i.imgur.com/MNoSbdo.jpg)
 
 # Styling ``<card-t>`` with CSS:
@@ -722,4 +724,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 10:38 
+Published: 2019-04-26 10:45 
