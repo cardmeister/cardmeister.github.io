@@ -264,6 +264,7 @@
             &lt;card-t&gt; attribute/property
             syntax</a>
     </h3>
+    <h3>'play' the Ace of Spades for some more advice</h3>
     <div id=Configuration class="grid">
         <!-- row -->
         <card-t suit=Hearts rank=Jack courts=201></card-t>
@@ -386,10 +387,6 @@
 
             //house keeping for showing full version
             if (element_version == 'full') {
-                // on every click show/hide attributes style
-                document.body.addEventListener('click', evt => {
-                    if (evt.target.parentNode.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled
-                });
 
                 fullversion.disabled = false;   // enable fullversion style
                 //inject cid cards in injectCardts array
@@ -422,16 +419,34 @@
             });
             //show body after all is done... FireFox does it different
             document.body.style.visibility = 'initial';
+
+            // on every click show/hide attributes style
+            document.body.addEventListener('click', evt => {
+                if (element_version == 'full' && evt.target.parentNode.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled;
+                window.nn = evt.target;
+                if (evt.target.parentNode.getAttribute('rank') == 1) {
+                    if (TheGambler.paused) TheGambler.play();
+                    else TheGambler.pause();
+                }
+            });
+
+            setTimeout(() => {
+                TheGambler.setAttribute('src', 'thegambler.ogg');
+                TheGambler.pause();
+            }, 1000);
+
         };
         document.body.appendChild(scriptTag);
+
     </script>
     <!-- Fork me on GitHub label  -->
     <a style="position:fixed;top:0;right:0" href="https://github.com/card-ts/playingcardts"><img width="160"
             height="160"
             src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=160%2C160"></a>
 
+    <audio src="" id="TheGambler" type="audio/ogg"></audio>
 </body>
 
 </html>
 <hr>
-Published: 2019-04-26 11:43 
+Published: 2019-04-26 13:10 
