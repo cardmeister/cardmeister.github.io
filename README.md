@@ -18,9 +18,11 @@ Used in: https://card-ts.github.io/Solitaire/
 
 ## The **single file** [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is:
 
-* [W3C Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements): ``<card-t> </card-t>``
-
 * SVG data for 52 playing cards - **500 KB** painstakingly slimmed
+
+* one [W3C Autonomous Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) : ``<card-t cid=Queen-of-Hearts> </card-t>``
+
+* 52 customized Built-In IMG elements : ``<img is=queen-of-hearts>``
 
 * Total **GZip** file size: **16 KB² creating 52 playingcardts:**
 
@@ -711,4 +713,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26  9:44 
+Published: 2019-04-26  9:52 
