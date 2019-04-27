@@ -42,7 +42,7 @@
         }
 
         #Straight {
-            grid-template-columns: 8fr 2fr 2fr 2fr 2fr 2fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: 1;
         }
 
@@ -328,12 +328,67 @@
 &lt;img is=king-of-hearts>
 &lt;img is=ace-of-spades suitcolor=darkred></code></pre>
         </div>
-        <img is=ten-of-hearts>
-        <img is=jack-of-hearts>
-        <img is=queen-of-hearts>
-        <img is=king-of-hearts>
-        <img is=ace-of-spades suitcolor=darkred>
+        <style>
+            .hand {
+                display: flex;
+                position: relative;
+                --cardwidth: 100%;
+                --cardheight: 100%;
+                /* --spread: 1; */
+                --spreaddeg: 20deg;
+                --spreaddistance: 40px;
+                --deg: calc(var(--spread)*var(--spreaddeg));
+                --distance: calc(var(--spread)*var(--spreaddistance));
+                --topoffset: calc(var(--spread)*15px);
+                margin-top: -8vh;
+                margin-left: calc(-0.5*var(--cardwidth));
+            }
+
+            .hand img {
+                height: var(--cardheight);
+                width: var(--cardwidth);
+                position: absolute;
+                transition: transform 2s;
+            }
+
+            .hand img:nth-child(1) {
+                left: calc(0*var(--distance));
+                top: calc(4*var(--topoffset));
+                transform: rotate(calc(-2*var(--deg)));
+            }
+
+            .hand img:nth-child(2) {
+                left: calc(1*var(--distance));
+                top: calc(2*var(--topoffset));
+                transform: rotate(calc(-1*var(--deg)));
+            }
+
+            .hand img:nth-child(3) {
+                left: calc(2*var(--distance));
+                top: calc(1*var(--topoffset));
+            }
+
+            .hand img:nth-child(4) {
+                left: calc(3*var(--distance));
+                top: calc(2*var(--topoffset));
+                transform: rotate(calc(1*var(--deg)));
+            }
+
+            .hand img:nth-child(5) {
+                left: calc(4*var(--distance));
+                top: calc(4*var(--topoffset));
+                transform: rotate(calc(2*var(--deg)));
+            }
+        </style>
+        <div id=Hand1 class="hand">
+            <img is=ten-of-hearts>
+            <img is=jack-of-hearts>
+            <img is=queen-of-hearts>
+            <img is=king-of-hearts>
+            <img is=ace-of-spades suitcolor=darkred>
+        </div>
     </div>
+    <div id=CardtUse></div>
 
 
     <!-- HR -------------------- -->
@@ -345,8 +400,10 @@
     <!-- SCRIPT -------------------- -->
     <!-- executing after HTML/loaded -->
     <script>
+
         //load min or full version dynamically in a script tag
-        const scriptTag = document.createElement('script');
+        var scriptTag = document.createElement('script');
+        var urlParams = new URLSearchParams(window.location.search);
 
         //create single card-t element
         let cardt = (suitname, rankname) => {
@@ -405,10 +462,10 @@
             }
 
             //if cid URL parameter defined show as bigcard
-            if (document.location.href.includes('cid')) BigCardt.cid = document.location.href.split('cid=')[1];
+            if (urlParams.has('cid')) BigCardt.cid = urlParams.get('cid');
             //show big testcard 
-            if (document.location.href.includes('testcard')) {
-                testcard.setAttribute('cid', document.location.href.split('testcard=')[1]);
+            if (urlParams.has('testcard')) {
+                testcard.setAttribute('cid', urlParams.get('testcard'));
                 testcard.style.display = 'block';
             }
 
@@ -439,6 +496,15 @@
         };
         document.body.appendChild(scriptTag);
 
+        new IntersectionObserver(entries => {
+            // console.log(entries[0].boundingClientRect, entries[0].target);
+            for (const entry of entries) {
+                if (entry.isIntersecting) {
+                    Hand1.style.setProperty('--spread', 1);
+                }
+            }
+        }).observe(document.querySelector("#CardtUse"));
+
     </script>
     <!-- Fork me on GitHub label  -->
     <a style="position:fixed;top:0;right:0" href="https://github.com/card-ts/playingcardts"><img width="160"
@@ -450,4 +516,4 @@
 
 </html>
 <hr>
-Published: 2019-04-26 16:24 
+Published: 2019-04-27 12:59 
