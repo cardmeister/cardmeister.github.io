@@ -740,6 +740,17 @@ https://github.com/zachwaugh/Helveticards
 * https://dafrok.github.io/gzip-size-online/
 * Analyze GZ compression:  
 https://encode.ru/threads/1889-gzthermal-pseudo-thermal-view-of-Gzip-Deflate-compression-efficiency
+![](https://i.imgur.com/J78H3LU.jpg)
+
+#### Chess
+
+``<img is=white-queen at=D5>``
+
+* https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces/Maurizio_Monge
+* https://codepen.io/jeansarlon/pen/WpZNda/
+* https://ilhooq.github.io/svgchessboard/demo/
+* https://rexxars.github.io/react-chess/
+
 
 ### Code Fragments
 
@@ -749,4 +760,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-26 16:24 
+Published: 2019-04-27 12:59 
