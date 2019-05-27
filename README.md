@@ -113,7 +113,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 ![](https://i.imgur.com/7csZylT.jpg)
 
-## Customized Built-In IMG element
+## Customized Built-In Element (from IMG)
 
 52 Custom Elements are **also** created customizing the IMG element so you can use:
 
@@ -138,6 +138,8 @@ You can pick the **one** that suits your application. Or use them both in one pa
 💡 on the (customized IMG) element you can use all attributes/properties documented below
 
 👨‍💻 tech: Autonomous Elements *can* have [ShadowDom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM), Customized Elements can **not** have [ShadowDom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+
+👨‍💻 tech: Because IMG elements don't contain text or have descendants, neither CSS selector ``img:before`` or ``img:after`` can be used
 
 ![](https://i.imgur.com/MNoSbdo.jpg)
 
@@ -733,6 +735,7 @@ https://github.com/zachwaugh/Helveticards
 * SVG minification and GZIP - https://blog.usejournal.com/of-svg-minification-and-gzip-21cd26a5d007
 * https://css-tricks.com/gotchas-on-getting-svg-into-production/
 * https://stackoverflow.com/questions/18467982/are-svg-parameters-such-as-xmlns-and-version-needed
+* https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
 
 #### LZMA compression
 * http://lzma-js.github.io/LZMA-JS/demos/advanced_demo.html
@@ -760,4 +763,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-04-27 12:59 
+Published: 2019-05-27 16:49 
