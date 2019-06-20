@@ -633,20 +633,6 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
-# License: Unlicense
-
-My first thought was making it a [Beerware License](https://en.wikipedia.org/wiki/Beerware) 
-
-But that is not an officially registered license. So I went with the [Unlicense](https://choosealicense.com/licenses/unlicense/)  
-Which basically says you can do anything you want with what I created. But you can't sue me.
-
-🍺🍺🍺 ... you can still buy me a beer though  
-If you are flying from the US to Amsterdam, bring me anything from the [Heretic Brewing Company](http://hereticbrewing.com/beers)
-
-Cheers!
-
-https://choosealicense.com/licenses/unlicense/
-
 ````
 This is free and unencumbered software released into the public domain.
 
@@ -763,4 +749,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-05-27 16:49 
+Published: 2019-06-20 10:46 
