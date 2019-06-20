@@ -6,7 +6,7 @@
 
     <title>CARD-TS</title>
     <!-- this.index.html loads .min. or .full. javascript dynamically  -->
-    <style>
+    <style id=theme_greenwhite>
         body {
             font-family: Arial, Helvetica, sans-serif;
             visibility: hidden;
@@ -20,6 +20,36 @@
             color: blue;
         }
 
+        pre {
+            --size: 2.1em;
+            font-size: var(--size);
+            font-weight: bold;
+            margin-left: var(--size);
+        }
+
+        .footnote,
+        h1,
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            margin-left: 1vw;
+        }
+
+        h3 {
+            text-shadow: 1px 1px 1px black;
+        }
+
+        h1 a,
+        h3 a {
+            text-shadow: 0 0;
+        }
+
+        .greencloth {
+            /* saves loading an image, looks better than a solid darkgreen background */
+            background-image: url('data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoeAB4APikSh0KhoQoCAAwBQllYz41AABFV/n8AItOaJepDavAA/vkKUe5BGtPR5aeKP/4hd7G2///gzv/f1X/gzv/BmUX9cJtST/Z9T/XsQq/MQV+1v8m2uukhu3nFYS/A5iTPpyXsMLAwk6xasWWFDPdx7OkWouLHKfqaoozRIW3R5D5MAA==');
+            background-size: cover;
+        }
+    </style>
+    <style>
         .grid {
             /* 13 ranks 4 suits */
             display: grid;
@@ -46,13 +76,6 @@
             grid-template-rows: 1;
         }
 
-        pre {
-            --size: 2.1em;
-            font-size: var(--size);
-            font-weight: bold;
-            margin-left: var(--size);
-        }
-
         #BigQueens {
             grid-template-columns: repeat(4, 1fr);
             margin: 0 10vw;
@@ -67,28 +90,6 @@
         .newrow {
             /* force a new grid row in examples */
             grid-column-start: 1;
-        }
-
-        .footnote,
-        h1,
-        h3 {
-            text-shadow: 2px 2px 2px black;
-            margin-left: 1vw;
-        }
-
-        h3 {
-            text-shadow: 1px 1px 1px black;
-        }
-
-        h1 a,
-        h3 a {
-            text-shadow: 0 0;
-        }
-
-        .greencloth {
-            /* saves loading an image, looks better than a solid darkgreen background */
-            background-image: url('data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAwBACdASoeAB4APikSh0KhoQoCAAwBQllYz41AABFV/n8AItOaJepDavAA/vkKUe5BGtPR5aeKP/4hd7G2///gzv/f1X/gzv/BmUX9cJtST/Z9T/XsQq/MQV+1v8m2uukhu3nFYS/A5iTPpyXsMLAwk6xasWWFDPdx7OkWouLHKfqaoozRIW3R5D5MAA==');
-            background-size: cover;
         }
 
         /* card-t {
@@ -131,7 +132,7 @@
         }
 
         .notfullversion {
-            margin: 10vh 0;
+            /* margin: 10vh 0; */
         }
 
         .fullversion {
@@ -204,7 +205,7 @@
                 text-shadow: 2px 2px 1px black;
             }
         </style>
-        <pre id=HTMLcode style='color:lightgray;'>    &lt;head>
+        <pre style='color:lightgray;'>    &lt;head>
         &lt;script src<i>=</i><b class=cardt1>'element.card-t.full.js'</b>>&lt;/script>
     &lt;/head>
     &lt;body>
@@ -259,12 +260,16 @@
     <!-- HR -------------------- -->
     <hr>
     <h1>&lt;card-t attribute&gt; configuration examples</h1>
-    <h3 class="fullversion">click to see Element Attributes - Details at: <a
-            href='https://github.com/card-ts/playingcardt'>GitHub
-            &lt;card-t&gt; attribute/property
-            syntax</a>
-    </h3>
-    <h3>'play' an Ace card for some more advice</h3>
+    <div class=fullversion>
+        <h3>click to see Element Attributes - Details at: <a href='https://github.com/card-ts/playingcardt'>GitHub
+                &lt;card-t&gt; attribute/property
+                syntax</a>
+        </h3>
+        <h3>'play' an Ace card for some more advice</h3>
+    </div>
+    <div class=notfullversion>
+        <h3>See the <a href='?#full'>full version</a> for attribute examples on click</h3>
+    </div>
     <div id=Configuration class="grid">
         <!-- row -->
         <card-t suit=Hearts rank=Jack courts=201></card-t>
@@ -522,4 +527,4 @@
 
 </html>
 <hr>
-Published: 2019-05-27 16:49 
+Published: 2019-06-20 10:46 
