@@ -175,7 +175,16 @@
 </head>
 
 <body class="greencloth">
-    <div id=BrowserWarning>W3C Custom Elements (WebComponent) run nativly in modern Chrome & FireFox Browsers</div>
+    <script>
+        if (!('customElements' in window)) {
+            window.onload = function () {
+                var noElements = "This browsers does not support modern W3C Custom Elements, use Chrome or FireFox";
+                console.error(noElements);
+                document.body.style.visibility = 'initial';
+                document.write(noElements);
+            }
+        }
+    </script>
     <img is=king-of-hearts id=testcard style=width:30vw;display:none>
     <h1>52 SVG playingcards in one <span id=ElementGZsize>16</span> KB<span class=notfullversion>¹</span> Custom
         Element &lt;card-t&gt;️</h1>
@@ -222,7 +231,6 @@
     <br>
 
 
-    <!-- HR -------------------- -->
     <hr>
     <div class=notfullversion>
         <h1>It is a card-trick... How did I cheat to get the GZip size down to <b>16 KB</b> ?</h1>
@@ -256,8 +264,6 @@
         </div>
     </div>
 
-
-    <!-- HR -------------------- -->
     <hr>
     <h1>&lt;card-t attribute&gt; configuration examples</h1>
     <div class=fullversion>
@@ -319,7 +325,6 @@
 
 
 
-    <!-- HR -------------------- -->
     <hr>
     <h1>Extending &lt;IMG> : creating 52 'Customized Built-In Elements'</h1>
     <h3>Creates less DOM nodes but &nbsp;<i>is=</i>&nbsp; notation must be the full (Customized) Element name in
@@ -396,7 +401,6 @@
     <div id=CardtUse></div>
 
 
-    <!-- HR -------------------- -->
     <hr>
     <h1>&lt;card-t&gt; is used in:</h1>
     <h3><a href='https://card-ts.github.io/Solitaire/'>https://card-ts.github.io/Solitaire/</a> (click to open in new
@@ -408,114 +412,114 @@
     </style>
     <iframe id=Solitaire title="card-t Solitaire" src="https://card-ts.github.io/Solitaire/"></iframe>
 
-    <!-- SCRIPT -------------------- -->
     <!-- executing after HTML/loaded -->
     <script>
-        //load min or full version dynamically in a script tag
-        var scriptTag = document.createElement('script');
-        var urlParams = new URLSearchParams(window.location.search);
+        try {
+            //load min or full version dynamically in a script tag
+            var scriptTag = document.createElement('script');
+            var urlParams = new URLSearchParams(window.location.search);
 
-        //create single card-t element
-        let cardt = (suitname, rankname) => {
-            let card = document.createElement('card-t');// Custom Element is declare in element.card-t.min/full.js
-            let setAttr = (x, v = '') => card.setAttribute(x, v);
-            setAttr('suit', suitname);
-            setAttr('rank', rankname);
-            try {
-                setAttr(rankname);  // set rank and suitnames as attribute for easier CSS selectors
-                setAttr(suitname);
-            } catch (e) {
-                //disregard invalid attribute names
-            }
-            //setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');// set black/red attributes for easier CSS selection
-            return card;
-        }
-
-        //dynamically load min or full version
-        scriptTag.type = 'text/javascript';
-        let element_version = 'min';
-        if (document.location.href.includes('full')) {
-            ElementGZsize.innerText = 60;//replace 16 KB in span text
-            element_version = 'full';
-        }
-        scriptTag.src = 'element.card-t.' + element_version + '.js';
-        scriptTag.onload = () => {
-            if (window.customElements) BrowserWarning.remove();
-            //            console.log('loaded card-t element', scriptTag.src);
-
-            let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
-
-            //create 52 cards-t elements
-            let cards = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
-                .map(suit => 'Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King'.split`,`
-                    .map(rank => cardt(suit, rank)))
-                .flat();
-
-            //add cards to the DOM
-            Deck.append(...cards);// add 52 cards to DOM element Deck
-
-            //house keeping for showing full version
-            if (element_version == 'full') {
-
-                fullversion.disabled = false;   // enable fullversion style
-                //inject cid cards in injectCardts array
-                let injectCardts = (element, settings = {}) => {
-                    let cids = ['J', 'Q', 'K'].map(rank => ['s', 'h', 'd', 'c'].map(suit => rank + suit)).flat();
-                    element.append(...cids.map(cid => {
-                        let card = document.createElement(`card-t`);
-                        card.setAttribute('cid', cid);
-                        Object.keys(settings).map(attr => card.setAttribute(attr, settings[attr]));
-                        return card;
-                    }));
+            //create single card-t element
+            let cardt = (suitname, rankname) => {
+                let card = document.createElement('card-t');// Custom Element is declare in element.card-t.min/full.js
+                let setAttr = (x, v = '') => card.setAttribute(x, v);
+                setAttr('suit', suitname);
+                setAttr('rank', rankname);
+                try {
+                    setAttr(rankname);  // set rank and suitnames as attribute for easier CSS selectors
+                    setAttr(suitname);
+                } catch (e) {
+                    //disregard invalid attribute names
                 }
-                injectCardts(FullCourts);                   // inject cardts in DOM element FullCourts
-                injectCardts(MinCourts, { suits: '1111' });
+                //setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');// set black/red attributes for easier CSS selection
+                return card;
             }
 
-            //if cid URL parameter defined show as bigcard
-            if (urlParams.has('cid')) BigCardt.cid = urlParams.get('cid');
-            //show big testcard 
-            if (urlParams.has('testcard')) {
-                testcard.setAttribute('cid', urlParams.get('testcard'));
-                testcard.style.display = 'block';
+            //dynamically load min or full version
+            scriptTag.type = 'text/javascript';
+            let element_version = 'min';
+            if (document.location.href.includes('full')) {
+                ElementGZsize.innerText = 60;//replace 16 KB in span text
+                element_version = 'full';
             }
+            scriptTag.src = 'element.card-t.' + element_version + '.js';
+            scriptTag.onload = () => {
+                //            console.log('loaded card-t element', scriptTag.src);
 
-            //for every card in the Deck show the card big
-            [...document.querySelectorAll('#Deck card-t')].forEach(cardt => {
-                cardt.addEventListener('mouseover', evt => {
-                    BigCardt.firstChild.src = cardt.firstChild.src
+                let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
+
+                //create 52 cards-t elements
+                let cards = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
+                    .map(suit => 'Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King'.split`,`
+                        .map(rank => cardt(suit, rank)))
+                    .flat();
+
+                //add cards to the DOM
+                Deck.append(...cards);// add 52 cards to DOM element Deck
+
+                //house keeping for showing full version
+                if (element_version == 'full') {
+
+                    fullversion.disabled = false;   // enable fullversion style
+                    //inject cid cards in injectCardts array
+                    let injectCardts = (element, settings = {}) => {
+                        let cids = ['J', 'Q', 'K'].map(rank => ['s', 'h', 'd', 'c'].map(suit => rank + suit)).flat();
+                        element.append(...cids.map(cid => {
+                            let card = document.createElement(`card-t`);
+                            card.setAttribute('cid', cid);
+                            Object.keys(settings).map(attr => card.setAttribute(attr, settings[attr]));
+                            return card;
+                        }));
+                    }
+                    injectCardts(FullCourts);                   // inject cardts in DOM element FullCourts
+                    injectCardts(MinCourts, { suits: '1111' });
+                }
+
+                //if cid URL parameter defined show as bigcard
+                if (urlParams.has('cid')) BigCardt.cid = urlParams.get('cid');
+                //show big testcard 
+                if (urlParams.has('testcard')) {
+                    testcard.setAttribute('cid', urlParams.get('testcard'));
+                    testcard.style.display = 'block';
+                }
+
+                //for every card in the Deck show the card big
+                [...document.querySelectorAll('#Deck card-t')].forEach(cardt => {
+                    cardt.addEventListener('mouseover', evt => {
+                        BigCardt.firstChild.src = cardt.firstChild.src
+                    });
                 });
-            });
-            //show body after all is done... FireFox does it different
-            document.body.style.visibility = 'initial';
+                //show body after all is done... FireFox does it different
+                document.body.style.visibility = 'initial';
 
-            // on every click show/hide attributes style
-            document.body.addEventListener('click', evt => {
-                let cardt = evt.target.parentNode;
-                if (element_version == 'full' && cardt.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled;
-                if (cardt.getAttribute('rank') == 1 || cardt.cid == 'As') {
-                    if (TheGambler.paused) TheGambler.play();
-                    else TheGambler.pause();
+                // on every click show/hide attributes style
+                document.body.addEventListener('click', evt => {
+                    let cardt = evt.target.parentNode;
+                    if (element_version == 'full' && cardt.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled;
+                    if (cardt.getAttribute('rank') == 1 || cardt.cid == 'As') {
+                        if (TheGambler.paused) TheGambler.play();
+                        else TheGambler.pause();
+                    }
+                });
+
+                setTimeout(() => {
+                    TheGambler.setAttribute('src', 'thegambler.ogg');
+                    TheGambler.pause();
+                }, 1000);
+
+            };
+            document.body.appendChild(scriptTag);
+
+            new IntersectionObserver(entries => {
+                // console.log(entries[0].boundingClientRect, entries[0].target);
+                for (const entry of entries) {
+                    if (entry.isIntersecting) {
+                        Hand1.style.setProperty('--spread', 1);
+                    }
                 }
-            });
-
-            setTimeout(() => {
-                TheGambler.setAttribute('src', 'thegambler.ogg');
-                TheGambler.pause();
-            }, 1000);
-
-        };
-        document.body.appendChild(scriptTag);
-
-        new IntersectionObserver(entries => {
-            // console.log(entries[0].boundingClientRect, entries[0].target);
-            for (const entry of entries) {
-                if (entry.isIntersecting) {
-                    Hand1.style.setProperty('--spread', 1);
-                }
-            }
-        }).observe(document.querySelector("#CardtUse"));
-
+            }).observe(document.querySelector("#CardtUse"));
+        } catch (e) {
+        }
     </script>
     <!-- Fork me on GitHub label  -->
     <a style="position:fixed;top:0;right:0" href="https://github.com/card-ts/playingcardts"><img width="160"
@@ -527,4 +531,4 @@
 
 </html>
 <hr>
-Published: 2019-06-21 10:24 
+Published: 2019-06-21 10:54 
