@@ -538,9 +538,14 @@ Creating the card does take CPU time. Maybe a WebWorker can improve performance 
 
 I haven't found a good Joker Card design yet, if you have one let me know
 
+## 🃏 Why not [..*fill in WC Library/Framework name*..] ?
+
+I wanted to learn how far I could go with vanilla JavaScript  
+Then I wanted to proof you don't need libraries/frameworks
+
 <hr>
 
-# 🃏 Where did you cheat?
+# 🃏 Where/How did you cheat to get all SVG in 16KB element?
 
 Look closely at the court cards.... 
 
@@ -684,6 +689,8 @@ or the Muppets version: https://www.youtube.com/watch?v=kNnrTNFWcsg
 * https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements
 * Custom Elements/Web Components best practices  
 https://developers.google.com/web/fundamentals/web-components/best-practices
+* Andrea Giammarchi/WebReflection - Why I use WebComponents  
+https://gist.github.com/WebReflection/71aed0c811e2e88e3cd3c647213f0e6c
 
 #### Cards
 
@@ -753,4 +760,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-06-21 15:10 
+Published: 2019-06-21 16:53 
