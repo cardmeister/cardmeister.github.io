@@ -507,6 +507,8 @@ If you need an installer to copy **one** file: [element.card-t.min.js](https://g
 
 You might find a better career flipping burgers at McDonalds.
 
+(Read: I stuck the UNlincense on this code, I don't want to be responsible for maintaining a repo/dependency for others)
+
 ### 🃏 Where is the ``SVGcardt()`` source?
 
 **You do NOT need the ``SVGcardt()`` _Source Code_ to use ``<card-t>`` or ``<img is=..>`` in applications**
@@ -749,4 +751,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-06-21 10:57 
+Published: 2019-06-21 15:08 
