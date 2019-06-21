@@ -635,6 +635,8 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
+# License: unlicense
+
 ````
 This is free and unencumbered software released into the public domain.
 
@@ -751,4 +753,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-06-21 15:08 
+Published: 2019-06-21 15:10 
