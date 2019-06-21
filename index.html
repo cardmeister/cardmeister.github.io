@@ -175,6 +175,7 @@
 </head>
 
 <body class="greencloth">
+    <div id=BrowserWarning>W3C Custom Elements (WebComponent) run nativly in modern Chrome & FireFox Browsers</div>
     <img is=king-of-hearts id=testcard style=width:30vw;display:none>
     <h1>52 SVG playingcards in one <span id=ElementGZsize>16</span> KB<span class=notfullversion>¹</span> Custom
         Element &lt;card-t&gt;️</h1>
@@ -189,7 +190,6 @@
     <hr>
     <span class="footnote notfullversion">¹ raw SVG for 52 cards is 500 KB , &lt;card-t&gt; GZipped is 16 KB</span>
 
-    <!-- HR -------------------- -->
     <hr>
     <h1>Using &lt;card-t&gt;:</h1>
     <div id=Usage class="grid">
@@ -411,7 +411,6 @@
     <!-- SCRIPT -------------------- -->
     <!-- executing after HTML/loaded -->
     <script>
-
         //load min or full version dynamically in a script tag
         var scriptTag = document.createElement('script');
         var urlParams = new URLSearchParams(window.location.search);
@@ -441,6 +440,7 @@
         }
         scriptTag.src = 'element.card-t.' + element_version + '.js';
         scriptTag.onload = () => {
+            if (window.customElements) BrowserWarning.remove();
             //            console.log('loaded card-t element', scriptTag.src);
 
             let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
@@ -527,4 +527,4 @@
 
 </html>
 <hr>
-Published: 2019-06-20 10:51 
+Published: 2019-06-21 10:24 
