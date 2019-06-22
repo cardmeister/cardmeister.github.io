@@ -65,13 +65,16 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 -- Amsterdam 🌷🌷🌷 the Netherlands  
 -- Summer 2019  👴🏽  _25 years after my first HTML page_
 
-````
-¹ - Everyone uses the terms Custom Elements & Web Components interchangeably.  
-    Strictly speaking Web Components are Custom Elements WITH shadow DOM
+1. The terms *Custom Elements* & *Web Components* seems to be used interchangeably.  
+    [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) is the umbrella term for the three main techonologies:  
+    * [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
+    * [Shadow Dom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) 
+    * [HTML Templates](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots) 
+    * some references include a fourth: [ES Modules](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules)
 
-² - 16 KB GZip
-    It is a card-game .. I cheated ... but can you spot where?  (explained in documentation below)
-````
+2. Minified 16 KB GZip  
+It is a card game .. I cheated ... but can you spot where?  (explained in documentation below)
+
 
 <hr>
 
@@ -760,4 +763,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-06-21 16:53 
+Published: 2019-06-22 10:26 
