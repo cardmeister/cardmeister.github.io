@@ -2,8 +2,8 @@
 
 #### No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No External SVG files!&nbsp;&nbsp; All SVG is created by the Custom Element
 
-> This project uses modern browser technologies, use the latest **Chrome or Firefox**  
-> If you want to make it work in other browsers see the [WebComponents polyfill](https://www.webcomponents.org/polyfills/)
+> This project uses modern browser technologies. Open in a 'evergreen' browser  
+> If you want to make it work in older browsers see the [WebComponents polyfill](https://www.webcomponents.org/polyfills/)
 
 **License:** Unlicense: This is free software released into the public domain - https://choosealicense.com/licenses/unlicense/
 
@@ -65,7 +65,7 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 -- Amsterdam 🌷🌷🌷 the Netherlands  
 -- Summer 2019  👴🏽  _25 years after my first HTML page_
 
-1. The terms *Custom Elements* & *Web Components* seems to be used interchangeably.  
+1. The terms *Custom Elements* & *Web Components* are used interchangeably.  
     [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) is the umbrella term for the three main techonologies:  
     * [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
     * [Shadow Dom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) 
@@ -763,4 +763,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-06-22 10:26 
+Published: 2019-06-28 10:04 
