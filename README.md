@@ -19,7 +19,7 @@
 
 ![](https://i.imgur.com/0K09KNh.jpg)
 
-## The **single file** [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is:
+## The **single file** [elements.cardmeister.min.js](https://github.com/card-ts/playingcardts/blob/master/elements.cardmeister.min.js) is:
 
 * SVG data for 52 playing cards - **500 KB** painstakingly slimmed
 
@@ -97,7 +97,7 @@ Like the HTML5 ``<video>`` tag, the Custom Element ``<card-t>`` abstracts comple
 ```html
   <html>
     <head>
-        <script src='element.card-t.full.js'></script>
+        <script src='elements.cardmeister.full.js'></script>
     </head>
     <body>
         <card-t rank=Queen suit=Hearts></card-t>
@@ -508,7 +508,7 @@ This project was about stuffing everything into **one** file.
 
 ### 🃏 Where is the NPM installer?  
 
-If you need an installer to copy **one** file: [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js)  
+If you need an installer to copy **one** file: [elements.cardmeister.min.js](https://github.com/card-ts/playingcardts/blob/master/elements.cardmeister.min.js)  
 
 You might find a better career flipping burgers at McDonalds.
 
@@ -518,7 +518,7 @@ You might find a better career flipping burgers at McDonalds.
 
 **You do NOT need the ``SVGcardt()`` _Source Code_ to use ``<card-t>`` or ``<img is=..>`` in applications**
 
-The ``<card-t>`` Custom Element declaration in [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js) is unlicensed.  
+The ``<card-t>`` Custom Element declaration in [elements.cardmeister.min.js](https://github.com/card-ts/playingcardts/blob/master/elements.cardmeister.min.js) is unlicensed.  
 You can rename ``<card-t>`` to anything you want and customize the Custom Element to your liking.
 
 The ``<img is=..>`` declaration is part of the minified SVGcardt() code.
@@ -577,11 +577,11 @@ Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
 ![](https://i.imgur.com/sVkxGey.jpg)
 
-The Full Version **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)** with 12 different court images adds **110 KB** raw SVG data  
+The Full Version **[elements.cardmeister.full.js](https://github.com/card-ts/playingcardts/blob/master/elements.cardmeister.full.js)** with 12 different court images adds **110 KB** raw SVG data  
 
 **Making the single file 60 KB GZipped!**
 
-## See: [index.html?#full](https://cardmeister.github.ioindex.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
+## See: [index.html?#full](https://cardmeister.github.ioindex.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/elements.cardmeister.full.js)
 
 ## Difference between the .min. and the .full. version
 
@@ -591,11 +591,11 @@ It was fun (and took some time) breaking that 16 KB barrier, and helped making t
 
 **Use the Full version** !
 
-* **[element.card-t.full.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)**
+* **[elements.cardmeister.full.js](https://github.com/card-ts/playingcardts/blob/master/elements.cardmeister.full.js)**
 
 The Min version can be used for slow/low-bandwidth applications.
 
-* [element.card-t.min.js](https://github.com/card-ts/playingcardts/blob/master/element.card-t.min.js)
+* [elements.cardmeister.min.js](https://github.com/card-ts/playingcardts/blob/master/elements.cardmeister.min.js)
 
 <hr>
 
@@ -765,4 +765,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-10-13 12:10 
+Published: 2019-10-13 12:24 
