@@ -11,12 +11,6 @@
 
 <hr>
 
-### Demo: [https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
-
-### Used in: https://card-ts.github.io/Solitaire/
-
-<hr>
-
 ![](https://i.imgur.com/0K09KNh.jpg)
 
 ## The **single file** [elements.cardmeister.min.js](https://github.com/card-ts/playingcardts/blob/master/elements.cardmeister.min.js) is:
@@ -30,10 +24,6 @@
 * Total **GZip** file size: (under) **16 KB² creating 52 playingcardts:**
 
 ![](https://i.imgur.com/bsYbx1q.jpg)
-
-<hr>
-
-[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -77,10 +67,6 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 2. Minified 16 KB GZip  
 It is a card game .. I cheated ... but can you spot where?  (explained in documentation below)
 
-
-<hr>
-
-[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -172,10 +158,6 @@ or for the customized IMG element:
 
 <hr>
 
-[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
-
-<hr>
-
 # My next challenge: a Solitaire game in Custom Elements
 
 I have the selection and drag/drop part nearly done: https://card-ts.github.io/Solitaire/
@@ -207,10 +189,6 @@ What if cardts could:
 * ...
 
 ![](https://i.imgur.com/y3wKtcE.jpg)
-
-<hr>
-
-[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -408,10 +386,6 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 💡 suit decorations are set by the ``suitcolor`` attribute
 
 ![](https://i.imgur.com/D2hwgrC.jpg)
-
-<hr>
-
-[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -641,10 +615,6 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
-[https://cardmeister.github.io](https://cardmeister.github.io) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
-
-<hr>
-
 # License: unlicense
 
 ````
@@ -765,4 +735,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-10-13 12:26 
+Published: 2019-10-13 12:29 
