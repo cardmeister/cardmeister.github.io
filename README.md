@@ -23,7 +23,7 @@
 
 * Total **GZip** file size: (under) **16 KB² creating 52 playingcards:**
 
-![](https://i.imgur.com/bsYbx1q.jpg)
+![](https://i.imgur.com/Wy7jqLR.jpg)
 
 <hr>
 
@@ -735,4 +735,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-10-13 13:46 
+Published: 2019-10-13 13:53 
