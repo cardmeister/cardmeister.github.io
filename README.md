@@ -4,14 +4,14 @@
 
 ##### From the maker of: [FlagMeister.github.io](https://flagmeister.github.io) , [ChessMeister.github.io](https://chessmeister.github.io)
 
+![](https://i.imgur.com/SeQwXST.jpg)
+
 > This project uses modern browser technologies. Open in a 'evergreen' browser  
 > If you want to make it work in older browsers see the [WebComponents polyfill](https://www.webcomponents.org/polyfills/)
 
 **License:** Unlicense: This is free software released into the public domain - https://choosealicense.com/licenses/unlicense/
 
 <hr>
-
-![](https://i.imgur.com/0K09KNh.jpg)
 
 ## The **single file** [elements.cardmeister.min.js](https://github.com/cardmeister/cardmeister.github.io/blob/master/elements.cardmeister.min.js) is:
 
@@ -735,4 +735,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-10-13 13:53 
+Published: 2019-10-13 13:55 
