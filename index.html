@@ -170,7 +170,7 @@
             content: attr(doc);
             overflow: visible;
             word-wrap: break-word;
-            z-index:1;
+            z-index: 1;
         }
     </style>
 </head>
@@ -216,7 +216,7 @@
             }
         </style>
         <pre style='color:lightgray;'>    &lt;head>
-        &lt;script src<i>=</i><b class=cardt1>'element.card-t.full.js'</b>>&lt;/script>
+        &lt;script src<i>=</i><b class=cardt1>'elements.cardmeister.full.js'</b>>&lt;/script>
     &lt;/head>
     &lt;body>
         <b class=cardt1>&lt;card-t <i>cid=</i><span class=cardt2>As</span>>&lt;/card-t></b>
@@ -422,7 +422,7 @@
 
             //create single card-t element
             let cardt = (suitname, rankname) => {
-                let card = document.createElement('card-t');// Custom Element is declare in element.card-t.min/full.js
+                let card = document.createElement('card-t');// Custom Element is declare in elements.cardmeister.min/full.js
                 let setAttr = (x, v = '') => card.setAttribute(x, v);
                 setAttr('suit', suitname);
                 setAttr('rank', rankname);
@@ -443,7 +443,7 @@
                 ElementGZsize.innerText = 60;//replace 16 KB in span text
                 element_version = 'full';
             }
-            scriptTag.src = 'element.card-t.' + element_version + '.js';
+            scriptTag.src = 'elements.cardmeister.' + element_version + '.js';
             scriptTag.onload = () => {
                 //            console.log('loaded card-t element', scriptTag.src);
 
@@ -532,4 +532,4 @@
 
 </html>
 <hr>
-Published: 2019-10-13 12:10 
+Published: 2019-10-13 12:24 
