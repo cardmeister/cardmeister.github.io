@@ -2,6 +2,8 @@
 
 #### No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No External SVG files!&nbsp;&nbsp; All SVG is created by the Custom Element
 
+##### From the maker of: [FlagMeister.github.io](https://flagmeister.github.io) , [ChessMeister.github.io](https://chessmeister.github.io)
+
 > This project uses modern browser technologies. Open in a 'evergreen' browser  
 > If you want to make it work in older browsers see the [WebComponents polyfill](https://www.webcomponents.org/polyfills/)
 
@@ -9,7 +11,7 @@
 
 <hr>
 
-### Demo: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
+### Demo: [https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM)
 
 ### Used in: https://card-ts.github.io/Solitaire/
 
@@ -31,7 +33,7 @@
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
+[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -67,7 +69,7 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 
 1. The terms *Custom Elements* & *Web Components* are used interchangeably.  
     [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) is the umbrella term for the three main techonologies:  
-    * [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
+    * [Custom Elements - the Custom Elements **API**](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
     * [Shadow Dom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) 
     * [HTML Templates](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots) 
     * some references include a fourth: [ES Modules](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules)
@@ -78,7 +80,7 @@ It is a card game .. I cheated ... but can you spot where?  (explained in docume
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
+[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -130,7 +132,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 > The *Autonomous* Custom Element ``<card-t>`` and the *Customized Built-In* Element ``<img is=...>``  
 are two different flavours of Custom Elements which (in this case) do the same.  
-You can pick the **one** that suits your application. Or use them both in one page: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/)
+You can pick the **one** that suits your application. Or use them both in one page: [https://cardmeister.github.io](https://cardmeister.github.io)
 
 💡 declaration **must be** all lowercase!
 
@@ -170,7 +172,7 @@ or for the customized IMG element:
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
+[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -208,7 +210,7 @@ What if cardts could:
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
+[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -232,7 +234,7 @@ As = Ace of Spades , Td = Ten of Diamonds
 
 ### ``<card-t>`` takes a sh*tload of attributes you can play with:
 
-See: [https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/)
+See: [https://cardmeister.github.io](https://cardmeister.github.io)
 
 * ``cid`` - Standard Card ID notation: ``cid=Qh`` = Queen of Hearts
 * ``letters`` - Custom localized court letters 
@@ -409,7 +411,7 @@ default: #DB3,red,#44F,#000,#000,4  (gold,red,blue,black,blacklines,linethicknes
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
+[https://cardmeister.github.io](https://cardmeister.github.io) -  🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -579,7 +581,7 @@ The Full Version **[element.card-t.full.js](https://github.com/card-ts/playingca
 
 **Making the single file 60 KB GZipped!**
 
-## See: [index.html?#full](https://card-ts.github.io/playingcardts/index.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
+## See: [index.html?#full](https://cardmeister.github.ioindex.html?#full&cid=Qh) - 📄 [source](https://github.com/card-ts/playingcardts/blob/master/element.card-t.full.js)
 
 ## Difference between the .min. and the .full. version
 
@@ -639,7 +641,7 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 
 <hr>
 
-[https://card-ts.github.io/playingcardts/](https://card-ts.github.io/playingcardts/) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
+[https://cardmeister.github.io](https://cardmeister.github.io) - 🤸 Play on: [JSFiddle](https://jsfiddle.net/dannye/Lvbqtj9d/) , [CodePen](https://codepen.io/Danny-Engelman/project/editor/ZRoWyM) Used in: https://card-ts.github.io/Solitaire/
 
 <hr>
 
@@ -763,4 +765,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-10-13 11:55 
+Published: 2019-10-13 12:10 
