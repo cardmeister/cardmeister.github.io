@@ -486,7 +486,8 @@ If you need an installer to copy **one** file: [elements.cardmeister.min.js](htt
 
 You might find a better career flipping burgers at McDonalds.
 
-(Read: I stuck the UNlincense on this code, I don't want to be responsible for maintaining a repo/dependency for others)
+Read: I stuck the **UNlicense** on this code. You can do whatever you want with the code.  
+I don't want to be responsible for maintaining a dependency for others
 
 ### 🃏 Where is the ``SVGcardt()`` source?
 
@@ -735,4 +736,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-10-13 14:50 
+Published: 2019-11-09 18:50 
