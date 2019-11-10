@@ -193,6 +193,8 @@ What if cardts could:
 ![](https://i.imgur.com/y3wKtcE.jpg)
 
 <hr>
+<hr>
+<hr>
 
 ![](https://i.imgur.com/gqOUijq.jpg)
 
@@ -204,7 +206,7 @@ What if cardts could:
 * SHDC is short for Spades-Hearts-Diamonds-Clubs 
 * 0123 are Array indexes (SHDC)
 * cid = card id  
-As = Ace of Spades , Td = Ten of Diamonds
+As = Ace of Spades , TD = Ten of Diamonds
 
 💡 attributes can be written as attributes in HTML:``<card-t id=MyCard cid=Qh ></card-t>``
 
@@ -738,4 +740,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-11-10 11:44 
+Published: 2019-11-10 12:04 
