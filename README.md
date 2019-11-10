@@ -19,7 +19,7 @@
 
 * one [W3C Autonomous Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) : ``<card-t cid=Queen-of-Hearts> </card-t>``
 
-* 52 customized Built-In IMG elements : ``<img is=queen-of-hearts>``
+* 52 customized Built-In IMG elements : ``<img is=queen-of-hearts>`` (only supported with a <a href="https://github.com/ungap/custom-elements-builtin"></a>polyfill</a> on Safari & Opera)
 
 * Total **GZip** file size: (under) **16 KB² creating 52 playingcards:**
 
@@ -104,7 +104,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 ![](https://i.imgur.com/7csZylT.jpg)
 
-## Customized Built-In Element (from IMG)
+## Customized Built-In Element (from IMG) 
 
 52 Custom Elements are **also** created customizing the IMG element so you can use:
 
@@ -119,6 +119,8 @@ and makes it easy to add HTML Drag-Drop functionality.
 > The *Autonomous* Custom Element ``<card-t>`` and the *Customized Built-In* Element ``<img is=...>``  
 are two different flavours of Custom Elements which (in this case) do the same.  
 You can pick the **one** that suits your application. Or use them both in one page: [https://cardmeister.github.io](https://cardmeister.github.io)
+
+💡 only supported with a <a href="https://github.com/ungap/custom-elements-builtin"></a>polyfill</a> on Safari & Opera
 
 💡 declaration **must be** all lowercase!
 
@@ -736,4 +738,4 @@ Load SVG content in main document:
 ```
 <hr>
 <hr>
-Published: 2019-11-10 11:14 
+Published: 2019-11-10 11:44 
