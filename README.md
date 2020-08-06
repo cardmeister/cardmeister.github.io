@@ -780,6 +780,8 @@ or the Muppets version: https://www.youtube.com/watch?v=kNnrTNFWcsg
 
 #### Chess
 
+Yes, I did https://chessmeister.github.io
+
 `<img is=white-queen at=D5>`
 
 - https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces/Maurizio_Monge
@@ -797,4 +799,4 @@ Load SVG content in main document:
 
 <hr>
 <hr>
-Published: 2020-08-06 16:28 
+Published: 2020-08-06 16:58 
