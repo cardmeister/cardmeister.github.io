@@ -19,7 +19,7 @@
 
 - one [W3C Autonomous Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) : `<card-t cid=Queen-of-Hearts> </card-t>`
 
-- 52 customized Built-In IMG elements : `<img is=queen-of-hearts>` (requires a <a href="https://github.com/ungap/custom-elements-builtin"></a>polyfill</a> in Safari)
+- 52 customized Built-In IMG elements : `<img is=queen-of-hearts>` 
 
 - Total **GZip** file size: (under) **16 KB² creating 52 playingcards:**
 
@@ -49,7 +49,7 @@ Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 - **no** external SVG images
 - All in 16 KB² because my first computer had 16 **Kilo**Bytes memory
 
-Feel free to PEEK around, and if you want to POKE submit an [issue](https://github.com/cardmeister/cardmeister.github.io/issues/new).
+Feel free to PEEK around, and if you want to POKE, submit an [issue](https://github.com/cardmeister/cardmeister.github.io/issues/new).
 
 A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful answers on [StackOverflow](https://stackoverflow.com/questions/tagged/web-component+or+custom-element)!
 
@@ -62,7 +62,7 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 
    - [Custom Elements - the Custom Elements **API**](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
    - [Shadow Dom](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM) (not used in this project)
-   - [HTML Templates](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots) (ot used in this project)
+   - [HTML Templates](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots) (not used in this project)
    - some references include a fourth: [ES Modules](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules) (not used in this project)
 
 2. Minified 16 KB GZip  
@@ -120,7 +120,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 > are two different flavours of Custom Elements which (in this case) do the same.  
 > You can pick the **one** that suits your application. Or use them both in one page: [https://cardmeister.github.io](https://cardmeister.github.io)
 
-💡 requires a <a href="https://github.com/ungap/custom-elements-builtin"></a>polyfill</a> in Safari
+💡 requires a <a href="https://www.webcomponents.org/polyfills">polyfill</a> in Safari, because Apple does not want to implement this part of the spec.
 
 💡 declaration **must be** all lowercase!
 
@@ -797,4 +797,4 @@ Load SVG content in main document:
 
 <hr>
 <hr>
-Published: 2020-06-10 12:43 
+Published: 2020-08-06 16:28 
