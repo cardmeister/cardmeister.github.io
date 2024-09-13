@@ -181,6 +181,7 @@
 
 <body class="greencloth">
     <playing-card cid=king-of-hearts id=testcard style=width:30vw;display:none></playing-card>
+    <h2>Version #1 2018 - Version #2 2024</h2>
     <h1>52 SVG playingcards in one <span id=ElementGZsize>16</span> KB<span class=notfullversion>¹</span> Custom
         Element &lt;playing-card&gt;️</h1>
     <h3>No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No external SVG files!&nbsp;&nbsp; All SVG is created by
@@ -463,7 +464,6 @@
                     .map(suit => 'Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King'.split`,`
                         .map(rank => createPlayingCard(suit, rank)))
                     .flat();
-                console.warn(cards);
                 //add cards to the DOM
                 Deck.append(...cards);// add 52 cards to DOM element Deck
 
