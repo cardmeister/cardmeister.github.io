@@ -1,4 +1,4 @@
-## 52 SVG playingcards in **one** 16 KB² Custom Element: `<CARD-T>`
+## 52 SVG playingcards in **one** 16 KB² Custom Element: `<playing-card>`
 
 #### No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No External SVG files!&nbsp;&nbsp; All SVG is created by the Custom Element
 
@@ -17,9 +17,9 @@
 
 - SVG data for 52 playing cards - **500 KB** painstakingly slimmed
 
-- one [W3C Autonomous Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) : `<card-t cid=Queen-of-Hearts> </card-t>`
+- one [W3C Autonomous Custom Element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) : `<playing-card cid=Queen-of-Hearts> </playing-card>`
 
-- 52 customized Built-In IMG elements : `<img is=queen-of-hearts>` 
+- 52 customized Built-In IMG elements : `<img is=queen-of-hearts>` (not supported in Safari; no longer created since 2024)
 
 - Total **GZip** file size: (under) **16 KB² creating 52 playingcards:**
 
@@ -43,7 +43,7 @@ Alas in the past years 'Web Development' has become something _For-Rocket-Scient
 
 Playingcard(t)s are a good subject to demonstrate the power of a Custom Element
 
-- one single file creates a `<card-t>` Custom Element
+- one single file creates a `<playing-card>` Custom Element
 - (loads of) attributes for configuration
 - 52 SVG playingcards
 - **no** external SVG images
@@ -70,11 +70,11 @@ A special thanks to users _Supersharp_ and _Intervalia_ for their always helpful
 
 <hr>
 
-# How the `<card-t>` Custom-Element works
+# How the `<playing-card>` Custom-Element works
 
 For an introduction to W3C standard Custom Elements/WebComponents [read the excellent Blog by Danny Moerkerke](https://www.dannymoerkerke.com/blog/web-components-will-replace-your-frontend-framework)
 
-Like the HTML5 `<video>` tag, the Custom Element `<card-t>` abstracts complex functionality into one HTML tag
+Like the HTML5 `<video>` tag, the Custom Element `<playing-card>` abstracts complex functionality into one HTML tag
 
 💡 Custom Elements must be declared in a [Namespace](https://www.webcomponents.org/community/articles/how-should-i-name-my-element), so require a - hyphen in the tag name
 
@@ -86,19 +86,19 @@ Like the HTML5 `<video>` tag, the Custom Element `<card-t>` abstracts complex fu
     <script src="elements.cardmeister.full.js"></script>
   </head>
   <body>
-    <card-t rank="Queen" suit="Hearts"></card-t>
+    <playing-card rank="Queen" suit="Hearts"></playing-card>
   </body>
 </html>
 ```
 
 ![](https://i.imgur.com/mfhk2pd.jpg)
 
-**(Autonomous) Custom Element `<card-t>` creates an image with the SVG as `data:image` src**
+**(Autonomous) Custom Element `<playing-card>` creates an image with the SVG as `data:image` src**
 
 Saves you from headaches with SVG in a document (duplicate symbol ids, bleeding CSS etc.)  
 and makes it easy to add HTML Drag-Drop functionality.
 
-💡 Autonomous Custom Elements require a closing tag: `</card-t>`
+💡 Autonomous Custom Elements require a closing tag: `</playing-card>`
 
 #### How it looks in F12 Developer Tools:
 
@@ -116,7 +116,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 <img is="ace-of-hearts" />
 ```
 
-> The _Autonomous_ Custom Element `<card-t>` and the _Customized Built-In_ Element `<img is=...>`  
+> The _Autonomous_ Custom Element `<playing-card>` and the _Customized Built-In_ Element `<img is=...>`  
 > are two different flavours of Custom Elements which (in this case) do the same.  
 > You can pick the **one** that suits your application. Or use them both in one page: [https://cardmeister.github.io](https://cardmeister.github.io)
 
@@ -136,9 +136,9 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 ![](https://i.imgur.com/MNoSbdo.jpg)
 
-# Styling `<card-t>` with CSS:
+# Styling `<playing-card>` with CSS:
 
-Since `<card-t>` only creates a single IMG **no shadow-DOM is required/used**, thus IMG can be styled with **global CSS**:
+Since `<playing-card>` only creates a single IMG **no shadow-DOM is required/used**, thus IMG can be styled with **global CSS**:
 
 ```css
 [rank="queen"] img {
@@ -162,7 +162,7 @@ img[is*="queen"] {
 
 # My next challenge: a Solitaire game in Custom Elements
 
-I have the selection and drag/drop part nearly done: https://card-ts.github.io/Solitaire/
+I have the selection and drag/drop part nearly done: https://playing-cards.github.io/Solitaire/
 
 ```html
 <cardts-game>
@@ -181,7 +181,7 @@ I have the selection and drag/drop part nearly done: https://card-ts.github.io/S
 ></cardts-game>
 ```
 
-## or even weirder `<card-t>` games ...
+## or even weirder `<playing-card>` games ...
 
 What if cardts could:
 
@@ -199,7 +199,7 @@ What if cardts could:
 
 ![](https://i.imgur.com/gqOUijq.jpg)
 
-# `<card-t>` attribute/properties syntax
+# `<playing-card>` attribute/properties syntax
 
 **playingcards Terminology:**
 
@@ -209,13 +209,13 @@ What if cardts could:
 - cid = card id  
   As = Ace of Spades , TD = Ten of Diamonds
 
-💡 attributes can be written as attributes in HTML:`<card-t id=MyCard cid=Qh ></card-t>`
+💡 attributes can be written as attributes in HTML:`<playing-card id=MyCard cid=Qh ></playing-card>`
 
 💡 attributes can be set as attribute:`MyCard.setAttribute('cid','Kh')`
 
 💡 or as property: `MyCard.cid='Kh'` (sets the attribute value)
 
-### `<card-t>` takes a sh\*tload of attributes you can play with:
+### `<playing-card>` takes a sh\*tload of attributes you can play with:
 
 See: [https://cardmeister.github.io](https://cardmeister.github.io)
 
@@ -224,6 +224,7 @@ See: [https://cardmeister.github.io](https://cardmeister.github.io)
 - `courts` - mix rank/courts images
 - `suits` - Mix suit/court images
 - `suitcolor` - Change SHDC suit color
+- `rankcolor` - Change rank color
 - `cardcolor` - card color
 - `opacity` - set card content opacity
 - `courtcolors` - Change court image colors
@@ -238,11 +239,11 @@ See: [https://cardmeister.github.io](https://cardmeister.github.io)
 # 🔧 `cid` - standard card id notation
 
 ```HTML
-    <card-t cid=As></card-t>
-    <card-t cid=5d></card-t>
-    <card-t cid=Tc></card-t>
-    <card-t cid=Jh></card-t>
-    <card-t cid=Qc></card-t>
+    <playing-card cid=As></playing-card>
+    <playing-card cid=5d></playing-card>
+    <playing-card cid=Tc></playing-card>
+    <playing-card cid=Jh></playing-card>
+    <playing-card cid=Qc></playing-card>
 ```
 
 💡 overrules `rank=` and `suit=` notation
@@ -264,10 +265,10 @@ default: AJQK
 Rename Ace, Jack, Queen, King letters AJQK to Dutch locale 'Aas Boer Vrouw Heer'
 
 ```HTML
-    <card-t suit=Spades   rank=Ace   letters=ABVH></card-t>
-    <card-t suit=Hearts   rank=Jack  letters=ABVH></card-t>
-    <card-t suit=Diamonds rank=Queen letters=ABVH></card-t>
-    <card-t suit=Clubs    rank=King  letters=ABVH></card-t>
+    <playing-card suit=Spades   rank=Ace   letters=ABVH></playing-card>
+    <playing-card suit=Hearts   rank=Jack  letters=ABVH></playing-card>
+    <playing-card suit=Diamonds rank=Queen letters=ABVH></playing-card>
+    <playing-card suit=Clubs    rank=King  letters=ABVH></playing-card>
 ```
 
 ![](https://i.imgur.com/y83wjG8.jpg)
@@ -287,9 +288,9 @@ Before anyone complains the Queen is always #2
 Rearrange SHDC court images to KJQ = 201 :
 
 ```html
-<card-t suit="Hearts" rank="Jack" courts="201"></card-t>
-<card-t suit="Spades" rank="Queen" courts="201"></card-t>
-<card-t suit="Diamonds" rank="King" courts="201"></card-t>
+<playing-card suit="Hearts" rank="Jack" courts="201"></playing-card>
+<playing-card suit="Spades" rank="Queen" courts="201"></playing-card>
+<playing-card suit="Diamonds" rank="King" courts="201"></playing-card>
 ```
 
 ![](https://i.imgur.com/sw8hWDi.jpg)
@@ -299,60 +300,63 @@ Rearrange SHDC court images to KJQ = 201 :
 default: #E55 (red)
 
 ```html
-<card-t rank="0" backcolor="red"></card-t>
-<card-t cid="00"></card-t>
-<card-t
+<playing-card rank="0" backcolor="red"></playing-card>
+<playing-card cid="00"></playing-card>
+<playing-card
   rank="0"
   backcolor="#44F"
   backtext="COPYRIGHT"
   backtextcolor="black"
-></card-t>
+></playing-card>
 ```
 
 ![](https://i.imgur.com/GxT3m91.jpg)
 
 # 🔧 `suitcolor` - Change SHDC suit color
+# 🔧 `rankcolor` - Change rank color
 
 default: #000,red,red,#000
+
+(rankcolor added on request in 2024; can also be a single color value)
 
 # 🔧 `cardcolor` - card color
 
 default: #FFF
 
 ```html
-<card-t
+<playing-card
   rank="1"
   suit="0"
   suitcolor="#FFF,#FFF,#FFF,red"
   cardcolor="red"
-></card-t>
-<card-t
+></playing-card>
+<playing-card
   rank="1"
   suit="1"
   suitcolor="#FFF,yellow,#FFF,red"
   cardcolor="green"
-></card-t>
-<card-t
+></playing-card>
+<playing-card
   rank="1"
   suit="2"
   suitcolor="#FFF,#FFF,black,red"
   cardcolor="dodgerblue"
-></card-t>
-<card-t
+></playing-card>
+<playing-card
   rank="1"
   suit="3"
   suitcolor="#FFF,#FFF,#FFF,red"
   cardcolor="yellow"
-></card-t>
+></playing-card>
 ```
 
 The string (all 4 settings in one string for global declaration!) is converted to an array so can be written as:
 
 ```html
-<card-t rank="1" suit="0" suitcolor="#FFF," cardcolor="red"></card-t>
-<card-t rank="1" suit="1" suitcolor=",yellow" cardcolor="green"></card-t>
-<card-t rank="1" suit="2" suitcolor=",,black" cardcolor="dodgerblue"></card-t>
-<card-t rank="1" suit="3" suitcolor=",,,red" cardcolor="yellow"></card-t>
+<playing-card rank="1" suit="0" suitcolor="#FFF," cardcolor="red"></playing-card>
+<playing-card rank="1" suit="1" suitcolor=",yellow" cardcolor="green"></playing-card>
+<playing-card rank="1" suit="2" suitcolor=",,black" cardcolor="dodgerblue"></playing-card>
+<playing-card rank="1" suit="3" suitcolor=",,,red" cardcolor="yellow"></playing-card>
 ```
 
 💡 You can change one card with: `element.suitcolor='blue';`
@@ -367,16 +371,16 @@ The string (all 4 settings in one string for global declaration!) is converted t
 
 default: 0.8
 
-💡 0.8 makes the cards look not too sharp, and you can highlight card-ts by setting opacity to 1
+💡 0.8 makes the cards look not too sharp, and you can highlight playing-cards by setting opacity to 1
 
 ```html
-<card-t rank="1" suit="0" opacity="1"></card-t>
-<card-t rank="1" suit="1" opacity=".75"></card-t>
-<card-t rank="1" suit="2" opacity=".5"></card-t>
-<card-t rank="1" suit="3" opacity=".1"></card-t>
+<playing-card rank="1" suit="0" opacity="1"></playing-card>
+<playing-card rank="1" suit="1" opacity=".75"></playing-card>
+<playing-card rank="1" suit="2" opacity=".5"></playing-card>
+<playing-card rank="1" suit="3" opacity=".1"></playing-card>
 ```
 
-💡 CSS opacity makes the whole IMG transparent! `<card-t opacity=n>` leaves the `<card-t>` **backcolor** at 100%
+💡 CSS opacity makes the whole IMG transparent! `<playing-card opacity=n>` leaves the `<playing-card>` **backcolor** at 100%
 
 ![](https://i.imgur.com/eZhAuob.jpg)
 
@@ -393,27 +397,27 @@ default: 12
 default: 1
 
 ```html
-<card-t
+<playing-card
   rank="1"
   suit="0"
   bordercolor="red"
   borderradius="12"
   borderline="12"
-></card-t>
-<card-t
+></playing-card>
+<playing-card
   rank="4"
   suit="0"
   bordercolor="hotpink"
   borderradius="100%"
   borderline="20"
-></card-t>
-<card-t
+></playing-card>
+<playing-card
   rank="13"
   suit="H"
   bordercolor="gold"
   borderradius="12"
   borderline="38"
-></card-t>
+></playing-card>
 ```
 
 ![](https://i.imgur.com/pdbp75j.jpg)
@@ -425,21 +429,21 @@ default: 1
 default: #DB3,red,#44F,#000,#000,4 (gold,red,blue,black,blacklines,linethickness)
 
 ```html
-<card-t
+<playing-card
   suit="Hearts"
   rank="Jack"
   courtcolors="gold,red,blue,black,black,4"
-></card-t>
-<card-t
+></playing-card>
+<playing-card
   suit="Spades"
   rank="Queen"
   courtcolors="#DB3,lightcoral,lightblue,slategray,#000,1"
-></card-t>
-<card-t
+></playing-card>
+<playing-card
   suit="Diamonds"
   rank="King"
   courtcolors="gold,red,green,orange,#000,4"
-></card-t>
+></playing-card>
 ```
 
 💡 suit decorations are set by the `suitcolor` attribute
@@ -456,7 +460,7 @@ In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the **single** [King
 
 ![](https://i.imgur.com/WEgysvp.jpg)
 
-### `<card-t>` creates all 52 cards in **16 KB**
+### `<playing-card>` creates all 52 cards in **16 KB**
 
 ![](https://i.imgur.com/0K09KNh.jpg)
 
@@ -486,11 +490,11 @@ Since GZip is a similar LZ compression technique (over the whole file) there is 
 
 # Frequently Asked Questions
 
-### 🃏 Why `<card-t>`
+### 🃏 Why `<playing-card>`
 
 A Custom Element requires its own [Namespace](https://www.webcomponents.org/community/articles/how-should-i-name-my-element), so you are stuck to something with a - hyphen.
 
-You can create 52 Autonomous Custom Elements (extend from `<card-t>`):
+You can create 52 Autonomous Custom Elements (extend from `<playing-card>`):
 
 ```html
 <queen-of-hearts></queen-of-hearts>
@@ -509,7 +513,7 @@ To select all Spades you still need attributes:
 ```
 
 Because `queen-of-hearts` can either be a 'Autonomous Custom Element' OR a 'Customized Built-In Element'  
-`<card-t>` creates 52 Customized IMG elements:
+`<playing-card>` creates 52 Customized IMG elements:
 
 ```html
 <img is="ten-of-hearts" />
@@ -547,10 +551,10 @@ I don't want to be responsible for maintaining a dependency for others
 
 ### 🃏 Where is the `SVGcardt()` source?
 
-**You do NOT need the `SVGcardt()` _Source Code_ to use `<card-t>` or `<img is=..>` in applications**
+**You do NOT need the `SVGcardt()` _Source Code_ to use `<playing-card>` or `<img is=..>` in applications**
 
-The `<card-t>` Custom Element declaration in [elements.cardmeister.min.js](https://github.com/cardmeister/cardmeister.github.io/blob/master/elements.cardmeister.min.js) is unlicensed.  
-You can rename `<card-t>` to anything you want and customize the Custom Element to your liking.
+The `<playing-card>` Custom Element declaration in [elements.cardmeister.min.js](https://github.com/cardmeister/cardmeister.github.io/blob/master/elements.cardmeister.min.js) is unlicensed.  
+You can rename `<playing-card>` to anything you want and customize the Custom Element to your liking.
 
 The `<img is=..>` declaration is part of the minified SVGcardt() code.
 
@@ -594,17 +598,17 @@ default: 0123 &nbsp; (**defaults to 1111 in the 16 KB version!**)
 Change Spades=0, Hearts=1, Diamonds=2, Clubs=3 court image:
 
 ```HTML
-    <card-t suit=S rank=Queen suits=1111></card-t>
-    <card-t suit=H rank=Queen suits=1111></card-t>
-    <card-t suit=D rank=Queen suits=1111></card-t>
-    <card-t suit=C rank=Queen suits=1111></card-t>
+    <playing-card suit=S rank=Queen suits=1111></playing-card>
+    <playing-card suit=H rank=Queen suits=1111></playing-card>
+    <playing-card suit=D rank=Queen suits=1111></playing-card>
+    <playing-card suit=C rank=Queen suits=1111></playing-card>
 ```
 
 ## Cheating Queens:
 
 ![](https://i.imgur.com/k6cmH4M.jpg)
 
-## The full `<card-t>` version with 12 **unique** SVG courts:
+## The full `<playing-card>` version with 12 **unique** SVG courts:
 
 ![](https://i.imgur.com/sVkxGey.jpg)
 
@@ -630,7 +634,7 @@ The Min version can be used for slow/low-bandwidth applications.
 
 <hr>
 
-# Challenge - built a game using `<card-t>`
+# Challenge - built a game using `<playing-card>`
 
 Create FreeCell with HTML Custom Elements
 
@@ -663,10 +667,10 @@ inspiration: https://www.free-freecell-solitaire.com/freecell.html
 ## Here is some help to create the foundation for the SHDC foundation piles:
 
 ```html
-<card-t cid="F0"></card-t>
-<card-t cid="FH"></card-t>
-<card-t cid="F2"></card-t>
-<card-t cid="FC"></card-t>
+<playing-card cid="F0"></playing-card>
+<playing-card cid="FH"></playing-card>
+<playing-card cid="F2"></playing-card>
+<playing-card cid="FC"></playing-card>
 ```
 
 ![](https://i.imgur.com/F5v8Ud7.jpg)
