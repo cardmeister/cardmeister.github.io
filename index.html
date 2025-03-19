@@ -180,44 +180,46 @@
 </head>
 
 <body class="greencloth">
-    <!-- <playing-card suit="" rank="" id=testcard style=width:30vw;display:none></playing-card> -->
-    <h2>Version #1 2018 (16 KB) - Version #2 2024 (reduced to 14 KB)</h2>
-    <h1>52 SVG playingcards in one <span id=ElementGZsize>14</span> KB<span class=notfullversion>¹</span> Custom
-        Element &lt;playing-card&gt;️</h1>
-    <h3>No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No external SVG files!&nbsp;&nbsp; All SVG is created by
-        the (Autonomous) Custom Element - <a href="https://github.com/cardmeister/cardmeister.github.io">Github &
-            Documentation</a> </h3>
-    <div id=DeckContainer class=grid>
-        <div id=Deck class=grid>
-            <!-- 52 cardts are injected here-->
+    <section>
+        <!-- <playing-card suit="" rank="" id=testcard style=width:30vw;display:none></playing-card> -->
+        <h3>► Version #1 2018 (16 KB) ► Version #2 2024 (reduced to 14 KB)</h3>
+        <h1>52 SVG playingcards in one <span id=ElementGZsize>14</span> KB<span class=notfullversion>¹</span> Custom
+            Element &lt;playing-card&gt;️</h1>
+        <h3>No Frameworks&nbsp;&nbsp; No Dependencies&nbsp;&nbsp; No external SVG files!&nbsp;&nbsp; All SVG is created
+            by
+            the (Autonomous) Custom Element - <a href="https://github.com/cardmeister/cardmeister.github.io">Github &
+                Documentation</a> </h3>
+        <div id=DeckContainer class=grid>
+            <div id=Deck class=grid>
+                <!-- 52 cardts are injected here-->
+            </div>
+            <playing-card id=BigCardt cid=Kh></playing-card>
         </div>
-        <playing-card id=BigCardt cid=Kh></playing-card>
-    </div>
-    <hr>
-    <span class="footnote notfullversion">¹ raw SVG for 52 cards is 500 KB , &lt;playing-card&gt; GZipped is 14
-        KB</span>
-<br>
-<h1>GZip sizes</h1>
-<div style="display:block;margin-left:3em;background:darkgrey;padding:5px">
-    <file-size src="https://cardmeister.github.io/elements.cardmeister.min.js"></file-size>
-    <file-size src="https://cardmeister.github.io/elements.cardmeister.full.js"></file-size>
-</div>
-    <hr>
-    <h1>Using &lt;playing-card&gt;:</h1>
-    <div id=Usage class="grid">
-        <style>
-            .cardt1 {
-                color: yellow;
-                font-weight: bold;
-                text-shadow: 1px 1px 1px black;
-            }
+        <hr>
+        <span class="footnote notfullversion">¹ raw SVG for 52 cards is 500 KB , &lt;playing-card&gt; GZipped is 14
+            KB</span>
+        <br>
+        <h1>GZip sizes</h1>
+        <div style="display:block;margin-left:3em;background:darkgrey;padding:5px">
+            <file-size src="https://cardmeister.github.io/elements.cardmeister.min.js"></file-size>
+            <file-size src="https://cardmeister.github.io/elements.cardmeister.full.js"></file-size>
+        </div>
+        <hr>
+        <h1>Using &lt;playing-card&gt;:</h1>
+        <div id=Usage class="grid">
+            <style>
+                .cardt1 {
+                    color: yellow;
+                    font-weight: bold;
+                    text-shadow: 1px 1px 1px black;
+                }
 
-            .cardt2 {
-                color: white;
-                text-shadow: 2px 2px 1px black;
-            }
-        </style>
-        <pre style='color:lightgray;'>    &lt;head>
+                .cardt2 {
+                    color: white;
+                    text-shadow: 2px 2px 1px black;
+                }
+            </style>
+            <pre style='color:lightgray;'>    &lt;head>
         &lt;script src<i>=</i><b class=cardt1>'elements.cardmeister.full.js'</b>>&lt;/script>
     &lt;/head>
     &lt;body>
@@ -229,32 +231,32 @@
     &lt;/body>
 </pre>
 
-        <playing-card cid=As></playing-card>
-        <playing-card suit=1 rank=10></playing-card>
-        <playing-card suit=Clubs rank=Queen></playing-card>
-    </div>
-    <br>
+            <playing-card cid=As></playing-card>
+            <playing-card suit=1 rank=10></playing-card>
+            <playing-card suit=Clubs rank=Queen></playing-card>
+            </div>
+            <br>
 
 
-    <hr>
-    <div class=notfullversion>
-        <h1>It is a card trick... How did I cheat to get the GZip size down to <b>14 KB</b> ?</h1>
-        <h1>The full version is 60 KB GZipped. See the difference: <a href='?#full'>index.html?full</a></h1>
-    </div>
-    <a id="full">
-        <!-- anchor for loading index.html#full version--></a>
-    <div class="fullversion">
-        <h1>60 KB for 12 different court images in the full version:</h1>
-        <div id=FullCourts class="grid">
+        <hr>
+        <div class=notfullversion>
+            <h1>It is a card trick... How did I cheat to get the GZip size down to <b>14 KB</b> ?</h1>
+            <h1>The full version is 60 KB GZipped. See the difference: <a href='?#full'>index.html?full</a></h1>
         </div>
-        <div>
-            <h1>In the <a href="index.html">14 KB version</a> all courts use the Hearts suit image:</h1>
-            <h3>Saves app. 70% of SVG data</h3>
-        </div>
-        <div id=MinCourts class="grid">
-        </div>
-        <div id=BigQueens class="grid">
-            <!-- <playing-card cid=Js suits=1111></playing-card>
+        <a id="full">
+            <!-- anchor for loading index.html#full version--></a>
+        <div class="fullversion">
+            <h1>60 KB for 12 different court images in the full version:</h1>
+            <div id=FullCourts class="grid">
+            </div>
+            <div>
+                <h1>In the <a href="index.html">14 KB version</a> all courts use the Hearts suit image:</h1>
+                <h3>Saves app. 70% of SVG data</h3>
+            </div>
+            <div id=MinCourts class="grid">
+            </div>
+            <div id=BigQueens class="grid">
+                <!-- <playing-card cid=Js suits=1111></playing-card>
                             <playing-card cid=Jh suits=1111></playing-card>
                             <playing-card cid=Jd suits=1111></playing-card>
                             <playing-card cid=Jc suits=1111></playing-card>
@@ -266,139 +268,142 @@
                             <playing-card cid=Kh suits=1111></playing-card>
                             <playing-card cid=Kd suits=1111></playing-card>
                             <playing-card cid=Kc suits=1111></playing-card> -->
+            </div>
+            </div>
+
+        <hr>
+        <h1>&lt;playing-card attribute&gt; configuration examples</h1>
+        <div class=fullversion>
+            <h3>click to see Element Attributes - Details at: <a
+                    href='https://github.com/cardmeister/cardmeister.github.io'>GitHub
+                    &lt;playing-card&gt; attribute/property
+                    syntax</a>
+            </h3>
+            <h3>'play' an Ace card for some more advice</h3>
         </div>
-    </div>
+        <div class=notfullversion>
+            <h3>See the <a href='?#full'>full version</a> for attribute examples on click</h3>
+        </div>
+        <div id=Configuration class="grid">
+            <!-- row -->
+            <playing-card suit=Hearts rank=Jack courts=201></playing-card>
+            <playing-card suit=Spades rank=Queen courts=201></playing-card>
+            <playing-card suit=Diamonds rank=King courts=201></playing-card>
+            <div></div>
+            <playing-card suit=0 rank=1 letters="CCCC"></playing-card>
+            <playing-card suit=1 rank=11 letters="AAAA"></playing-card>
+            <playing-card suit=3 rank=13 letters="RRRR"></playing-card>
+            <playing-card suit=2 rank=12 letters="DDDD"></playing-card>
+            <playing-card suit=0 rank=0></playing-card>
+            <playing-card suit=0 rank=13 letters="TTTT"></playing-card>
+            <div></div>
+            <playing-card rank=0 backcolor="green" backtext=" "></playing-card>
+            <playing-card rank=0 backcolor="#44F" backtext="YOURNAME" backtextcolor=#333></playing-card>
+            <!-- row -->
+            <playing-card rank=1 suit=0 suitcolor="#FFF," cardcolor="red" class="newrow"></playing-card>
+            <playing-card rank=1 suit=1 suitcolor=",yellow," cardcolor="darkgreen"></playing-card>
+            <playing-card rank=1 suit=2 suitcolor=",,black," cardcolor="dodgerblue" norank></playing-card>
+            <playing-card rank=1 suit=3 suitcolor=",,,red" cardcolor="yellow" norank=1></playing-card>
+            <div></div>
+            <!-- opacity -->
+            <playing-card rank=1 suit=0 opacity=1></playing-card>
+            <playing-card rank=1 suit=1 opacity=.75></playing-card>
+            <playing-card rank=1 suit=2 opacity=.5></playing-card>
+            <div></div>
+            <!-- destory court image colors -->
+            <playing-card suit=Hearts rank=Jack courtcolors=gold,red,blue,black,black,4></playing-card>
+            <playing-card suit=Spades rank=Queen courtcolors=#DB3,lightcoral,lightblue,slategray,#000,1></playing-card>
+            <playing-card suit=Diamonds rank=King courtcolors=green,green,green,green,black,4></playing-card>
+            <!-- row -->
+            <playing-card cid=F0 class="newrow"></playing-card>
+            <playing-card cid=FH></playing-card>
+            <playing-card cid=FD></playing-card>
+            <playing-card rank=1 suit=3 norank=1 cardcolor='transparent' opacity=.3 letters='    ' pips='3'></playing-card>
+            <div></div>
+            <!-- orignal Queen court images -->
+            <playing-card suit=S rank=Queen></playing-card>
+            <playing-card suit=H rank=Queen></playing-card>
+            <playing-card suit=D rank=Queen></playing-card>
+            <playing-card suit=C rank=Queen></playing-card>
+            <div></div>
+            <playing-card rank=1 suit=0 bordercolor=red borderradius=12 borderline=12></playing-card>
+            <playing-card rank=4 suit=0 bordercolor=hotpink borderradius=100% borderline=20></playing-card>
+            <playing-card rank=13 suit=H bordercolor=gold borderradius=12 borderline=38></playing-card>
+            </div>
 
-    <hr>
-    <h1>&lt;playing-card attribute&gt; configuration examples</h1>
-    <div class=fullversion>
-        <h3>click to see Element Attributes - Details at: <a
-                href='https://github.com/cardmeister/cardmeister.github.io'>GitHub
-                &lt;playing-card&gt; attribute/property
-                syntax</a>
+        <hr>
+        <h1>Extending &lt;IMG> : creating 52 'Customized Built-In Elements'</h1>
+        <h3>Creates less DOM nodes but &nbsp;<i>is=</i>&nbsp; notation must be the full (Customized) Element name in
+            lowercase
+            <br>* requires a <a href="https://github.com/ungap/custom-elements-builtin"></a>polyfill</a> in Safari
         </h3>
-        <h3>'play' an Ace card for some more advice</h3>
-    </div>
-    <div class=notfullversion>
-        <h3>See the <a href='?#full'>full version</a> for attribute examples on click</h3>
-    </div>
-    <div id=Configuration class="grid">
-        <!-- row -->
-        <playing-card suit=Hearts rank=Jack courts=201></playing-card>
-        <playing-card suit=Spades rank=Queen courts=201></playing-card>
-        <playing-card suit=Diamonds rank=King courts=201></playing-card>
-        <div></div>
-        <playing-card suit=0 rank=1 letters="CCCC"></playing-card>
-        <playing-card suit=1 rank=11 letters="AAAA"></playing-card>
-        <playing-card suit=3 rank=13 letters="RRRR"></playing-card>
-        <playing-card suit=2 rank=12 letters="DDDD"></playing-card>
-        <playing-card suit=0 rank=0></playing-card>
-        <playing-card suit=0 rank=13 letters="TTTT"></playing-card>
-        <div></div>
-        <playing-card rank=0 backcolor="green" backtext=" "></playing-card>
-        <playing-card rank=0 backcolor="#44F" backtext="YOURNAME" backtextcolor=#333></playing-card>
-        <!-- row -->
-        <playing-card rank=1 suit=0 suitcolor="#FFF," cardcolor="red" class="newrow"></playing-card>
-        <playing-card rank=1 suit=1 suitcolor=",yellow," cardcolor="darkgreen"></playing-card>
-        <playing-card rank=1 suit=2 suitcolor=",,black," cardcolor="dodgerblue" norank></playing-card>
-        <playing-card rank=1 suit=3 suitcolor=",,,red" cardcolor="yellow" norank=1></playing-card>
-        <div></div>
-        <!-- opacity -->
-        <playing-card rank=1 suit=0 opacity=1></playing-card>
-        <playing-card rank=1 suit=1 opacity=.75></playing-card>
-        <playing-card rank=1 suit=2 opacity=.5></playing-card>
-        <div></div>
-        <!-- destory court image colors -->
-        <playing-card suit=Hearts rank=Jack courtcolors=gold,red,blue,black,black,4></playing-card>
-        <playing-card suit=Spades rank=Queen courtcolors=#DB3,lightcoral,lightblue,slategray,#000,1></playing-card>
-        <playing-card suit=Diamonds rank=King courtcolors=green,green,green,green,black,4></playing-card>
-        <!-- row -->
-        <playing-card cid=F0 class="newrow"></playing-card>
-        <playing-card cid=FH></playing-card>
-        <playing-card cid=FD></playing-card>
-        <playing-card rank=1 suit=3 norank=1 cardcolor='transparent' opacity=.3 letters='    ' pips='3'></playing-card>
-        <div></div>
-        <!-- orignal Queen court images -->
-        <playing-card suit=S rank=Queen></playing-card>
-        <playing-card suit=H rank=Queen></playing-card>
-        <playing-card suit=D rank=Queen></playing-card>
-        <playing-card suit=C rank=Queen></playing-card>
-        <div></div>
-        <playing-card rank=1 suit=0 bordercolor=red borderradius=12 borderline=12></playing-card>
-        <playing-card rank=4 suit=0 bordercolor=hotpink borderradius=100% borderline=20></playing-card>
-        <playing-card rank=13 suit=H bordercolor=gold borderradius=12 borderline=38></playing-card>
-    </div>
-
-    <hr>
-    <h1>Extending &lt;IMG> : creating 52 'Customized Built-In Elements'</h1>
-    <h3>Creates less DOM nodes but &nbsp;<i>is=</i>&nbsp; notation must be the full (Customized) Element name in
-        lowercase
-        <br>* requires a <a href="https://github.com/ungap/custom-elements-builtin"></a>polyfill</a> in Safari
-    </h3>
-    <h3 style="color: coral !important;">Update 2024: <i>Customized Built-In Elements</i> (not supported by APple/Safari)
-        are no longer created</h3>
-    <div id=Straight class=grid>
-        <div>
-            <pre><code>&lt;img is=ten-of-hearts>
+        <h3 style="color: lightcoral !important;width:50vw;word-wrap: normal;text-shadow:1px 1px 1px red ">Update 2024:
+            <i>Customized Built-In Elements</i> (not supported by
+            Apple/Safari)<br>
+            are no longer created</h3>
+        <div id=Straight class=grid>
+            <div>
+                <pre><code>&lt;img is=ten-of-hearts>
 &lt;img is=jack-of-hearts>
 &lt;img is=queen-of-hearts>
 &lt;img is=king-of-hearts>
 &lt;img is=ace-of-spades suitcolor=darkred></code></pre>
-        </div>
-        <style>
-            .hand {
-                display: flex;
-                position: relative;
-                --cardwidth: 100%;
-                --cardheight: 100%;
-                /* --spread: 1; */
-                --spreaddeg: 20deg;
-                --spreaddistance: 40px;
-                --deg: calc(var(--spread)*var(--spreaddeg));
-                --distance: calc(var(--spread)*var(--spreaddistance));
-                --topoffset: calc(var(--spread)*15px);
-                margin-top: -8vh;
-                /* margin-left: calc(-0.5*var(--cardwidth)); */
-            }
+            </div>
+            <style>
+                .hand {
+                    display: flex;
+                    position: relative;
+                    --cardwidth: 100%;
+                    --cardheight: 100%;
+                    /* --spread: 1; */
+                    --spreaddeg: 20deg;
+                    --spreaddistance: 40px;
+                    --deg: calc(var(--spread)*var(--spreaddeg));
+                    --distance: calc(var(--spread)*var(--spreaddistance));
+                    --topoffset: calc(var(--spread)*15px);
+                    margin-top: -8vh;
+                    /* margin-left: calc(-0.5*var(--cardwidth)); */
+                }
 
-            .hand playing-card {
-                position: absolute;
-                transition: transform 2s;
-            }
-            .hand img{
-                height: calc( var(--cardheight) /2 );
-                width: calc( var(--cardwidth) /2 );
-            }
+                .hand playing-card {
+                    position: absolute;
+                    transition: transform 2s;
+                }
 
-            .hand playing-card:nth-child(1) {
-                left: calc(0*var(--distance));
-                top: calc(4*var(--topoffset));
-                transform: rotate(calc(-2*var(--deg)));
-            }
+                .hand img {
+                    height: calc(var(--cardheight) /2);
+                    width: calc(var(--cardwidth) /2);
+                }
 
-            .hand playing-card:nth-child(2) {
-                left: calc(1*var(--distance));
-                top: calc(2*var(--topoffset));
-                transform: rotate(calc(-1*var(--deg)));
-            }
+                .hand playing-card:nth-child(1) {
+                    left: calc(0*var(--distance));
+                    top: calc(4*var(--topoffset));
+                    transform: rotate(calc(-2*var(--deg)));
+                }
 
-            .hand playing-card:nth-child(3) {
-                left: calc(2*var(--distance));
-                top: calc(1*var(--topoffset));
-            }
+                .hand playing-card:nth-child(2) {
+                    left: calc(1*var(--distance));
+                    top: calc(2*var(--topoffset));
+                    transform: rotate(calc(-1*var(--deg)));
+                }
 
-            .hand playing-card:nth-child(4) {
-                left: calc(3*var(--distance));
-                top: calc(2*var(--topoffset));
-                transform: rotate(calc(1*var(--deg)));
-            }
+                .hand playing-card:nth-child(3) {
+                    left: calc(2*var(--distance));
+                    top: calc(1*var(--topoffset));
+                }
 
-            .hand playing-card:nth-child(5) {
-                left: calc(4*var(--distance));
-                top: calc(4*var(--topoffset));
-                transform: rotate(calc(2*var(--deg)));
-            }
-        </style>
+                .hand playing-card:nth-child(4) {
+                    left: calc(3*var(--distance));
+                    top: calc(2*var(--topoffset));
+                    transform: rotate(calc(1*var(--deg)));
+                }
+
+                .hand playing-card:nth-child(5) {
+                    left: calc(4*var(--distance));
+                    top: calc(4*var(--topoffset));
+                    transform: rotate(calc(2*var(--deg)));
+                }
+            </style>
             <!-- <img is=ten-of-hearts>
             <img is=jack-of-hearts>
             <img is=queen-of-hearts>
@@ -410,133 +415,135 @@
                 <playing-card cid="QH"></playing-card>
                 <playing-card cid="KH"></playing-card>
                 <playing-card cid="AS" suitcolor=darkred></playing-card>
-        </div>
-    </div>
-    <div id=CardtUse></div>
+            </div>
+            </div>
+            <div id=CardtUse></div>
 
 
-    <hr>
-    <h1>&lt;playing-card&gt; is used in:</h1>
-    <h3><a href='https://card-ts.github.io/Solitaire/'>https://card-ts.github.io/Solitaire/</a> (click to open
-        in new
-        window, the IFrame version below has issues)</h3>
-    <style>
-        iframe {
-            pointer-events: none;
-        }
-    </style>
-    <iframe id=Solitaire title="playing-card Solitaire" src="https://card-ts.github.io/Solitaire/"></iframe>
-
-    <!-- executing after HTML/loaded -->
-    <script>
-        try {
-            //load min or full version dynamically in a script tag
-            var scriptTag = document.createElement('script');
-            var urlParams = new URLSearchParams(window.location.search);
-
-            //create single playing-card element
-            let createPlayingCard = (suitname, rankname) => {
-                let card = document.createElement('playing-card');// Custom Element is declare in elements.cardmeister.min/full.js
-                let setAttr = (x, v = '') => card.setAttribute(x, v);
-                setAttr('suit', suitname);
-                setAttr('rank', rankname);
-                try {
-                    setAttr(rankname);  // set rank and suitnames as attribute for easier CSS selectors
-                    setAttr(suitname);
-                } catch (e) {
-                    //disregard invalid attribute names
-                }
-                //setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');// set black/red attributes for easier CSS selection
-                return card;
+        <hr>
+        <h1>&lt;playing-card&gt; is used in:</h1>
+        <h3><a href='https://card-ts.github.io/Solitaire/'>https://card-ts.github.io/Solitaire/</a> (click to open
+            in new
+            window, the IFrame version below has issues)</h3>
+        <style>
+            iframe {
+                pointer-events: none;
             }
+        </style>
+        <iframe id=Solitaire title="playing-card Solitaire" src="https://card-ts.github.io/Solitaire/"></iframe>
 
-            //dynamically load min or full version
-            scriptTag.type = 'text/javascript';
-            let element_version = 'min';
-            if (document.location.href.includes('full')) {
-                ElementGZsize.innerText = 60;//replace 14 KB in span text
-                element_version = 'full';
-            }
-            scriptTag.src = 'elements.cardmeister.' + element_version + '.js';
-            scriptTag.onload = () => {
-                console.log('loaded playing-card element', scriptTag.src);
+        <!-- executing after HTML/loaded -->
+        <script>
+            try {
+                //load min or full version dynamically in a script tag
+                var scriptTag = document.createElement('script');
+                var urlParams = new URLSearchParams(window.location.search);
 
-                let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
-
-                //create 52 cards-t elements
-                let cards = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
-                    .map(suit => 'Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King'.split`,`
-                        .map(rank => createPlayingCard(suit, rank)))
-                    .flat();
-                //add cards to the DOM
-                Deck.append(...cards);// add 52 cards to DOM element Deck
-
-                //house keeping for showing full version
-                if (element_version == 'full') {
-
-                    fullversion.disabled = false;   // enable fullversion style
-                    //inject cid cards in injectCardts array
-                    let injectCardts = (element, settings = {}) => {
-                        let cids = ['J', 'Q', 'K'].map(rank => ['s', 'h', 'd', 'c'].map(suit => rank + suit)).flat();
-                        element.append(...cids.map(cid => {
-                            let card = document.createElement("playing-card");
-                            card.setAttribute('cid', cid);
-                            Object.keys(settings).map(attr => card.setAttribute(attr, settings[attr]));
-                            return card;
-                        }));
+                //create single playing-card element
+                let createPlayingCard = (suitname, rankname) => {
+                    let card = document.createElement('playing-card');// Custom Element is declare in elements.cardmeister.min/full.js
+                    let setAttr = (x, v = '') => card.setAttribute(x, v);
+                    setAttr('suit', suitname);
+                    setAttr('rank', rankname);
+                    try {
+                        setAttr(rankname);  // set rank and suitnames as attribute for easier CSS selectors
+                        setAttr(suitname);
+                    } catch (e) {
+                        //disregard invalid attribute names
                     }
-                    injectCardts(FullCourts);                   // inject cardts in DOM element FullCourts
-                    injectCardts(MinCourts, { suits: '1111' });
+                    //setAttr((suitname == 'Spades' || suitname == 'Clubs') ? 'black' : 'red');// set black/red attributes for easier CSS selection
+                    return card;
                 }
 
-                //if cid URL parameter defined show as bigcard
-                if (urlParams.has('cid')) BigCardt.cid = urlParams.get('cid');
-                //show big testcard 
-                if (urlParams.has('testcard')) {
-                    testcard.setAttribute('cid', urlParams.get('testcard'));
-                    testcard.style.display = 'block';
+                //dynamically load min or full version
+                scriptTag.type = 'text/javascript';
+                let element_version = 'min';
+                if (document.location.href.includes('full')) {
+                    ElementGZsize.innerText = 60;//replace 14 KB in span text
+                    element_version = 'full';
                 }
+                scriptTag.src = 'elements.cardmeister.' + element_version + '.js';
+                scriptTag.onload = () => {
+                    console.log('loaded playing-card element', scriptTag.src);
 
-                //for every card in the Deck show the card big
-                [...document.querySelectorAll('#Deck playing-card')].forEach(cardt => {
-                    cardt.addEventListener('mouseover', evt => {
-                        BigCardt.firstChild.src = cardt.firstChild.src
+                    let shuffle = x => x.sort(() => Math.random() - 0.5);// unused Yes, Fisher-Yates is better
+
+                    //create 52 cards-t elements
+                    let cards = ['Spades', 'Hearts', 'Diamonds', 'Clubs']
+                        .map(suit => 'Ace,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King'.split`,`
+                            .map(rank => createPlayingCard(suit, rank)))
+                        .flat();
+                    //add cards to the DOM
+                    Deck.append(...cards);// add 52 cards to DOM element Deck
+
+                    //house keeping for showing full version
+                    if (element_version == 'full') {
+
+                        fullversion.disabled = false;   // enable fullversion style
+                        //inject cid cards in injectCardts array
+                        let injectCardts = (element, settings = {}) => {
+                            let cids = ['J', 'Q', 'K'].map(rank => ['s', 'h', 'd', 'c'].map(suit => rank + suit)).flat();
+                            element.append(...cids.map(cid => {
+                                let card = document.createElement("playing-card");
+                                card.setAttribute('cid', cid);
+                                Object.keys(settings).map(attr => card.setAttribute(attr, settings[attr]));
+                                return card;
+                            }));
+                        }
+                        injectCardts(FullCourts);                   // inject cardts in DOM element FullCourts
+                        injectCardts(MinCourts, { suits: '1111' });
+                    }
+
+                    //if cid URL parameter defined show as bigcard
+                    if (urlParams.has('cid')) BigCardt.cid = urlParams.get('cid');
+                    //show big testcard 
+                    if (urlParams.has('testcard')) {
+                        testcard.setAttribute('cid', urlParams.get('testcard'));
+                        testcard.style.display = 'block';
+                    }
+
+                    //for every card in the Deck show the card big
+                    [...document.querySelectorAll('#Deck playing-card')].forEach(cardt => {
+                        cardt.addEventListener('mouseover', evt => {
+                            BigCardt.firstChild.src = cardt.firstChild.src
+                        });
                     });
-                });
-                //show body after all is done... FireFox does it different
-                document.body.style.visibility = 'initial';
+                    //show body after all is done... FireFox does it different
+                    document.body.style.visibility = 'initial';
 
-                // on every click show/hide attributes style
-                document.body.addEventListener('click', evt => {
-                    let cardt = evt.target.parentNode;
-                    if (element_version == 'full' && cardt.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled;
-                    if (cardt.getAttribute('rank') == 1 || cardt.cid == 'As') {
-                        if (TheGambler.paused) TheGambler.play();
-                        else TheGambler.pause();
+                    // on every click show/hide attributes style
+                    document.body.addEventListener('click', evt => {
+                        let cardt = evt.target.parentNode;
+                        if (element_version == 'full' && cardt.nodeName.includes('CARD')) showAttributes.disabled = !showAttributes.disabled;
+                        if (cardt.getAttribute('rank') == 1 || cardt.cid == 'As') {
+                            if (TheGambler.paused) TheGambler.play();
+                            else TheGambler.pause();
+                        }
+                    });
+
+                    setTimeout(() => {
+                        TheGambler.setAttribute('src', 'thegambler.ogg');
+                        TheGambler.pause();
+                    }, 1000);
+
+                };
+                document.body.append(scriptTag);
+
+                        new IntersectionObserver(entries => {
+                            // console.log(entries[0].boundingClientRect, entries[0].target);
+                            for (const entry of entries) {
+                                if (entry.isIntersecting) {
+                                    Hand1.style.setProperty('--spread', 1);
+                                }
+                            }
+                        }).observe(document.querySelector("#CardtUse"));
+                    } catch (e) {
                     }
-                });
+                </script>
+        <audio src="" id="TheGambler" type="audio/ogg"></audio>
+        <script src="https://file-size.github.io/element.js"></script>
+    </section>
 
-                setTimeout(() => {
-                    TheGambler.setAttribute('src', 'thegambler.ogg');
-                    TheGambler.pause();
-                }, 1000);
-
-            };
-            document.body.append(scriptTag);
-
-            new IntersectionObserver(entries => {
-                // console.log(entries[0].boundingClientRect, entries[0].target);
-                for (const entry of entries) {
-                    if (entry.isIntersecting) {
-                        Hand1.style.setProperty('--spread', 1);
-                    }
-                }
-            }).observe(document.querySelector("#CardtUse"));
-        } catch (e) {
-        }
-    </script>
-    <audio src="" id="TheGambler" type="audio/ogg"></audio>
-    <script src="https://file-size.github.io/element.js"></script>
 </body>
 
 </html>
