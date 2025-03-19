@@ -102,9 +102,17 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 #### How it looks in F12 Developer Tools:
 
+
+2018 version:
+
 ![](https://i.imgur.com/7csZylT.jpg)
 
-## Customized Built-In Element (from IMG) (not supported in Safari), no longer created since 2024)
+2024 version:
+
+![](https://i.imgur.com/T0wFQM0.png)
+
+## Customized Built-In Element (from IMG)  
+(not supported in Safari), no longer created since 2024)
 
 52 Custom Elements are **also** created customizing the IMG element so you can use:
 
@@ -254,7 +262,8 @@ See: [https://cardmeister.github.io](https://cardmeister.github.io)
 
 💡 `Queen-of-Clubs` is processed as `Qc`
 
-💡 `<img is=queen-of-clubs>` uses `cid` internally - **`is=` requires lowercase full Element name!!**
+💡 `<img is=queen-of-clubs>` uses `cid` internally - **`is=` requires lowercase full Element name!!**  
+(Safari does not support this, since 2024 CardMeister no longer creates these _Customized Built-In_ Elements\_)
 
 ![](https://i.imgur.com/lI8sa0p.jpg)
 
@@ -313,6 +322,7 @@ default: #E55 (red)
 ![](https://i.imgur.com/GxT3m91.jpg)
 
 # 🔧 `suitcolor` - Change SHDC suit color
+
 # 🔧 `rankcolor` - Change rank color
 
 default: #000,red,red,#000
@@ -353,10 +363,30 @@ default: #FFF
 The string (all 4 settings in one string for global declaration!) is converted to an array so can be written as:
 
 ```html
-<playing-card rank="1" suit="0" suitcolor="#FFF," cardcolor="red"></playing-card>
-<playing-card rank="1" suit="1" suitcolor=",yellow" cardcolor="green"></playing-card>
-<playing-card rank="1" suit="2" suitcolor=",,black" cardcolor="dodgerblue"></playing-card>
-<playing-card rank="1" suit="3" suitcolor=",,,red" cardcolor="yellow"></playing-card>
+<playing-card
+  rank="1"
+  suit="0"
+  suitcolor="#FFF,"
+  cardcolor="red"
+></playing-card>
+<playing-card
+  rank="1"
+  suit="1"
+  suitcolor=",yellow"
+  cardcolor="green"
+></playing-card>
+<playing-card
+  rank="1"
+  suit="2"
+  suitcolor=",,black"
+  cardcolor="dodgerblue"
+></playing-card>
+<playing-card
+  rank="1"
+  suit="3"
+  suitcolor=",,,red"
+  cardcolor="yellow"
+></playing-card>
 ```
 
 💡 You can change one card with: `element.suitcolor='blue';`
@@ -513,7 +543,7 @@ To select all Spades you still need attributes:
 ```
 
 Safari does not support the `is=` attribute, so you can't use `<img is=queen-of-hearts>` in Safari.  
-Since 2024 CardMeister no longer creates these _Customized Built-In_ Elements_.
+Since 2024 CardMeister no longer creates these _Customized Built-In_ Elements\_.
 
 Because `queen-of-hearts` can either be a 'Autonomous Custom Element' OR a 'Customized Built-In Element'  
 `<playing-card>` creates 52 Customized IMG elements:
@@ -806,4 +836,4 @@ Load SVG content in main document:
 
 <hr>
 <hr>
-Published: 2020-08-06 17:13 
+Published: 2020-08-06 17:13
