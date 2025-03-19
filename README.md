@@ -104,7 +104,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 
 ![](https://i.imgur.com/7csZylT.jpg)
 
-## Customized Built-In Element (from IMG)
+## Customized Built-In Element (from IMG) (not supported in Safari), no longer created since 2024)
 
 52 Custom Elements are **also** created customizing the IMG element so you can use:
 
@@ -147,7 +147,7 @@ Since `<playing-card>` only creates a single IMG **no shadow-DOM is required/use
 }
 ```
 
-or for the customized IMG element:
+or for the customized IMG element: (not supported in Safari, no longer created since 2024)
 
 ```css
 img[is*="queen"] {
@@ -511,6 +511,9 @@ To select all Spades you still need attributes:
 <ten-of-spades spades></ten-of-spades>
 ...
 ```
+
+Safari does not support the `is=` attribute, so you can't use `<img is=queen-of-hearts>` in Safari.  
+Since 2024 CardMeister no longer creates these _Customized Built-In_ Elements_.
 
 Because `queen-of-hearts` can either be a 'Autonomous Custom Element' OR a 'Customized Built-In Element'  
 `<playing-card>` creates 52 Customized IMG elements:
