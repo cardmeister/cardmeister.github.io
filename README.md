@@ -112,7 +112,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 ![](https://i.imgur.com/T0wFQM0.png)
 
 ## Customized Built-In Element (from IMG)  
-(not supported in Safari), no longer created since 2024)
+(not supported in Safari), This Web Component notation is no longer created since 2024
 
 52 Custom Elements are **also** created customizing the IMG element so you can use:
 
@@ -128,7 +128,7 @@ and makes it easy to add HTML Drag-Drop functionality.
 > are two different flavours of Custom Elements which (in this case) do the same.  
 > You can pick the **one** that suits your application. Or use them both in one page: [https://cardmeister.github.io](https://cardmeister.github.io)
 
-💡 requires a <a href="https://www.webcomponents.org/polyfills">polyfill</a> in Safari, because Apple does not want to implement this part of the spec.
+💡 requires a <a href="https://www.webcomponents.org/polyfills">polyfill</a> in Safari, because Apple did not implement this part of the spec. See [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)
 
 💡 declaration **must be** all lowercase!
 
@@ -145,6 +145,8 @@ and makes it easy to add HTML Drag-Drop functionality.
 ![](https://i.imgur.com/MNoSbdo.jpg)
 
 # Styling `<playing-card>` with CSS:
+
+Note: ``::part`` styling not used, it did not exist in 2018
 
 Since `<playing-card>` only creates a single IMG **no shadow-DOM is required/used**, thus IMG can be styled with **global CSS**:
 
@@ -389,7 +391,7 @@ The string (all 4 settings in one string for global declaration!) is converted t
 ></playing-card>
 ```
 
-💡 You can change one card with: `element.suitcolor='blue';`
+💡 You can change one card property with: `element.suitcolor='blue';`
 
 💡 non-color values will break the SVG suit display
 
@@ -495,6 +497,7 @@ In the [HTML5 deck of cards](https://deck-of-cards.js.org/) the **single** [King
 ![](https://i.imgur.com/0K09KNh.jpg)
 
 - I started with the 550 KB for 52 CC-0 licensed cards from the [card generator by Adrian Kennard](https://www.me.uk/cards/)
+- His site is no longer online; [./rev/index.html](I saved one blogpost from Web Archive, where Adrian explains creating the Open Source cards) 
 - reduced precision with: [Jake Archibalds GUI for SVGO](https://jakearchibald.github.io/svgomg/)  
   (this causes some alignment 'errors' you only see viewing a court card full screen)
 - spent some time in [Inkscape](https://inkscape.org/) reducing details you don't see on a computer screen
