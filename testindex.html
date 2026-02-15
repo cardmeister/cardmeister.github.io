@@ -1,0 +1,29 @@
+<head>
+    <script src="./elements.cardmeister.min.js"></script>
+    <style>
+        playing-card {
+            display: inline-block;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <playing-card rank=1 suit=0 suitcolor="#FFF," cardcolor="red" class="newrow" norank="1"></playing-card>
+    <playing-card rank=1 suit=1 suitcolor=",yellow," cardcolor="darkgreen" norank="1"></playing-card>
+    <playing-card rank=1 suit=2 suitcolor=",,black," cardcolor="dodgerblue" norank="1"></playing-card>
+    <playing-card rank=1 suit=3 suitcolor=",,,red" cardcolor="yellow" norank=1></playing-card>
+
+    <playing-card rank="k" suit="Hearts"></playing-card>
+    <playing-card id=KAART suit="H" rank="a"></playing-card>
+    <playing-card id=KAART suit="h" rank="J"></playing-card>
+    <playing-card id=KAART suit="s" rank="2"></playing-card>
+    <playing-card id=KAART suit="s" rank="7"></playing-card>
+    <playing-card id=KAART suit="s" rank="10"></playing-card>
+    <script>
+        setTimeout(() => {
+            //KAART.setAttribute('rank', '17');
+        }, 100);
+    </script>
+
+</body>
